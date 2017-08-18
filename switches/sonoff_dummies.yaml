@@ -1,0 +1,45 @@
+- platform: mqtt
+  name: "Bedroom outlet"
+  state_topic: "home/bedroom/switch1"
+  command_topic: "home/bedroom/switch1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true
+- platform: mqtt
+  name: "Living Room outlet 1"
+  state_topic: "home/livingRoom/switch1"
+  command_topic: "home/livingRoom/switch1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true
+- platform: mqtt
+  name: "Living Room outlet 2"
+  state_topic: "home/livingRoom/switch2"
+  command_topic: "home/livingRoom/switch2"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Geyser"
+  state_topic: "home/geyser/switch1"
+  command_topic: "home/geyser/switch1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 
+- platform: mqtt
+  name: "Kettle"
+  state_topic: "home/kettle/switch1"
+  command_topic: "home/kettle/switch1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true 

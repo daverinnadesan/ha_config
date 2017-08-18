@@ -1,0 +1,31 @@
+homeassistant:
+  name: Home
+  latitude: -25.7069
+  longitude: 28.2294
+  elevation: 0
+  unit_system: metric
+  time_zone: Africa/Johannesburg
+  packages: !include_dir_named packages
+  customize: !include_dir_merge_named customize
+
+mqtt: !include config/mqtt.yaml
+http: !include config/http.yaml
+tts: !include config/tts.yaml
+automation: !include_dir_merge_list automations
+light: !include_dir_merge_list lights
+sensor: !include_dir_merge_list sensors
+switch: !include_dir_merge_list switches
+group: !include_dir_merge_named groups
+emulated_hue: !include config/emulated_hue.yaml
+
+frontend:
+config:
+updater:
+discovery:
+conversation:
+history:
+logbook:
+sun:
+
+
+

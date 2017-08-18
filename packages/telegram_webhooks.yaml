@@ -1,0 +1,9 @@
+telegram_bot:
+  - platform: webhooks
+    url: https://affianced-armadillo-6567.dataplicity.io/
+    api_key: 447383091:AAEoRHusrCH-DPC1oMLARTIh78jxT2d1L5M  
+    allowed_chat_ids:
+      - 299386279
+      - 444908880
+      - -220710108
+      - 396287366
