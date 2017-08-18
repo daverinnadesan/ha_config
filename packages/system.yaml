@@ -1,0 +1,37 @@
+group:
+  Pi:
+    name: System Status
+    control: hidden
+    entities:
+      - group.badgespi
+      - sensor.since_last_boot
+      - script.restart_ha
+  badgespi:
+    entities:
+      - sensor.ram_use
+      - sensor.cpu_use
+      - sensor.disk_use_
+      - sensor.disk_free_
+
+homeassistant:
+  customize_glob:
+      group.badges*:
+        custom_ui_state_card: custom-ui  
+        state_card_mode: badges
+
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: disk_free
+        arg: /
+      - type: memory_use_percent
+      - type: processor_use
+      - type: since_last_boot
+
+script:
+  restart_ha:
+    alias: Restart HA
+    sequence:
+      - service: homeassistant.restart

@@ -1,0 +1,5 @@
+System:
+  view: yes
+  icon: mdi:gauge
+  entities:
+    - group.Pi

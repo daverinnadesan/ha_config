@@ -1,0 +1,3 @@
+2017-08-18 04:38:57 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=2 from 2017-08-18 02:15:50.337369)
+2017-08-18 04:38:57 WARNING (Thread-12) [homeassistant.components.emulated_hue] Listen IP address not specified, auto-detected address is 10.0.2.15
+2017-08-18 04:38:57 WARNING (Thread-12) [homeassistant.components.emulated_hue] When targetting Google Home, listening port has to be port 80
