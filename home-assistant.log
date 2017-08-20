@@ -1,0 +1,7 @@
+2017-08-19 22:38:05 WARNING (Thread-7) [homeassistant.components.emulated_hue] Listen IP address not specified, auto-detected address is 192.168.8.3
+2017-08-19 22:38:05 WARNING (Thread-7) [homeassistant.components.emulated_hue] When targetting Google Home, listening port has to be port 80
+2017-08-19 22:38:05 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
+2017-08-19 22:38:36 WARNING (Thread-5) [netdisco.ssdp] Error fetching description at 192.168.8.5
+2017-08-19 22:38:57 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
+2017-08-20 01:33:54 WARNING (Thread-14) [pychromecast.socket_client] Heartbeat timeout, resetting connection
+2017-08-20 02:04:18 WARNING (Thread-14) [pychromecast.socket_client] Heartbeat timeout, resetting connection
