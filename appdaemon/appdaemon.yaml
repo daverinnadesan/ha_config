@@ -1,0 +1,80 @@
+AppDaemon:
+  logfile: /home/homeassistant/config/appdaemon/log
+  errorfile: /home/homeassistant/config/appdaemon/errorLog
+  threads: 10
+HASS:
+  ha_url: http://localhost:8123
+  ha_key: homeassistant
+
+telegram:
+  module: telegram
+  class: TelegramBotEventListener
+  groups:
+    admin:
+      chatids:
+        - 299386279
+        - 396287366
+      menu:
+        - Alarm Functions
+        - Rooms
+        - Lights,Switches,Scenes
+        - Cameras
+      switches:
+        - switch.living_room_outlet_1
+        - switch.living_room_outlet_2
+        - switch.kettle
+        - switch.bedroom_outlet
+      lights:
+        - light.bathroom_light
+        - light.bedroom_light
+        - light.kitchen_light
+        - light.lamp
+        - light.living_room_light
+        - switch.geyser
+      rooms:
+        - group.living_room
+        - group.bathroom
+        - group.bedroom
+        - group.kitchen
+      scenes:
+        - script.new
+      other: None
+    user:
+      chatids:
+        - 444901880
+      menu:
+        - Alarm Functions
+        - Rooms
+        - Lights,Switches,Scenes
+      switches:
+        - switch.geyser
+        - switch.kettle
+      lights:
+        - light.bathroom_light
+        - light.bedroom_light
+        - light.lamp
+      rooms:
+        - group.living_room
+        - group.bathroom
+      scenes:
+        - script.new
+      other: None
+
+    guest:
+      chatids:
+        - 444908880
+      menu:
+        - Rooms
+        - Lights,Switches
+        - Scenes
+      switches:
+        - switch.kettle
+      lights:
+        - light.lamp
+      rooms:
+        - group.kitchen
+      scenes:
+        - script.new
+      other: None
+
+
