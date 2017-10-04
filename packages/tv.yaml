@@ -1,0 +1,4 @@
+media_player:
+  - platform: webostv
+    mac: 3c:cd:93:06:e8:65
+    host: 10.0.0.19

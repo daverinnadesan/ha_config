@@ -1,0 +1,123 @@
+AppDaemon:
+  logfile: /home/homeassistant/config/appdaemon/log
+  errorfile: /home/homeassistant/config/appdaemon/errorLog
+  threads: 10
+  api_port: 5000
+
+HASS:
+  ha_url: https://rsdatahost.duckdns.org:8123
+  ha_key: daver1ns
+
+Alarm:
+  module: alarm
+  class: AlarmReaction
+  alarm_lights: input_boolean.alarm_lights
+  alarm_sounds: input_boolean.alarm_sounds
+  notify_triggered:
+    - admin
+  notify_warning:
+    - admin
+  notify_disarmed:
+    - admin
+  notify_armed_home:
+    - admin
+  notify_armed_away:
+    - admin
+  notify_pending:
+    - admin
+  lights:
+    - entity_id: switch.living_room
+    - entity_id: switch.kitchen
+    - entity_id: switch.dummy
+    - entity_id: switch.tarini_bedroom
+    - entity_id: light.lounge
+      effect: Police
+  xiaomis:
+    - gw_mac: 34:CE:00:88:D6:13
+      ringtone_id: 2
+      ringtone_vol: 10
+
+Telegram:
+  module: telegram
+  class: TelegramBotEventListener
+  groups:
+    admin:
+      chatids:
+        - "444908880"
+        - "396287366"
+      menu:
+        - Alarm Functions
+        - Rooms
+        - Lights,Switches,Scenes
+        - Cameras
+      switches:
+        - switch.tv
+        - switch.living_room_outlet_2
+        - switch.kettle
+        - switch.bedroom_outlet
+      lights:
+        - switch.kitchen
+        - switch.living_room
+        - switch.dummy
+        - switch.tarinis_bedroom
+        - light.lamp
+        - light.lounge
+        - light.gateway_light_34ce0088d613
+      rooms:
+        - group.living_room
+        - group.bathroom
+        - group.bedroom
+        - group.kitchen
+      scenes:
+        - script.new
+      alarm:
+        functions:
+          - nonee
+    member:
+      chatids:
+        - "437911056"
+        - "444385343"
+        - "299386279"
+        - "346686450"
+      menu:
+        - Alarm Functions
+        - Rooms
+        - Lights,Switches
+        - Scenes
+      switches:
+        - switch.tv
+        - switch.geyser
+      lights:
+        - switch.kitchen
+        - switch.living_room
+        - switch.dummy
+        - switch.tarinis_bedroom
+        - light.lounge
+      rooms:
+        - group.living_room
+        - group.bathroom
+        - group.kitchen
+      scenes:
+        - script.new
+      alarm:
+        functions:
+          - disarm
+    guest:
+      chatids:
+        - "4423908880"
+      menu:
+        - Rooms
+        - Lights,Switches
+        - Scenes
+      switches:
+        - switch.kettle
+      lights:
+        - switch.living_room
+        - light.lounge
+      rooms:
+        - group.kitchen
+      scenes:
+        - script.new
+
+
+

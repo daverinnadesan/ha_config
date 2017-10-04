@@ -1,0 +1,6 @@
+api_password: "daver1ns"
+ssl_certificate: /etc/letsencrypt/live/rsdatahost.duckdns.org/fullchain.pem
+ssl_key: /etc/letsencrypt/live/rsdatahost.duckdns.org/privkey.pem
+base_url: rsdatahost.duckdns.org
+#ip_ban_enabled: True
+#login_attempts_threshold: 5

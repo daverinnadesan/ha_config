@@ -1,0 +1,27 @@
+Media:
+  view: yes 
+  entities: 
+    - media_player.lg_webos_smart_tv
+    - switch.tv_power
+Control:
+  name: Security
+  view: yes
+  entities:
+    - group.remote
+Climate:
+    view: yes
+    icon: mdi:thermometer
+    entities:
+      - group.Weather
+      - group.Today
+System:
+  view: yes
+  icon: mdi:gauge
+  entities:
+    - group.Pi
+Camera:
+  icon: mdi:camcorder
+  view: yes
+  entities:
+    - camera.huawei_cam
+    - group.huawei_cam

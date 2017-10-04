@@ -1,0 +1,41 @@
+panel_custom:
+    - name: alarm
+      sidebar_title: Alarm
+      sidebar_icon: mdi:security-home
+      config:
+          alarmid: alarm_control_panel.house
+
+input_boolean:
+  alarm:
+    name: Alarm
+    icon: mdi:alert-decagram
+  warning:
+    name: Warning
+    icon: mdi:alert-circle-outline
+  alarm_lights:
+    name: Alarm Siren
+    icon: mdi:alarm-light
+  alarm_sounds:
+    name: Alarm Sounds
+    icon: mdi:alarm-multiple
+    
+alarm_control_panel: 
+  platform: bwalarm
+  name: House
+  pending_time: 30
+  trigger_time: 60
+  alarm: input_boolean.alarm
+  warning: input_boolean.warning
+  immediate:
+      - binary_sensor.door_window_sensor_158d000187120a
+  delayed:
+      - binary_sensor.switch_158d000186e9bd
+  notathome:
+      - binary_sensor.motion_sensor_158d00016dcfa8
+  zones:
+    - group.zone_garage
+    - group.zone_living_room
+    - group.zone_kitchen
+    - group.zone_upstairs
+    - group.zone_downstairs
+    - group.zone_outside
