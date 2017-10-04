@@ -7994,3 +7994,75 @@
 2017-10-05 00:46:34.102163 WARNING Logged an error to /home/homeassistant/config/appdaemon/errorLog
 2017-10-05 00:46:45.096747 WARNING Logged an error to /home/homeassistant/config/appdaemon/errorLog
 2017-10-05 00:46:53.155438 WARNING Logged an error to /home/homeassistant/config/appdaemon/errorLog
+2017-10-04 23:14:01.795226 INFO AppDaemon Version 2.1.7 starting
+2017-10-04 23:14:01.804183 INFO Configuration read from: /home/homeassistant/config/appdaemon/appdaemon.yaml
+2017-10-04 23:14:02.475525 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:14:08.125737 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:14:13.611563 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:14:19.107397 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:14:24.392870 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:14:29.610349 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:14:34.814781 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:14:40.125945 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:14:45.640452 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:14:50.886977 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:14:56.043118 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:15:01.484103 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:15:06.737240 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:15:11.963093 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:15:17.111734 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:15:22.288374 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:15:27.463887 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:15:32.623393 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:15:38.087098 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:15:43.521792 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:15:48.667922 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-05 01:15:57.667773 INFO Got initial state
+2017-10-05 01:15:57.679126 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-05 01:15:57.745749 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-05 01:15:59.962140 INFO Alarm: Listening for Alarm Triggers....
+2017-10-05 01:15:59.968401 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-05 01:15:59.997113 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-05 01:16:00.105359 INFO Telegram: Listening for telegram texts...
+2017-10-05 01:16:00.109688 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/hello.py
+2017-10-05 01:16:00.135493 INFO App initialization complete
+2017-10-05 01:16:00.150786 INFO Dashboards are disabled
+2017-10-05 01:16:00.153946 INFO Starting API
+2017-10-05 01:16:00.979481 INFO Connected to Home Assistant 0.54.0
+2017-10-05 01:16:02.005335 WARNING Scheduler clock skew detected - delta = 1.004957914352417 - resetting
+2017-10-04 23:20:33.458040 INFO AppDaemon Version 2.1.7 starting
+2017-10-04 23:20:33.466909 INFO Configuration read from: /home/homeassistant/config/appdaemon/appdaemon.yaml
+2017-10-04 23:20:34.099873 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:20:39.563654 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:20:45.033076 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:20:50.196140 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:20:55.357521 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:00.498020 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:05.651081 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:10.831053 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:16.297870 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:21.428995 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:26.560863 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:31.711048 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:36.860192 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:42.032146 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:47.532043 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:53.012627 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:21:58.172020 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:22:03.349190 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:22:08.507884 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:22:13.978774 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-04 23:22:19.177814 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-05 01:22:28.829315 INFO Got initial state
+2017-10-05 01:22:28.862988 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-05 01:22:28.891289 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-05 01:22:31.425834 INFO Alarm: Listening for Alarm Triggers....
+2017-10-05 01:22:31.432245 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-05 01:22:31.489685 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-05 01:22:31.627487 INFO Telegram: Listening for telegram texts...
+2017-10-05 01:22:31.633523 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/hello.py
+2017-10-05 01:22:31.649255 INFO App initialization complete
+2017-10-05 01:22:31.664768 INFO Dashboards are disabled
+2017-10-05 01:22:31.667745 INFO Starting API
+2017-10-05 01:22:32.621524 INFO Connected to Home Assistant 0.54.0
+2017-10-05 01:22:33.003306 WARNING Scheduler clock skew detected - delta = 1.0029120445251465 - resetting
