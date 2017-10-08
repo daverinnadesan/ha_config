@@ -56,12 +56,12 @@ Telegram:
       switches:
         - switch.tv
         - switch.lamp
+        - light.gateway_light_34ce0088d613
       lights:
         - switch.kitchen
         - switch.living_room
         - switch.dummy
         - switch.tarinis_bedroom
-        - light.gateway_light_34ce0088d613
       rooms:
         - group.living_room
         - group.bathroom
@@ -91,12 +91,12 @@ Telegram:
       switches:
         - switch.tv
         - switch.lamp
+        - light.gateway_light_34ce0088d613
       lights:
         - switch.kitchen
         - switch.living_room
         - switch.dummy
         - switch.tarinis_bedroom
-        - light.gateway_light_34ce0088d613
       rooms:
         - group.living_room
         - group.bathroom
