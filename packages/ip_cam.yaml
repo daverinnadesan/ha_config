@@ -1,0 +1,40 @@
+android_ip_webcam:
+  - host: 10.0.0.12
+    name: Huawei Cam
+    username: ipcam
+    password: daver1ns
+    sensors:
+      - battery_level
+      - light
+      - motion
+    switches:
+      - overlay
+      - torch
+      - video_recording
+      - ffc
+
+group:
+  badges_camera_sensors:
+    - sensor.huawei_cam_battery_level
+    - sensor.huawei_cam_light_level
+    - sensor.huawei_cam_motion
+  Camera:
+    icon: mdi:camcorder
+    view: yes
+    entities:
+      - camera.huawei_cam
+      - group.huawei_cam
+      
+  huawei_cam:
+    control: hidden
+    entities:
+      - group.badges_camera_sensors
+      - switch.huawei_cam_frontfacing_camera
+      - switch.huawei_cam_overlay
+      - switch.huawei_cam_torch
+      - switch.huawei_cam_video_recording
+
+homeassistant:
+  customize:
+    group.huawei_cam:
+      friendly_name: Living Room Camera

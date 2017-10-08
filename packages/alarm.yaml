@@ -5,6 +5,7 @@ panel_custom:
       config:
           alarmid: alarm_control_panel.house
 
+
 input_boolean:
   alarm:
     name: Alarm
@@ -28,8 +29,9 @@ alarm_control_panel:
   warning: input_boolean.warning
   immediate:
       - binary_sensor.door_window_sensor_158d000187120a
-  delayed:
       - binary_sensor.switch_158d000186e9bd
+  delayed:
+      - binary_sensor.motion_sensor_158d00016dcfa8
   notathome:
       - binary_sensor.motion_sensor_158d00016dcfa8
   zones:
@@ -39,3 +41,43 @@ alarm_control_panel:
     - group.zone_upstairs
     - group.zone_downstairs
     - group.zone_outside
+
+group:
+  security:
+    name: Security
+    view: yes
+    entities:
+      - group.zone_garage
+      - group.zone_living_room
+      - group.zone_kitchen
+      - group.zone_upstairs
+      - group.zone_downstairs
+      - group.zone_outside
+
+  zone_garage:
+    name: Garage Sensors
+    entities: 
+      - binary_sensor.motion_sensor_158d00016dcfa8
+  zone_living_room:
+    name: Living Room Sensors
+    entities:
+      - binary_sensor.motion_sensor_158d00016dcfa8
+      - binary_sensor.door_window_sensor_158d000187120a
+  zone_kitchen:
+    name: Kitchen Sensors
+    entities:
+      - binary_sensor.door_window_sensor_158d000187120a
+  zone_upstairs:
+    name: Upstairs Sensors
+    entities:
+      - binary_sensor.door_window_sensor_158d000187120a
+      - binary_sensor.switch_158d000186e9bd
+  zone_downstairs:
+    name: Downstairs Sensors
+    entities:
+      - binary_sensor.switch_158d000186e9bd
+  zone_outside:
+    name: Outside Sensors
+    entities:
+      - binary_sensor.switch_158d000186e9bd
+      - binary_sensor.motion_sensor_158d00016dcfa8

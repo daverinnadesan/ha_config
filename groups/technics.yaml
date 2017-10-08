@@ -1,0 +1,10 @@
+technics:
+  icon: mdi:camcorder
+  control: hidden
+  entities:
+    - script.power
+    - script.tuner
+    - script.cd
+    - script.mute
+    - script.vol_up
+    - script.vol_down

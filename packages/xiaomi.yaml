@@ -1,4 +1,14 @@
-xiaomi:
+xiaomi_aqara:
   gateways:
    - mac: 34:CE:00:88:D6:13
      key: 9D18B2EF2D974D32
+
+homeassistant:
+  customize:
+    binary_sensor.door_window_sensor_158d000187120a:
+      friendly_name: Front Door
+    binary_sensor.motion_sensor_158d00016dcfa8:
+      friendly_name: Lounge PIR
+    binary_sensor.switch_158d000186e9bd:
+      friendly_name: Alarm Switch
+    

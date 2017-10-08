@@ -1,0 +1,48 @@
+switch.kettle:
+  icon: mdi:kettle
+switch.living_room_outlet_1:
+  icon: mdi:power-plug
+switch.living_room_outlet_2:
+  icon: mdi:power-plug
+switch.bedroom_outlet:
+  icon: mdi:power-plug
+light.lamp:
+  icon: mdi:lamp
+light.gateway_light_34ce0088d613:
+  friendly_name: Security hub
+group.security:
+  order: 2
+group.media:
+  order: 3
+group.climate:
+  order: 4
+group.camera:
+  order: 5
+group.technics:
+  friendly_name: Technics
+script.cd:
+  friendly_name: CD
+  icon: mdi:disk
+script.mute:
+  friendly_name: Mute
+  icon: mdi:volume-mute
+script.tuner:
+  friendly_name: Tuner
+  icon: mdi:radio
+script.power:
+  friendly_name: Power
+  icon: mdi:power
+script.vol_down:
+  friendly_name: Volume Down
+  icon: mdi:volume-minus
+script.vol_up:
+  friendly_name: Volume Up
+  icon: mdi:volume-plus
+switch.tarinis_bedroom:
+  friendly_name: Bedroom light
+  telegram_name: Tarini's Room
+switch.dummy:
+  friendly_name: Bathroom Light
+  telegram_name: Bathroom
+group.bedroom:
+  friendly_name: Tarini 's Bedroom

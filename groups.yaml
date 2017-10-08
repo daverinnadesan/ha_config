@@ -1,9 +1,0 @@
-access_control:
-  entities: []
-  name: Security
-  view: true
-control:
-  entities:
-  - group.remote
-  name: Security
-  view: true

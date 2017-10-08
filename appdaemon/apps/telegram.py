@@ -2,23 +2,30 @@ import appdaemon.appapi as appapi
 import uuid
 import enum
 import json
+
 ALARM_KEYBOARD = {
-    'armStay'          :"Arm Stay".format(u'\U0001f3E1',u'\U0001f512'),
-    'armAwayDelay' 	   :"Arm Away Delay".format(u'\U000023f3'),
-		'armAway'          :"Arm Away".format(u'\U0001f510'),
-    'sensorOverview'   :"Sensor Overview".format(u'\U0001f440'),
-    'sensorBypass'     :"Zone Bypass".format(u'\U0001f515'),
-    'backToMenu'       :"{} Menu".format(u'\U0001f3e0'),
-    'panic'       	   :"{} Panic".format(u'\U0001f4e2'),
-    'cameras'    		   :"{}".format(u'\U0001f4f9'),
-    'disarm'           :"Disarm".format(u'\U0001f513'),
-		'forceArm' 				 :"Force Arm",
-		'alarmFunctions'	 :"Alarm Functions",
-		'rooms'						 :"Rooms",
-		'lights'					 :"Lights",
-		'switches'				 :"Switches",
-		'scenes'					 :"Scenes",
-		'cameras'					 :"Cameras"}
+    "Arm Stay".format(u'\U0001f3E1',u'\U0001f512')	: 'armStay',
+    "Arm Away Delay".format(u'\U000023f3')					: 'armAwayDelay',
+		"Arm Away".format(u'\U0001f510')								: 'armAway',
+    "Sensor Overview".format(u'\U0001f440')					: 'sensorOverview',
+    "Zone Bypass".format(u'\U0001f515')							: 'sensorBypass',
+		"{} Menu".format(u'\U0001f3e0')									: 'backToMenu',
+    "{} Panic".format(u'\U0001f4e2')								: 'panic',
+    "{}".format(u'\U0001f4f9')											: 'cameras',
+    "Disarm".format(u'\U0001f513')									: 'disarm',
+		"Force Arm"																			: 'forceArm',
+		"Alarm Functions"																: 'alarmFunctions',
+		"Rooms"																					: 'rooms',
+    "{} Rooms".format(u'\U0001f448')								: 'rooms',
+		'Lights'					 															:"lights",
+		'Switches'				 															:"switches",
+		'Scenes'					 															:"scenes",
+		'Cameras'					 															:"cameras",
+		"{} Alarm Functions".format(u'\U0001f448')      :'alarmFunctions',
+		"enable"	   																		:'unbypass',
+		"bypass"																				:'bypass',
+		"Cameras"																				:"cameras"
+		}
 ALARM_KEYBOARD_REVERSED = {v: k for k, v in ALARM_KEYBOARD.items()}
 KEYBOARD_STRUCTURE = {
 	'disarmed' : ['armStay',
@@ -92,9 +99,9 @@ class TelegramBotEventListener(appapi.AppDaemon):
 			self.errorMessage(payload_event,"User ID was not found\nPlease contact administrator")
 			self.log("ERROR - user_id <{}> not found".format(payload_event["user_id"]))
 		else:
-			simpleFunction = ALARM_KEYBOARD_TO_METHOD.get(ALARM_KEYBOARD_REVERSED.get(payload_event['text']))
+			simpleFunction = ALARM_KEYBOARD_TO_METHOD.get(ALARM_KEYBOARD.get(payload_event['text']))
 			if simpleFunction is not None:
-					simpleFunction(self,payload_event,accessgroup)
+					simpleFunction(self, payload_event, accessgroup)
 			else:
 					text = payload_event['text'].lower()
 					replace_text = "{} back to ".format(u'\U0001f448')
@@ -103,19 +110,19 @@ class TelegramBotEventListener(appapi.AppDaemon):
 					text = payload_event['text'] = refined_text
 					if text.startswith("turn off") or text.startswith("turn on"):
 							self.turn_on_off(payload_event, accessgroup)
-					elif text.startswith("bypass") or text.startswith("unbypass"):
+					elif text.startswith("bypass") or text.startswith("enable"):
 							self.bypassZone(payload_event, accessgroup)
+					elif text.endswith("sensors"):
+							self.sensorStatusSelective(payload_event, accessgroup)
 					elif self.isRoom(payload_event, accessgroup):
 							self.roomControl(payload_event, accessgroup)
 					elif self.endsWithEntity(payload_event, accessgroup):
 							self.roomEntityControl(payload_event, accessgroup)
-					elif text.startswith("bypass") or text.startswith("unbypass"):
-							self.bypassZone(payload_event, accessgroup)
 					else:
 							self.printMenu(payload_event,accessgroup)
 
 	def alarmFunction(self, payload_event, accessgroup):
-		alarm_command = ALARM_KEYBOARD_REVERSED.get(payload_event['text'])
+		alarm_command = ALARM_KEYBOARD.get(payload_event['text'])
 		alarm_service = TEXT_TO_SERVICE[alarm_command]
 		chatid = str(payload_event['chat_id'])
 		self.log("Calling Alarm Service {} from {}".format(alarm_service,chatid))
@@ -155,6 +162,7 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		return {"state":self.get_state(entity_id), "message":"Aready {}".format(self.get_state(entity_id))}
 
 	
+
 	def sensorStatus(self, payload_event, accessgroup):
 		self.log("Sensor Status")
 		alarm_sensor_states = self.get_state("alarm_control_panel.house","all")
@@ -162,6 +170,30 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		#self.log(alarm_sensor_states['attributes']['allsensors'])
 		message = ''
 		for eid in alarm_sensor_states['attributes']['allsensors']:
+  			message+= "[{}] - {}\n".format(str(all_sensor_states[eid]['state']).upper(),all_sensor_states[eid]['attributes']['friendly_name'])
+		self.log(message)
+		self.call_service("telegram_bot/send_message",
+			target = payload_event['chat_id'],
+			message = message)
+
+	def sensorStatusSelective(self, payload_event, accessgroup):
+		self.log("Sensor Status Selective")
+		all_group_states = self.get_state('group')
+		friendly_name_text = payload_event['text']
+		sensors = None
+		for group in all_group_states.items():
+				if type(group[1]) == dict:
+					friendly_name_test = group[1]['attributes']['friendly_name'].lower()
+					#self.log("<{}> - <{}>".format(friendly_name_text, friendly_name_test))
+					if friendly_name_text == friendly_name_test:
+						sensors = group[1]['attributes']['entity_id']
+						break
+		if sensors:
+  			self.log('sens')
+  			
+		all_sensor_states = self.get_state('binary_sensor')
+		message = ''
+		for eid in sensors:
   			message+= "[{}] - {}\n".format(str(all_sensor_states[eid]['state']).upper(),all_sensor_states[eid]['attributes']['friendly_name'])
 		self.log(message)
 		self.call_service("telegram_bot/send_message",
@@ -182,11 +214,19 @@ class TelegramBotEventListener(appapi.AppDaemon):
 						entity_id = group[0]
 						break
 		if entity_id:
-  			result = self.call_service("alarm_control_panel/alarm_arm_{}_zone".format(splitText[0]),zone = entity_id)
-		self.run_in(self.bypass(payload_event,accessgroup), 100)
+			handle = self.call_service("alarm_control_panel/alarm_arm_{}_zone".format(ALARM_KEYBOARD[splitText[0]]),zone = entity_id)
+			self.run_in(self.bypass,1,payload_event = payload_event, accessgroup = accessgroup)
+			#self.listenForService()
 
-	def bypass(self, payload_event, accessgroup):
+	def bypass(self,*args):
 		self.log("Bypass")
+		self.log(args)
+		payload_event = args[0]
+		accessgroup = payload_event.get('accessgroup')
+		if accessgroup is not None:
+  			payload_event = payload_event.get('payload_event')
+		else:
+				accessgroup = args[1]
 		alarm_state = self.get_state("alarm_control_panel.house","all")
 		alarm_zones = alarm_state['attributes']['zones']
 
@@ -198,7 +238,7 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		for zone_id in alarm_zones:
 			zone_friendly_name = all_group_states[zone_id]['attributes']['friendly_name'].replace(" Sensors","")
 			if set(all_group_states[zone_id]['attributes']['entity_id']) <= set(bypassedSensors):
-					keyboard.append("Unbypass {0},{0} Sensors".format(zone_friendly_name))
+					keyboard.append("Enable {0},{0} Sensors".format(zone_friendly_name))
 					message+="{} {}\n".format(u'\U0000274C',zone_friendly_name)
 			else:
 					keyboard.append("Bypass {0},{0} Sensors".format(zone_friendly_name))
@@ -294,7 +334,7 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		friendly_name = text[8:].lstrip().lower()
 		if text.startswith("turn on"): isOn = True
 		self.log("Checking if entity is a light...")
-		entity_labels = ["lights","switches"]
+		entity_labels = ["lights","switches","scenes"]
 		self.log("Entity - {}".format(friendly_name))
 		if friendly_name.startswith("all "):
 			payload_event['text'] = friendly_name.replace("all ","")
@@ -310,7 +350,11 @@ class TelegramBotEventListener(appapi.AppDaemon):
 				room_text = payload_event["text"][:-(len(entity)+1)]
 				room_object = None
 				for room in accessgroup["rooms"]:
-					friendly_name_temp = str(self.get_state(room,"friendly_name")).lower()
+					friendly_name_temp = self.get_state(room,"telegram_name")
+					if friendly_name_temp is None:
+						friendly_name_temp = str(self.get_state(room,"friendly_name")).lower()
+					else:
+						friendly_name_temp = str(friendly_name_temp).lower()
 					if friendly_name_temp==room_text:
 						room_object = room
 				group_entities = self.get_state(room_object,"attributes")["entity_id"]
@@ -323,7 +367,12 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		self.log("Entity - {}".format(friendly_name))
 		for entity_label in entity_labels:
 			for entity in accessgroup[entity_label]:
-				friendly_name_temp = str(self.get_state(entity,"friendly_name")).lower()
+				friendly_name_temp = self.get_state(entity,"telegram_name")
+				self.log("{} - {}".format(friendly_name_temp, friendly_name))
+				if friendly_name_temp is None:
+					friendly_name_temp = str(self.get_state(entity,"friendly_name")).lower()
+				else:
+					friendly_name_temp = str(friendly_name_temp).lower()
 				if friendly_name==friendly_name_temp:
 					self.log("Entity is a {}".format(entity_label))
 					self.entity_turn_on_off(entity,friendly_name,isOn,payload_event)
@@ -349,26 +398,32 @@ class TelegramBotEventListener(appapi.AppDaemon):
 			keyboard = accessgroup["menu"]
 		elif keyboard_type=="switches" or keyboard_type=="lights" or keyboard_type=="other":
 			for entity in accessgroup[keyboard_type]:
-				friendly_name_temp = str(self.get_state(entity,"friendly_name"))
+				friendly_name_temp = self.get_state(entity,"telegram_name")
+				if friendly_name_temp is None:
+						friendly_name_temp = str(self.get_state(entity,"friendly_name"))
 				keyboard.append("Turn on {0},Turn off {0}".format(friendly_name_temp))
 			keyboard.append("Turn on all {0}".format(keyboard_type))
 			keyboard.append("Turn off all {0}".format(keyboard_type))
-			keyboard.append("{} Back to Menu".format(u'\U0001f3e0'))
+			keyboard.append("{} Menu".format(u'\U0001f3e0'))
 		elif keyboard_type=="scenes":
 			for entity in accessgroup["scenes"]:
-				friendly_name_temp = str(self.get_state(entity,"entity_id"))
+				friendly_name_temp = self.get_state(entity,"telegram_name")
+				if friendly_name_temp is None:
+						friendly_name_temp = str(self.get_state(entity,"friendly_name"))
 				keyboard.append("Turn on {}".format(friendly_name_temp))
-			keyboard.append("{} Back to Menu".format(u'\U0001f3e0'))
+			keyboard.append("{} Menu".format(u'\U0001f3e0'))
 		elif keyboard_type=="rooms":
 			for entity in accessgroup["rooms"]:
-				friendly_name_temp = str(self.get_state(entity,"friendly_name"))
+				friendly_name_temp = self.get_state(entity,"telegram_name")
+				if friendly_name_temp is None:
+						friendly_name_temp = str(self.get_state(entity,"friendly_name"))
 				keyboard.append(friendly_name_temp)
-			keyboard.append("{} Back to Menu".format(u'\U0001f3e0'))
+			keyboard.append("{} Menu".format(u'\U0001f3e0'))
 		elif keyboard_type =="room_control":
 			functions = ["lights","switches","scenes"]
 			for entry in functions:
 				keyboard.append("{} {}".format(payload_event["text"],entry))
-			keyboard.append("{} Back to Rooms,{} Back to Menu".format(u'\U0001f448',u'\U0001f3e0'))
+			keyboard.append("{} Rooms,{} Menu".format(u'\U0001f448',u'\U0001f3e0'))
 		elif keyboard_type in KEYBOARD_STRUCTURE.keys():
 			keyboard = self.getRefinedKeyboard(KEYBOARD_STRUCTURE[keyboard_type],accessgroup['alarm']['functions'])						
 		return keyboard
@@ -378,12 +433,12 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		for item in keyboard:
 			if(type(item) == str):
 				if item not in alarmAccessGroup:
-					refinedKeyboard.append(ALARM_KEYBOARD[item])
+					refinedKeyboard.append(ALARM_KEYBOARD_REVERSED[item])
 			else:
-				line = ALARM_KEYBOARD[item[0]]
+				line = ALARM_KEYBOARD_REVERSED[item[0]]
 				for string in item[1:]:
 					if string not in alarmAccessGroup:
-						line += ",{}".format(ALARM_KEYBOARD[string])
+						line += ",{}".format(ALARM_KEYBOARD_REVERSED[string])
 				refinedKeyboard.append(line)
 		return refinedKeyboard
 	def control_lights(self,payload_event, accessgroup):
@@ -401,6 +456,13 @@ class TelegramBotEventListener(appapi.AppDaemon):
 					message = "Which switches do you want to control?",
 					disable_notification = True,
 					keyboard = self.getKeyboard("switches",accessgroup,payload_event))
+		self.log("+---}")
+	def cameras(self, payload_event, accessgroup):
+		self.log("Serving Camera Menu")
+		self.call_service("telegram_bot/send_message",
+					target = payload_event['chat_id'],
+					message = "Feature Coming Soon {}".format(u'\U0001f609'),
+					disable_notification = True)
 		self.log("+---}")
 	def control_scenes(self, payload_event, accessgroup):
 		self.log("Serving Scene Menu")
@@ -443,7 +505,7 @@ ALARM_KEYBOARD_TO_METHOD = {
 	'sensorBypass'     :TelegramBotEventListener.bypass,
 	'backToMenu'       :TelegramBotEventListener.printMenu,
 	'panic'       	   :TelegramBotEventListener.alarmFunction,
-	'cameras'    		   :None,
+	'cameras'    		   :TelegramBotEventListener.cameras,
 	'disarm'           :TelegramBotEventListener.alarmFunction,
 	'armAway'          :TelegramBotEventListener.alarmFunction,
 	'forceArm' 				 :TelegramBotEventListener.alarmFunction,

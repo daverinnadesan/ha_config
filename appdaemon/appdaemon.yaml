@@ -5,7 +5,7 @@ AppDaemon:
   api_port: 5000
 
 HASS:
-  ha_url: https://rsdatahost.duckdns.org:8123
+  ha_url: http://localhost:8123
   ha_key: daver1ns
 
 Alarm:
@@ -15,8 +15,10 @@ Alarm:
   alarm_sounds: input_boolean.alarm_sounds
   notify_triggered:
     - admin
+    - member
   notify_warning:
     - admin
+    - member
   notify_disarmed:
     - admin
   notify_armed_home:
@@ -45,6 +47,7 @@ Telegram:
       chatids:
         - "444908880"
         - "396287366"
+        - "437911056"
       menu:
         - Alarm Functions
         - Rooms
@@ -52,16 +55,12 @@ Telegram:
         - Cameras
       switches:
         - switch.tv
-        - switch.living_room_outlet_2
-        - switch.kettle
-        - switch.bedroom_outlet
+        - switch.lamp
       lights:
         - switch.kitchen
         - switch.living_room
         - switch.dummy
         - switch.tarinis_bedroom
-        - light.lamp
-        - light.lounge
         - light.gateway_light_34ce0088d613
       rooms:
         - group.living_room
@@ -69,15 +68,20 @@ Telegram:
         - group.bedroom
         - group.kitchen
       scenes:
-        - script.new
+        - script.power
+        - script.tuner
+        - script.cd
+        - script.mute
+        - script.vol_up
+        - script.vol_down
       alarm:
         functions:
           - nonee
     member:
       chatids:
-        - "437911056"
         - "444385343"
         - "299386279"
+        - "255658098"
         - "346686450"
       menu:
         - Alarm Functions
@@ -86,22 +90,29 @@ Telegram:
         - Scenes
       switches:
         - switch.tv
-        - switch.geyser
+        - switch.lamp
       lights:
         - switch.kitchen
         - switch.living_room
         - switch.dummy
         - switch.tarinis_bedroom
-        - light.lounge
+        - light.gateway_light_34ce0088d613
       rooms:
         - group.living_room
         - group.bathroom
+        - group.bedroom
         - group.kitchen
       scenes:
-        - script.new
+        - script.power
+        - script.tuner
+        - script.cd
+        - script.mute
+        - script.vol_up
+        - script.vol_down
       alarm:
         functions:
-          - disarm
+          - sensorBypass
+          - sensorOverview
     guest:
       chatids:
         - "4423908880"
@@ -110,14 +121,18 @@ Telegram:
         - Lights,Switches
         - Scenes
       switches:
-        - switch.kettle
+        - switch.lamp
       lights:
         - switch.living_room
-        - light.lounge
       rooms:
         - group.kitchen
       scenes:
         - script.new
+      alarm:
+        functions:
+          - sensorBypass
+          - sensorOverview
+          - disarm
 
 
 

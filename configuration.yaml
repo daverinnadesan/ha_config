@@ -6,7 +6,7 @@ homeassistant:
   unit_system: metric
   time_zone: Africa/Johannesburg
   packages: !include_dir_named packages
-  customize: !include_dir_merge_named customize
+  customize: !include customize.yaml
 
 mqtt: !include config/mqtt.yaml
 http: !include config/http.yaml

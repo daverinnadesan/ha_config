@@ -1,0 +1,25 @@
+Living Room:
+    icon: mdi:home
+    entities:
+        - switch.lamp
+        - switch.living_room
+        - switch.tv
+        - light.lounge
+        - light.gateway_light_34ce0088d613
+Bathroom:
+    control: hidden
+    entities:
+        - switch.dummy
+        - switch.extractor_fan
+Bedroom:
+    control: hidden
+    entities:
+        - switch.tarinis_bedroom
+        - switch.outlet_1
+Kitchen:
+    control: hidden
+    entities:
+        - switch.kitchen
+        - switch.kettle
+        - switch.outlet_2
+

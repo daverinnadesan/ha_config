@@ -1,6 +1,8 @@
 telegram_bot:
-  - platform: polling
+  - platform: webhooks
     api_key: 322051580:AAEGs_U3Lw32dF4hsdrq9dB1bG_ZvcG5-0c
+    trusted_networks:
+      - 127.0.0.1
     allowed_chat_ids:
       - 299386279
       - 346686450
@@ -8,6 +10,8 @@ telegram_bot:
       - 444908880
       - 444385343
       - 396287366
+      - -220710108
+      - 255658098
 notify:
   - name: telegram_user1
     platform: telegram

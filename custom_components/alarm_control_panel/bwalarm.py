@@ -184,6 +184,7 @@ class BWAlarm(alarm.AlarmControlPanel):
         if new is None or new.state != STATE_ON:
             return
         eid = event.data['entity_id']
+        self._triggered_by = None
         if eid in self.immediate:
             self._lasttrigger = eid
             self.process_event(Events.ImmediateTrip)
@@ -231,9 +232,12 @@ class BWAlarm(alarm.AlarmControlPanel):
             zone_sensors = zone.attributes['entity_id']
             _LOGGER.info("{} - {}".format(zone_sensors,type(zone_sensors)))
             self.bypassedsensors |= set(zone_sensors)
+            self.immediate -= set(zone_sensors)
+            self.delayed -= set(zone_sensors)
+            self.ignored = self._allinputs - (self.immediate | self.delayed)
+            self.schedule_update_ha_state()
         else:
             _LOGGER.info("Something went wrong...:(")
-        self.schedule_update_ha_state()
 
     def alarm_arm_unbypass_zone(self, zone_eid):
         _LOGGER.info(zone_eid)
@@ -243,7 +247,10 @@ class BWAlarm(alarm.AlarmControlPanel):
             zone_sensors = zone.attributes['entity_id']
             _LOGGER.info(zone_sensors)
             self.bypassedsensors -= set(zone_sensors)
-        self.schedule_update_ha_state()
+            self.immediate |= set(zone_sensors)&self._immediate
+            self.delayed |= set(zone_sensors)&self._delayed
+            self.ignored = self._allinputs - (self.immediate | self.delayed)
+            self.schedule_update_ha_state()
 
 
     ### Internal processing
@@ -254,11 +261,12 @@ class BWAlarm(alarm.AlarmControlPanel):
 
     def setsignals(self, athome):
         """ Figure out what to sense and how """
-        self.immediate -= self.bypassedsensors
-        self.delayed -= self.bypassedsensors
-        self.immediate = set(filter(self.noton, self._immediate))
-        self.delayed = set(filter(self.noton, self._delayed))
+        self.immediate = self._immediate - self.bypassedsensors
+        self.delayed = self._delayed - self.bypassedsensors
+        self.immediate = set(filter(self.noton, self.immediate))
+        self.delayed = set(filter(self.noton, self.delayed))
         self.tripped_sensors = (self._immediate - self.immediate) | (self._delayed - self.delayed)
+        self.tripped_sensors -= self.bypassedsensors
         _LOGGER.info("Tripped Sensors - <{}>".format(self.tripped_sensors))
         if athome:
             self.immediate -= self._notathome
@@ -318,12 +326,10 @@ class BWAlarm(alarm.AlarmControlPanel):
             if new == STATE_ALARM_WARNING:
                 _LOGGER.debug("Turning on warning")
                 input_boolean.turn_on(self._hass, self._warning)
-                self._triggered_by = None
                 self._timeoutat = now() + self._pending_time
             elif new == STATE_ALARM_TRIGGERED:
                 _LOGGER.debug("Turning on alarm")
                 input_boolean.turn_on(self._hass, self._alarm)
-                self._triggered_by = None
                 self._timeoutat = now() + self._trigger_time
             elif new == STATE_ALARM_PENDING:
                 _LOGGER.debug("Pending user leaving house")
@@ -335,16 +341,17 @@ class BWAlarm(alarm.AlarmControlPanel):
                 self._returnto = STATE_ALARM_ARMED_HOME
                 self.setsignals(True)
                 if self.tripped_sensors != set():
-                    self.bypassedsensors|=self.tripped_sensors
                     self._state = STATE_ALARM_PENDING
                     self._timeoutat = now() + self._pending_time
                 else:
                     self._state = STATE_ALARM_ARMED_HOME    
             elif new == STATE_ALARM_ARMED_AWAY:
                 self.setsignals(False)
+                self.bypassedsensors|=self.tripped_sensors
                 self._returnto = new
             elif new == STATE_ALARM_ARMED_HOME:
                 self.setsignals(True)
+                self.bypassedsensors|=self.tripped_sensors
                 self._returnto = new
             elif new == STATE_ALARM_DISARMED:
                 self._returnto = new
@@ -354,7 +361,6 @@ class BWAlarm(alarm.AlarmControlPanel):
                 self._returnto = STATE_ALARM_ARMED_AWAY
                 self.setsignals(False)
                 if self.tripped_sensors != set():
-                    self.bypassedsensors|=self.tripped_sensors
                     self._state = STATE_ALARM_PENDING
                     self._timeoutat = now() + self._pending_time
                 else:

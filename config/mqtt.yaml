@@ -1,9 +1,9 @@
-  broker: rsdatahost.local
+  broker: localhost
   port: 1883
   client_id: home-assistant-1
   keepalive: 60
   username: homeassistant
-  password: daver1ns
+  password: Cheesetoast12MqttHomeassistant
   protocol: 3.1
   birth_message:
     topic: "tele/hass1/LWT"
