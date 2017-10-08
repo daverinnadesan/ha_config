@@ -9519,3 +9519,1926 @@
 2017-10-08 00:15:39.217309 INFO Telegram: +---}
 2017-10-08 00:15:42.369179 INFO Telegram: Turning off light.gateway_light_34ce0088d613
 2017-10-08 00:15:42.460769 INFO Telegram: +---}
+2017-10-08 06:04:04.562362 INFO Telegram: {---+
+2017-10-08 06:04:04.594076 INFO Telegram: {'chat_id': 396287366, 'text': '🏠 Menu', 'user_id': 396287366, 'from_last': 'Dav', 'from_first': 'Legendary'}
+2017-10-08 06:04:04.615135 INFO Telegram: Legendary ---> 🏠 Menu
+2017-10-08 06:04:04.632141 INFO Telegram: Serving Main Menu
+2017-10-08 06:04:11.471171 INFO Telegram: +---}
+2017-10-08 07:10:38.605467 INFO Telegram: {---+
+2017-10-08 07:10:38.637585 INFO Telegram: {'chat_id': 346686450, 'text': '🏠 Menu', 'user_id': 346686450, 'from_last': 'Nadesan', 'from_first': 'Rajen'}
+2017-10-08 07:10:38.654399 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 07:10:38.682125 INFO Telegram: Serving Main Menu
+2017-10-08 07:10:48.961612 INFO Telegram: +---}
+2017-10-08 07:10:54.173151 INFO Telegram: {---+
+2017-10-08 07:10:54.194977 INFO Telegram: {'chat_id': 346686450, 'text': 'Lights', 'user_id': 346686450, 'from_last': 'Nadesan', 'from_first': 'Rajen'}
+2017-10-08 07:10:54.217302 INFO Telegram: Rajen ---> Lights
+2017-10-08 07:10:54.245460 INFO Telegram: Serving Light Menu
+2017-10-08 07:10:54.814924 INFO Telegram: +---}
+2017-10-08 07:10:59.485581 INFO Telegram: {---+
+2017-10-08 07:10:59.503611 INFO Telegram: {'chat_id': 346686450, 'text': 'Turn on all lights', 'user_id': 346686450, 'from_last': 'Nadesan', 'from_first': 'Rajen'}
+2017-10-08 07:10:59.522534 INFO Telegram: Rajen ---> Turn on all lights
+2017-10-08 07:10:59.544287 INFO Telegram: turn on all lights (👈 back to ) ---> *turn on all lights*
+2017-10-08 07:10:59.563670 INFO Telegram: Checking if entity is a light...
+2017-10-08 07:10:59.582670 INFO Telegram: Entity - all lights
+2017-10-08 07:10:59.602514 INFO Telegram: IS A ENTITY!!!
+2017-10-08 07:11:02.442922 INFO Telegram: {---+
+2017-10-08 07:11:02.480834 INFO Telegram: {'chat_id': 346686450, 'text': 'Turn off all lights', 'user_id': 346686450, 'from_last': 'Nadesan', 'from_first': 'Rajen'}
+2017-10-08 07:11:02.503973 INFO Telegram: Rajen ---> Turn off all lights
+2017-10-08 07:11:02.519223 INFO Telegram: turn off all lights (👈 back to ) ---> *turn off all lights*
+2017-10-08 07:11:02.536827 INFO Telegram: Checking if entity is a light...
+2017-10-08 07:11:02.554063 INFO Telegram: Entity - all lights
+2017-10-08 07:11:02.571098 INFO Telegram: IS A ENTITY!!!
+2017-10-08 07:11:10.492769 INFO Telegram: Turning on ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 07:11:10.534496 INFO Telegram: +---}
+2017-10-08 07:11:13.304418 INFO Telegram: Turning off ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 07:11:13.323528 INFO Telegram: +---}
+2017-10-08 07:11:20.853690 INFO Telegram: {---+
+2017-10-08 07:11:20.878816 INFO Telegram: {'chat_id': 346686450, 'text': '🏠 Menu', 'user_id': 346686450, 'from_last': 'Nadesan', 'from_first': 'Rajen'}
+2017-10-08 07:11:20.905011 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 07:11:20.922159 INFO Telegram: Serving Main Menu
+2017-10-08 07:11:21.542736 INFO Telegram: +---}
+2017-10-08 07:11:23.128635 INFO Telegram: {---+
+2017-10-08 07:11:23.157976 INFO Telegram: {'chat_id': 346686450, 'text': 'Alarm Functions', 'user_id': 346686450, 'from_last': 'Nadesan', 'from_first': 'Rajen'}
+2017-10-08 07:11:23.190567 INFO Telegram: Rajen ---> Alarm Functions
+2017-10-08 07:11:23.208567 INFO Telegram: Serving Alarm Function Menu
+2017-10-08 07:11:23.748008 INFO Telegram: Current Alarm Status - *ARMED_HOME*
+2017-10-08 07:11:23.773193 INFO Telegram: +---}
+2017-10-08 07:11:28.307517 INFO Telegram: {---+
+2017-10-08 07:11:28.344360 INFO Telegram: {'chat_id': 346686450, 'text': 'Cameras', 'user_id': 346686450, 'from_last': 'Nadesan', 'from_first': 'Rajen'}
+2017-10-08 07:11:28.359548 INFO Telegram: Rajen ---> Cameras
+2017-10-08 07:11:28.376610 INFO Telegram: Serving Camera Menu
+2017-10-08 07:11:28.908655 INFO Telegram: +---}
+2017-10-08 08:15:03.842566 INFO AppDaemon Version 2.1.7 starting
+2017-10-08 08:15:03.850814 INFO Configuration read from: /home/homeassistant/config/appdaemon/appdaemon.yaml
+2017-10-08 08:15:04.126765 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:15:09.243530 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:15:14.352468 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:15:19.464678 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:15:24.568748 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:15:29.704361 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:15:34.805504 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:15:39.906480 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:15:45.012051 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:15:50.129805 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:15:55.237233 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:16:00.357344 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:16:05.474095 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:16:10.593190 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:16:15.791382 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:16:20.895253 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:16:26.014285 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:16:31.301201 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-08 08:16:38.667014 INFO Got initial state
+2017-10-08 08:16:38.689016 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-08 08:16:38.719475 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-08 08:16:41.052562 INFO Telegram: Listening for telegram texts...
+2017-10-08 08:16:41.057235 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/hello.py
+2017-10-08 08:16:41.085795 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-08 08:16:41.107895 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-08 08:16:41.171786 INFO Alarm: Listening for Alarm Triggers....
+2017-10-08 08:16:41.178308 INFO App initialization complete
+2017-10-08 08:16:41.184145 INFO Dashboards are disabled
+2017-10-08 08:16:41.191632 INFO Starting API
+2017-10-08 08:16:41.316231 INFO Connected to Home Assistant 0.54.0
+2017-10-08 08:28:19.142020 INFO Telegram: {---+
+2017-10-08 08:28:19.158028 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 08:28:19.173205 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 08:28:19.189809 INFO Telegram: Serving Main Menu
+2017-10-08 08:28:23.723529 INFO Telegram: {---+
+2017-10-08 08:28:23.760701 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on all lights', 'user_id': 437911056}
+2017-10-08 08:28:23.783088 INFO Telegram: Rajen ---> Turn on all lights
+2017-10-08 08:28:23.798239 INFO Telegram: turn on all lights (👈 back to ) ---> *turn on all lights*
+2017-10-08 08:28:23.814768 INFO Telegram: Checking if entity is a light...
+2017-10-08 08:28:23.831738 INFO Telegram: Entity - all lights
+2017-10-08 08:28:23.848002 INFO Telegram: IS A ENTITY!!!
+2017-10-08 08:28:26.004845 INFO Telegram: +---}
+2017-10-08 08:28:29.757870 INFO Telegram: Turning on ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 08:28:29.776863 INFO Telegram: +---}
+2017-10-08 08:28:35.538030 INFO Telegram: {---+
+2017-10-08 08:28:35.569514 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Lights', 'user_id': 437911056}
+2017-10-08 08:28:35.593821 INFO Telegram: Rajen ---> Lights
+2017-10-08 08:28:35.620443 INFO Telegram: Serving Light Menu
+2017-10-08 08:28:36.179084 INFO Telegram: +---}
+2017-10-08 08:28:39.461907 INFO Telegram: {---+
+2017-10-08 08:28:39.489368 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on all lights', 'user_id': 437911056}
+2017-10-08 08:28:39.515409 INFO Telegram: Rajen ---> Turn on all lights
+2017-10-08 08:28:39.540379 INFO Telegram: turn on all lights (👈 back to ) ---> *turn on all lights*
+2017-10-08 08:28:39.573356 INFO Telegram: Checking if entity is a light...
+2017-10-08 08:28:39.605134 INFO Telegram: Entity - all lights
+2017-10-08 08:28:39.623225 INFO Telegram: IS A ENTITY!!!
+2017-10-08 08:28:43.766915 INFO Telegram: Turning on ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 08:28:43.812676 INFO Telegram: +---}
+2017-10-08 08:28:44.126733 INFO Telegram: {---+
+2017-10-08 08:28:44.143079 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn off all lights', 'user_id': 437911056}
+2017-10-08 08:28:44.158309 INFO Telegram: Rajen ---> Turn off all lights
+2017-10-08 08:28:44.173764 INFO Telegram: turn off all lights (👈 back to ) ---> *turn off all lights*
+2017-10-08 08:28:44.190920 INFO Telegram: Checking if entity is a light...
+2017-10-08 08:28:44.208250 INFO Telegram: Entity - all lights
+2017-10-08 08:28:44.225490 INFO Telegram: IS A ENTITY!!!
+2017-10-08 08:28:46.395127 INFO Telegram: Turning off ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 08:28:46.418431 INFO Telegram: +---}
+2017-10-08 08:28:53.825541 INFO Telegram: {---+
+2017-10-08 08:28:53.861688 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Security hub', 'user_id': 437911056}
+2017-10-08 08:28:53.878091 INFO Telegram: Rajen ---> Turn on Security hub
+2017-10-08 08:28:53.893131 INFO Telegram: turn on security hub (👈 back to ) ---> *turn on security hub*
+2017-10-08 08:28:53.910232 INFO Telegram: Checking if entity is a light...
+2017-10-08 08:28:53.926876 INFO Telegram: Entity - security hub
+2017-10-08 08:28:53.943773 INFO Telegram: Entity - security hub
+2017-10-08 08:28:53.961582 INFO Telegram: None - security hub
+2017-10-08 08:28:53.979868 INFO Telegram: None - security hub
+2017-10-08 08:28:54.000536 INFO Telegram: Bathroom - security hub
+2017-10-08 08:28:54.027750 INFO Telegram: Tarini's Room - security hub
+2017-10-08 08:28:54.077773 INFO Telegram: None - security hub
+2017-10-08 08:28:54.095120 INFO Telegram: Entity is a lights
+2017-10-08 08:28:55.006406 INFO Telegram: Turning on light.gateway_light_34ce0088d613
+2017-10-08 08:28:55.083139 INFO Telegram: +---}
+2017-10-08 08:28:58.367439 INFO Telegram: {---+
+2017-10-08 08:28:58.478732 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn off Security hub', 'user_id': 437911056}
+2017-10-08 08:28:58.536930 INFO Telegram: Rajen ---> Turn off Security hub
+2017-10-08 08:28:58.625941 INFO Telegram: turn off security hub (👈 back to ) ---> *turn off security hub*
+2017-10-08 08:28:58.688164 INFO Telegram: Checking if entity is a light...
+2017-10-08 08:28:58.728700 INFO Telegram: Entity - security hub
+2017-10-08 08:28:58.797860 INFO Telegram: Entity - security hub
+2017-10-08 08:28:58.868758 INFO Telegram: None - security hub
+2017-10-08 08:28:58.891757 INFO Telegram: None - security hub
+2017-10-08 08:28:58.924677 INFO Telegram: Bathroom - security hub
+2017-10-08 08:28:58.965028 INFO Telegram: Tarini's Room - security hub
+2017-10-08 08:28:59.000044 INFO Telegram: None - security hub
+2017-10-08 08:28:59.049992 INFO Telegram: Entity is a lights
+2017-10-08 08:29:00.243449 INFO Telegram: Turning off light.gateway_light_34ce0088d613
+2017-10-08 08:29:00.320681 INFO Telegram: +---}
+2017-10-08 08:29:02.090868 INFO Telegram: {---+
+2017-10-08 08:29:02.111541 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Security hub', 'user_id': 437911056}
+2017-10-08 08:29:02.126616 INFO Telegram: Rajen ---> Turn on Security hub
+2017-10-08 08:29:02.142283 INFO Telegram: turn on security hub (👈 back to ) ---> *turn on security hub*
+2017-10-08 08:29:02.159490 INFO Telegram: Checking if entity is a light...
+2017-10-08 08:29:02.176858 INFO Telegram: Entity - security hub
+2017-10-08 08:29:02.194202 INFO Telegram: Entity - security hub
+2017-10-08 08:29:02.211702 INFO Telegram: None - security hub
+2017-10-08 08:29:02.229876 INFO Telegram: None - security hub
+2017-10-08 08:29:02.248231 INFO Telegram: Bathroom - security hub
+2017-10-08 08:29:02.266161 INFO Telegram: Tarini's Room - security hub
+2017-10-08 08:29:02.291018 INFO Telegram: None - security hub
+2017-10-08 08:29:02.308734 INFO Telegram: Entity is a lights
+2017-10-08 08:29:03.582599 INFO Telegram: Turning on light.gateway_light_34ce0088d613
+2017-10-08 08:29:03.617026 INFO Telegram: +---}
+2017-10-08 08:29:06.198034 INFO Telegram: {---+
+2017-10-08 08:29:06.232635 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 08:29:06.247779 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 08:29:06.264624 INFO Telegram: Serving Main Menu
+2017-10-08 08:29:06.835865 INFO Telegram: +---}
+2017-10-08 08:43:41.918997 INFO Telegram: {---+
+2017-10-08 08:43:41.942682 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': '🏠 Menu', 'user_id': 346686450}
+2017-10-08 08:43:41.958172 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 08:43:41.974725 INFO Telegram: Serving Main Menu
+2017-10-08 08:43:42.586319 INFO Telegram: +---}
+2017-10-08 08:43:45.271551 INFO Telegram: {---+
+2017-10-08 08:43:45.305577 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Lights', 'user_id': 346686450}
+2017-10-08 08:43:45.320322 INFO Telegram: Rajen ---> Lights
+2017-10-08 08:43:45.337417 INFO Telegram: Serving Light Menu
+2017-10-08 08:43:45.893961 INFO Telegram: +---}
+2017-10-08 08:43:53.498574 INFO Telegram: {---+
+2017-10-08 08:43:53.517719 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Turn on all lights', 'user_id': 346686450}
+2017-10-08 08:43:53.550025 INFO Telegram: Rajen ---> Turn on all lights
+2017-10-08 08:43:53.575739 INFO Telegram: turn on all lights (👈 back to ) ---> *turn on all lights*
+2017-10-08 08:43:53.617220 INFO Telegram: Checking if entity is a light...
+2017-10-08 08:43:53.633977 INFO Telegram: Entity - all lights
+2017-10-08 08:43:53.651065 INFO Telegram: IS A ENTITY!!!
+2017-10-08 08:43:55.759368 INFO Telegram: Turning on ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 08:43:55.777784 INFO Telegram: +---}
+2017-10-08 08:44:04.100569 INFO Telegram: {---+
+2017-10-08 08:44:04.121283 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Turn off all lights', 'user_id': 346686450}
+2017-10-08 08:44:04.136095 INFO Telegram: Rajen ---> Turn off all lights
+2017-10-08 08:44:04.151671 INFO Telegram: turn off all lights (👈 back to ) ---> *turn off all lights*
+2017-10-08 08:44:04.168293 INFO Telegram: Checking if entity is a light...
+2017-10-08 08:44:04.186021 INFO Telegram: Entity - all lights
+2017-10-08 08:44:04.203327 INFO Telegram: IS A ENTITY!!!
+2017-10-08 08:44:06.926457 INFO Telegram: Turning off ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 08:44:06.968037 INFO Telegram: +---}
+2017-10-08 10:46:40.336054 INFO Telegram: {---+
+2017-10-08 10:46:40.358570 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': '🏠 Menu', 'user_id': 346686450}
+2017-10-08 10:46:40.380951 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 10:46:40.398207 INFO Telegram: Serving Main Menu
+2017-10-08 10:46:47.035810 INFO Telegram: +---}
+2017-10-08 10:46:49.490529 INFO Telegram: {---+
+2017-10-08 10:46:49.529866 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Alarm Functions', 'user_id': 346686450}
+2017-10-08 10:46:49.558012 INFO Telegram: Rajen ---> Alarm Functions
+2017-10-08 10:46:49.575995 INFO Telegram: Serving Alarm Function Menu
+2017-10-08 10:46:50.187825 INFO Telegram: Current Alarm Status - *DISARMED*
+2017-10-08 10:46:50.205647 INFO Telegram: +---}
+2017-10-08 10:46:52.628565 INFO Telegram: {---+
+2017-10-08 10:46:52.660839 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Arm Stay', 'user_id': 346686450}
+2017-10-08 10:46:52.682886 INFO Telegram: Rajen ---> Arm Stay
+2017-10-08 10:46:52.699406 INFO Telegram: Calling Alarm Service alarm_arm_home from 346686450
+2017-10-08 10:46:53.287749 INFO Alarm: <<...
+2017-10-08 10:46:53.421354 INFO Alarm: Event Trigger for  :PENDING
+2017-10-08 10:46:53.469369 INFO Alarm: Triggered by       :Rajen
+2017-10-08 10:46:53.510464 INFO Alarm: Notifying
+2017-10-08 10:46:53.537196 INFO Alarm: [admin] 444908880
+2017-10-08 10:46:55.191862 INFO Alarm: [admin] 396287366
+2017-10-08 10:46:55.744585 INFO Alarm: [admin] 437911056
+2017-10-08 10:46:56.326464 INFO Alarm: 3 user(s) successfully notified
+2017-10-08 10:46:56.350675 INFO Alarm: ...>>
+2017-10-08 10:47:00.870148 INFO Telegram: {---+
+2017-10-08 10:47:00.894061 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Force Arm', 'user_id': 346686450}
+2017-10-08 10:47:00.913154 INFO Telegram: Rajen ---> Force Arm
+2017-10-08 10:47:00.937094 INFO Telegram: Calling Alarm Service alarm_arm_force from 346686450
+2017-10-08 10:47:01.541657 INFO Alarm: <<...
+2017-10-08 10:47:01.593463 INFO Alarm: Event Trigger for  :ARMED_HOME
+2017-10-08 10:47:01.625830 INFO Alarm: Triggered by       :Rajen
+2017-10-08 10:47:01.660538 INFO Alarm: Notifying
+2017-10-08 10:47:01.699241 INFO Alarm: [admin] 444908880
+2017-10-08 10:47:03.437756 INFO Alarm: [admin] 396287366
+2017-10-08 10:47:03.987451 INFO Alarm: [admin] 437911056
+2017-10-08 10:47:04.562316 INFO Alarm: 3 user(s) successfully notified
+2017-10-08 10:47:04.588710 INFO Alarm: ...>>
+2017-10-08 10:51:49.252883 INFO Alarm: <<...
+2017-10-08 10:51:49.330278 INFO Alarm: Event Trigger for  :TRIGGERED
+2017-10-08 10:51:49.386620 INFO Alarm: Triggered by       :Front Door
+2017-10-08 10:51:49.415943 INFO Alarm: Notifying
+2017-10-08 10:51:49.460039 INFO Alarm: [admin] 444908880
+2017-10-08 10:51:51.299315 INFO Alarm: [admin] 396287366
+2017-10-08 10:51:51.859097 INFO Alarm: [admin] 437911056
+2017-10-08 10:51:52.394592 INFO Alarm: [member] 444385343
+2017-10-08 10:51:53.271823 INFO Alarm: [member] 299386279
+2017-10-08 10:51:53.907587 INFO Alarm: [member] 255658098
+2017-10-08 10:51:54.495819 INFO Alarm: [member] 346686450
+2017-10-08 10:51:55.269053 INFO Alarm: 7 user(s) successfully notified
+2017-10-08 10:51:55.305176 INFO Alarm: ...>>
+2017-10-08 10:52:48.754734 INFO Alarm: <<...
+2017-10-08 10:52:48.771755 INFO Alarm: Event Trigger for  :ARMED_HOME
+2017-10-08 10:52:48.788886 INFO Alarm: Triggered by       :Web Console
+2017-10-08 10:52:48.805208 INFO Alarm: Notifying
+2017-10-08 10:52:48.824273 INFO Alarm: [admin] 444908880
+2017-10-08 10:52:49.349066 INFO Alarm: [admin] 396287366
+2017-10-08 10:52:49.884005 INFO Alarm: [admin] 437911056
+2017-10-08 10:52:50.504930 INFO Alarm: 3 user(s) successfully notified
+2017-10-08 10:52:50.524676 INFO Alarm: ...>>
+2017-10-08 10:53:17.713012 INFO Telegram: {---+
+2017-10-08 10:53:17.731285 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Disarm', 'user_id': 346686450}
+2017-10-08 10:53:17.748717 INFO Telegram: Rajen ---> Disarm
+2017-10-08 10:53:17.782649 INFO Telegram: Calling Alarm Service alarm_disarm from 346686450
+2017-10-08 10:53:18.350092 INFO Alarm: <<...
+2017-10-08 10:53:18.379068 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 10:53:18.427344 INFO Alarm: Triggered by       :Rajen
+2017-10-08 10:53:18.459794 INFO Alarm: Notifying
+2017-10-08 10:53:18.495433 INFO Alarm: [admin] 444908880
+2017-10-08 10:53:20.212640 INFO Alarm: [admin] 396287366
+2017-10-08 10:53:20.826937 INFO Alarm: [admin] 437911056
+2017-10-08 10:53:21.444564 INFO Alarm: 3 user(s) successfully notified
+2017-10-08 10:53:21.469304 INFO Alarm: ...>>
+2017-10-08 10:53:23.180490 INFO Telegram: {---+
+2017-10-08 10:53:23.201018 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Arm Stay', 'user_id': 346686450}
+2017-10-08 10:53:23.223751 INFO Telegram: Rajen ---> Arm Stay
+2017-10-08 10:53:23.244889 INFO Telegram: Calling Alarm Service alarm_arm_home from 346686450
+2017-10-08 10:53:23.854562 INFO Alarm: <<...
+2017-10-08 10:53:23.902802 INFO Alarm: Event Trigger for  :PENDING
+2017-10-08 10:53:23.928587 INFO Alarm: Triggered by       :Rajen
+2017-10-08 10:53:23.971426 INFO Alarm: Notifying
+2017-10-08 10:53:24.007106 INFO Alarm: [admin] 444908880
+2017-10-08 10:53:25.579488 INFO Alarm: [admin] 396287366
+2017-10-08 10:53:26.172355 INFO Alarm: [admin] 437911056
+2017-10-08 10:53:26.776807 INFO Alarm: 3 user(s) successfully notified
+2017-10-08 10:53:26.801048 INFO Alarm: ...>>
+2017-10-08 10:53:53.828002 INFO Telegram: CALLBACK DELAY - pending - armed_home - {'chat_id': 346686450, 'accessgroup': {'chatids': ['444385343', '299386279', '255658098', '346686450'], 'lights': ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613'], 'rooms': ['group.living_room', 'group.bathroom', 'group.bedroom', 'group.kitchen'], 'switches': ['switch.tv', 'switch.lamp'], 'alarm': {'functions': ['sensorBypass', 'sensorOverview']}, 'menu': ['Alarm Functions', 'Rooms', 'Lights,Switches', 'Scenes'], 'groupname': 'member', 'scenes': ['script.power', 'script.tuner', 'script.cd', 'script.mute', 'script.vol_up', 'script.vol_down']}, 'entity_id': 'alarm_control_panel.house'}
+2017-10-08 10:53:53.859864 INFO Alarm: <<...
+2017-10-08 10:53:53.936626 INFO Alarm: Event Trigger for  :ARMED_HOME
+2017-10-08 10:53:53.976781 INFO Alarm: Triggered by       :Rajen
+2017-10-08 10:53:54.017839 INFO Alarm: Notifying
+2017-10-08 10:53:54.164969 INFO Alarm: [admin] 444908880
+2017-10-08 10:53:55.858141 INFO Alarm: [admin] 396287366
+2017-10-08 10:53:56.354990 INFO Alarm: [admin] 437911056
+2017-10-08 10:53:56.897719 INFO Alarm: 3 user(s) successfully notified
+2017-10-08 10:53:56.924286 INFO Alarm: ...>>
+2017-10-08 10:54:05.734423 INFO Telegram: {---+
+2017-10-08 10:54:05.755706 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 10:54:05.776565 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 10:54:05.797469 INFO Telegram: Sensor Status
+2017-10-08 10:54:05.823750 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 10:54:24.896928 INFO Telegram: {---+
+2017-10-08 10:54:24.930196 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 10:54:24.953045 INFO Telegram: Rajen ---> Disarm
+2017-10-08 10:54:24.969871 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 10:54:25.554152 INFO Alarm: <<...
+2017-10-08 10:54:25.593393 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 10:54:25.643994 INFO Alarm: Triggered by       :Rajen
+2017-10-08 10:54:25.693663 INFO Alarm: Notifying
+2017-10-08 10:54:25.732131 INFO Alarm: [admin] 444908880
+2017-10-08 10:54:27.502761 INFO Alarm: [admin] 396287366
+2017-10-08 10:54:28.121666 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 10:54:28.139389 INFO Alarm: ...>>
+2017-10-08 10:54:38.577493 INFO Telegram: {---+
+2017-10-08 10:54:38.616455 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 10:54:38.637081 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 10:54:38.653656 INFO Telegram: Sensor Status
+2017-10-08 10:54:38.673312 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 11:30:11.754805 INFO Telegram: {---+
+2017-10-08 11:30:11.787761 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': '🏠 Menu', 'user_id': 346686450}
+2017-10-08 11:30:11.836044 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 11:30:11.880048 INFO Telegram: Serving Main Menu
+2017-10-08 11:30:18.617343 INFO Telegram: +---}
+2017-10-08 11:30:27.472187 INFO Telegram: {---+
+2017-10-08 11:30:27.508026 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Lights', 'user_id': 346686450}
+2017-10-08 11:30:27.523149 INFO Telegram: Rajen ---> Lights
+2017-10-08 11:30:27.557215 INFO Telegram: Serving Light Menu
+2017-10-08 11:30:28.181330 INFO Telegram: +---}
+2017-10-08 11:30:31.158060 INFO Telegram: {---+
+2017-10-08 11:30:31.178884 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Turn on Security hub', 'user_id': 346686450}
+2017-10-08 11:30:31.198703 INFO Telegram: Rajen ---> Turn on Security hub
+2017-10-08 11:30:31.217632 INFO Telegram: turn on security hub (👈 back to ) ---> *turn on security hub*
+2017-10-08 11:30:31.241191 INFO Telegram: Checking if entity is a light...
+2017-10-08 11:30:31.264237 INFO Telegram: Entity - security hub
+2017-10-08 11:30:31.281554 INFO Telegram: Entity - security hub
+2017-10-08 11:30:31.299258 INFO Telegram: None - security hub
+2017-10-08 11:30:31.318204 INFO Telegram: None - security hub
+2017-10-08 11:30:31.336836 INFO Telegram: Bathroom - security hub
+2017-10-08 11:30:31.354749 INFO Telegram: Tarini's Room - security hub
+2017-10-08 11:30:31.373323 INFO Telegram: None - security hub
+2017-10-08 11:30:31.398130 INFO Telegram: Entity is a lights
+2017-10-08 11:30:32.323242 INFO Telegram: Turning on light.gateway_light_34ce0088d613
+2017-10-08 11:30:32.372120 INFO Telegram: +---}
+2017-10-08 11:31:33.148731 INFO Telegram: {---+
+2017-10-08 11:31:33.186097 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': '🏠 Menu', 'user_id': 346686450}
+2017-10-08 11:31:33.201730 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 11:31:33.218563 INFO Telegram: Serving Main Menu
+2017-10-08 11:31:33.809120 INFO Telegram: +---}
+2017-10-08 11:31:37.307952 INFO Telegram: {---+
+2017-10-08 11:31:37.337467 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Switches', 'user_id': 346686450}
+2017-10-08 11:31:37.358437 INFO Telegram: Rajen ---> Switches
+2017-10-08 11:31:37.375086 INFO Telegram: Serving Switch Menu
+2017-10-08 11:31:38.038100 INFO Telegram: +---}
+2017-10-08 11:31:40.531372 INFO Telegram: {---+
+2017-10-08 11:31:40.565011 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Turn on Lamp', 'user_id': 346686450}
+2017-10-08 11:31:40.588012 INFO Telegram: Rajen ---> Turn on Lamp
+2017-10-08 11:31:40.603863 INFO Telegram: turn on lamp (👈 back to ) ---> *turn on lamp*
+2017-10-08 11:31:40.621329 INFO Telegram: Checking if entity is a light...
+2017-10-08 11:31:40.638032 INFO Telegram: Entity - lamp
+2017-10-08 11:31:40.654899 INFO Telegram: Entity - lamp
+2017-10-08 11:31:40.673034 INFO Telegram: None - lamp
+2017-10-08 11:31:40.691277 INFO Telegram: None - lamp
+2017-10-08 11:31:40.709984 INFO Telegram: Bathroom - lamp
+2017-10-08 11:31:40.727906 INFO Telegram: Tarini's Room - lamp
+2017-10-08 11:31:40.745993 INFO Telegram: None - lamp
+2017-10-08 11:31:40.764445 INFO Telegram: None - lamp
+2017-10-08 11:31:40.783236 INFO Telegram: None - lamp
+2017-10-08 11:31:40.801264 INFO Telegram: Entity is a switches
+2017-10-08 11:31:41.707969 INFO Telegram: Turning on switch.lamp
+2017-10-08 11:31:41.751648 INFO Telegram: +---}
+2017-10-08 11:31:43.367388 INFO Telegram: {---+
+2017-10-08 11:31:43.398035 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Turn off Lamp', 'user_id': 346686450}
+2017-10-08 11:31:43.419288 INFO Telegram: Rajen ---> Turn off Lamp
+2017-10-08 11:31:43.434522 INFO Telegram: turn off lamp (👈 back to ) ---> *turn off lamp*
+2017-10-08 11:31:43.451489 INFO Telegram: Checking if entity is a light...
+2017-10-08 11:31:43.468511 INFO Telegram: Entity - lamp
+2017-10-08 11:31:43.487056 INFO Telegram: Entity - lamp
+2017-10-08 11:31:43.505338 INFO Telegram: None - lamp
+2017-10-08 11:31:43.523753 INFO Telegram: None - lamp
+2017-10-08 11:31:43.555824 INFO Telegram: Bathroom - lamp
+2017-10-08 11:31:43.573491 INFO Telegram: Tarini's Room - lamp
+2017-10-08 11:31:43.591422 INFO Telegram: None - lamp
+2017-10-08 11:31:43.617679 INFO Telegram: None - lamp
+2017-10-08 11:31:43.635986 INFO Telegram: None - lamp
+2017-10-08 11:31:43.653670 INFO Telegram: Entity is a switches
+2017-10-08 11:31:44.908597 INFO Telegram: Turning off switch.lamp
+2017-10-08 11:31:44.935081 INFO Telegram: +---}
+2017-10-08 11:31:51.737265 INFO Telegram: {---+
+2017-10-08 11:31:51.766060 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Turn on Lamp', 'user_id': 346686450}
+2017-10-08 11:31:51.781236 INFO Telegram: Rajen ---> Turn on Lamp
+2017-10-08 11:31:51.796353 INFO Telegram: turn on lamp (👈 back to ) ---> *turn on lamp*
+2017-10-08 11:31:51.813177 INFO Telegram: Checking if entity is a light...
+2017-10-08 11:31:51.830698 INFO Telegram: Entity - lamp
+2017-10-08 11:31:51.847138 INFO Telegram: Entity - lamp
+2017-10-08 11:31:51.864726 INFO Telegram: None - lamp
+2017-10-08 11:31:51.883132 INFO Telegram: None - lamp
+2017-10-08 11:31:51.901556 INFO Telegram: Bathroom - lamp
+2017-10-08 11:31:51.919209 INFO Telegram: Tarini's Room - lamp
+2017-10-08 11:31:51.936874 INFO Telegram: None - lamp
+2017-10-08 11:31:51.954712 INFO Telegram: None - lamp
+2017-10-08 11:31:51.980607 INFO Telegram: None - lamp
+2017-10-08 11:31:51.999048 INFO Telegram: Entity is a switches
+2017-10-08 11:31:53.337663 INFO Telegram: Turning on switch.lamp
+2017-10-08 11:31:53.379483 INFO Telegram: +---}
+2017-10-08 11:31:53.723951 INFO Telegram: {---+
+2017-10-08 11:31:53.755181 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Turn on Lamp', 'user_id': 346686450}
+2017-10-08 11:31:53.770163 INFO Telegram: Rajen ---> Turn on Lamp
+2017-10-08 11:31:53.785490 INFO Telegram: turn on lamp (👈 back to ) ---> *turn on lamp*
+2017-10-08 11:31:53.802586 INFO Telegram: Checking if entity is a light...
+2017-10-08 11:31:53.818985 INFO Telegram: Entity - lamp
+2017-10-08 11:31:53.836295 INFO Telegram: Entity - lamp
+2017-10-08 11:31:53.853688 INFO Telegram: None - lamp
+2017-10-08 11:31:53.871921 INFO Telegram: None - lamp
+2017-10-08 11:31:53.890374 INFO Telegram: Bathroom - lamp
+2017-10-08 11:31:53.907814 INFO Telegram: Tarini's Room - lamp
+2017-10-08 11:31:53.925387 INFO Telegram: None - lamp
+2017-10-08 11:31:53.943857 INFO Telegram: None - lamp
+2017-10-08 11:31:53.961922 INFO Telegram: None - lamp
+2017-10-08 11:31:53.979236 INFO Telegram: Entity is a switches
+2017-10-08 11:31:54.905560 INFO Telegram: Turning on switch.lamp
+2017-10-08 11:31:54.939490 INFO Telegram: +---}
+2017-10-08 11:31:55.877303 INFO Telegram: {---+
+2017-10-08 11:31:55.894013 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Turn on Lamp', 'user_id': 346686450}
+2017-10-08 11:31:55.918428 INFO Telegram: Rajen ---> Turn on Lamp
+2017-10-08 11:31:55.935556 INFO Telegram: turn on lamp (👈 back to ) ---> *turn on lamp*
+2017-10-08 11:31:55.959237 INFO Telegram: Checking if entity is a light...
+2017-10-08 11:31:55.976084 INFO Telegram: Entity - lamp
+2017-10-08 11:31:55.992596 INFO Telegram: Entity - lamp
+2017-10-08 11:31:56.020297 INFO Telegram: None - lamp
+2017-10-08 11:31:56.050328 INFO Telegram: None - lamp
+2017-10-08 11:31:56.081827 INFO Telegram: Bathroom - lamp
+2017-10-08 11:31:56.100107 INFO Telegram: Tarini's Room - lamp
+2017-10-08 11:31:56.125613 INFO Telegram: None - lamp
+2017-10-08 11:31:56.144656 INFO Telegram: None - lamp
+2017-10-08 11:31:56.162910 INFO Telegram: None - lamp
+2017-10-08 11:31:56.179942 INFO Telegram: Entity is a switches
+2017-10-08 11:31:57.120465 INFO Telegram: Turning on switch.lamp
+2017-10-08 11:31:57.172827 INFO Telegram: +---}
+2017-10-08 11:31:58.098030 INFO Telegram: {---+
+2017-10-08 11:31:58.119045 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Turn off Lamp', 'user_id': 346686450}
+2017-10-08 11:31:58.135898 INFO Telegram: Rajen ---> Turn off Lamp
+2017-10-08 11:31:58.150868 INFO Telegram: turn off lamp (👈 back to ) ---> *turn off lamp*
+2017-10-08 11:31:58.167383 INFO Telegram: Checking if entity is a light...
+2017-10-08 11:31:58.184345 INFO Telegram: Entity - lamp
+2017-10-08 11:31:58.201002 INFO Telegram: Entity - lamp
+2017-10-08 11:31:58.218437 INFO Telegram: None - lamp
+2017-10-08 11:31:58.237135 INFO Telegram: None - lamp
+2017-10-08 11:31:58.255041 INFO Telegram: Bathroom - lamp
+2017-10-08 11:31:58.272505 INFO Telegram: Tarini's Room - lamp
+2017-10-08 11:31:58.297167 INFO Telegram: None - lamp
+2017-10-08 11:31:58.315595 INFO Telegram: None - lamp
+2017-10-08 11:31:58.334454 INFO Telegram: None - lamp
+2017-10-08 11:31:58.351819 INFO Telegram: Entity is a switches
+2017-10-08 11:31:59.508548 INFO Telegram: Turning off switch.lamp
+2017-10-08 11:31:59.548521 INFO Telegram: +---}
+2017-10-08 11:32:03.363683 INFO Telegram: {---+
+2017-10-08 11:32:03.393558 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Turn on Lamp', 'user_id': 346686450}
+2017-10-08 11:32:03.408512 INFO Telegram: Rajen ---> Turn on Lamp
+2017-10-08 11:32:03.424098 INFO Telegram: turn on lamp (👈 back to ) ---> *turn on lamp*
+2017-10-08 11:32:03.441004 INFO Telegram: Checking if entity is a light...
+2017-10-08 11:32:03.458310 INFO Telegram: Entity - lamp
+2017-10-08 11:32:03.478178 INFO Telegram: Entity - lamp
+2017-10-08 11:32:03.497054 INFO Telegram: None - lamp
+2017-10-08 11:32:03.515256 INFO Telegram: None - lamp
+2017-10-08 11:32:03.546286 INFO Telegram: Bathroom - lamp
+2017-10-08 11:32:03.565431 INFO Telegram: Tarini's Room - lamp
+2017-10-08 11:32:03.583733 INFO Telegram: None - lamp
+2017-10-08 11:32:03.607652 INFO Telegram: None - lamp
+2017-10-08 11:32:03.627151 INFO Telegram: None - lamp
+2017-10-08 11:32:03.645328 INFO Telegram: Entity is a switches
+2017-10-08 11:32:04.833819 INFO Telegram: Turning on switch.lamp
+2017-10-08 11:32:04.865876 INFO Telegram: +---}
+2017-10-08 11:59:33.893747 INFO Telegram: {---+
+2017-10-08 11:59:33.923960 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 11:59:33.939281 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 11:59:33.956822 INFO Telegram: Serving Main Menu
+2017-10-08 11:59:35.711301 INFO Telegram: +---}
+2017-10-08 11:59:42.376540 INFO Telegram: {---+
+2017-10-08 11:59:42.410293 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Lights', 'user_id': 437911056}
+2017-10-08 11:59:42.425959 INFO Telegram: Rajen ---> Lights
+2017-10-08 11:59:42.442837 INFO Telegram: Serving Light Menu
+2017-10-08 11:59:43.025940 INFO Telegram: +---}
+2017-10-08 11:59:49.205096 INFO Telegram: {---+
+2017-10-08 11:59:49.221502 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn off all lights', 'user_id': 437911056}
+2017-10-08 11:59:49.247234 INFO Telegram: Rajen ---> Turn off all lights
+2017-10-08 11:59:49.264691 INFO Telegram: turn off all lights (👈 back to ) ---> *turn off all lights*
+2017-10-08 11:59:49.298935 INFO Telegram: Checking if entity is a light...
+2017-10-08 11:59:49.315527 INFO Telegram: Entity - all lights
+2017-10-08 11:59:49.332146 INFO Telegram: IS A ENTITY!!!
+2017-10-08 11:59:51.465079 INFO Telegram: Turning off ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 11:59:51.490746 INFO Telegram: +---}
+2017-10-08 11:59:56.302816 INFO Telegram: {---+
+2017-10-08 11:59:56.331083 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Security hub', 'user_id': 437911056}
+2017-10-08 11:59:56.346936 INFO Telegram: Rajen ---> Turn on Security hub
+2017-10-08 11:59:56.362506 INFO Telegram: turn on security hub (👈 back to ) ---> *turn on security hub*
+2017-10-08 11:59:56.379735 INFO Telegram: Checking if entity is a light...
+2017-10-08 11:59:56.397400 INFO Telegram: Entity - security hub
+2017-10-08 11:59:56.414745 INFO Telegram: Entity - security hub
+2017-10-08 11:59:56.433155 INFO Telegram: None - security hub
+2017-10-08 11:59:56.451896 INFO Telegram: None - security hub
+2017-10-08 11:59:56.471691 INFO Telegram: Bathroom - security hub
+2017-10-08 11:59:56.490253 INFO Telegram: Tarini's Room - security hub
+2017-10-08 11:59:56.508385 INFO Telegram: None - security hub
+2017-10-08 11:59:56.545113 INFO Telegram: Entity is a lights
+2017-10-08 11:59:57.480268 INFO Telegram: Turning on light.gateway_light_34ce0088d613
+2017-10-08 11:59:57.521888 INFO Telegram: +---}
+2017-10-08 12:00:00.276166 INFO Telegram: {---+
+2017-10-08 12:00:00.294218 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on all lights', 'user_id': 437911056}
+2017-10-08 12:00:00.314500 INFO Telegram: Rajen ---> Turn on all lights
+2017-10-08 12:00:00.343923 INFO Telegram: turn on all lights (👈 back to ) ---> *turn on all lights*
+2017-10-08 12:00:00.363586 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:00:00.380550 INFO Telegram: Entity - all lights
+2017-10-08 12:00:00.397417 INFO Telegram: IS A ENTITY!!!
+2017-10-08 12:00:02.979902 INFO Telegram: Turning on ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 12:00:03.088393 INFO Telegram: +---}
+2017-10-08 12:00:05.901511 INFO Telegram: {---+
+2017-10-08 12:00:05.931547 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn off all lights', 'user_id': 437911056}
+2017-10-08 12:00:05.946779 INFO Telegram: Rajen ---> Turn off all lights
+2017-10-08 12:00:05.962015 INFO Telegram: turn off all lights (👈 back to ) ---> *turn off all lights*
+2017-10-08 12:00:05.979156 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:00:05.995882 INFO Telegram: Entity - all lights
+2017-10-08 12:00:06.025845 INFO Telegram: IS A ENTITY!!!
+2017-10-08 12:00:08.700518 INFO Telegram: Turning off ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 12:00:08.734053 INFO Telegram: +---}
+2017-10-08 12:00:09.890182 INFO Telegram: {---+
+2017-10-08 12:00:09.910728 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Security hub', 'user_id': 437911056}
+2017-10-08 12:00:09.935601 INFO Telegram: Rajen ---> Turn on Security hub
+2017-10-08 12:00:09.971741 INFO Telegram: turn on security hub (👈 back to ) ---> *turn on security hub*
+2017-10-08 12:00:09.998369 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:00:10.068257 INFO Telegram: Entity - security hub
+2017-10-08 12:00:10.089389 INFO Telegram: Entity - security hub
+2017-10-08 12:00:10.119529 INFO Telegram: None - security hub
+2017-10-08 12:00:10.158796 INFO Telegram: None - security hub
+2017-10-08 12:00:10.180731 INFO Telegram: Bathroom - security hub
+2017-10-08 12:00:10.208914 INFO Telegram: Tarini's Room - security hub
+2017-10-08 12:00:10.228363 INFO Telegram: None - security hub
+2017-10-08 12:00:10.257472 INFO Telegram: Entity is a lights
+2017-10-08 12:00:11.246059 INFO Telegram: Turning on light.gateway_light_34ce0088d613
+2017-10-08 12:00:11.286298 INFO Telegram: +---}
+2017-10-08 12:00:20.944900 INFO Telegram: {---+
+2017-10-08 12:00:20.980441 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': "Turn off Tarini's Room", 'user_id': 437911056}
+2017-10-08 12:00:20.995315 INFO Telegram: Rajen ---> Turn off Tarini's Room
+2017-10-08 12:00:21.010374 INFO Telegram: turn off tarini's room (👈 back to ) ---> *turn off tarini's room*
+2017-10-08 12:00:21.046938 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:00:21.077615 INFO Telegram: Entity - tarini's room
+2017-10-08 12:00:21.094162 INFO Telegram: Entity - tarini's room
+2017-10-08 12:00:21.111907 INFO Telegram: None - tarini's room
+2017-10-08 12:00:21.130225 INFO Telegram: None - tarini's room
+2017-10-08 12:00:21.147987 INFO Telegram: Bathroom - tarini's room
+2017-10-08 12:00:21.165479 INFO Telegram: Tarini's Room - tarini's room
+2017-10-08 12:00:21.189661 INFO Telegram: Entity is a lights
+2017-10-08 12:00:22.187417 INFO Telegram: Turning off switch.tarinis_bedroom
+2017-10-08 12:00:22.230298 INFO Telegram: +---}
+2017-10-08 12:00:23.313220 INFO Telegram: {---+
+2017-10-08 12:00:23.349857 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': "Turn on Tarini's Room", 'user_id': 437911056}
+2017-10-08 12:00:23.364783 INFO Telegram: Rajen ---> Turn on Tarini's Room
+2017-10-08 12:00:23.379832 INFO Telegram: turn on tarini's room (👈 back to ) ---> *turn on tarini's room*
+2017-10-08 12:00:23.398306 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:00:23.415005 INFO Telegram: Entity - tarini's room
+2017-10-08 12:00:23.431795 INFO Telegram: Entity - tarini's room
+2017-10-08 12:00:23.450216 INFO Telegram: None - tarini's room
+2017-10-08 12:00:23.467986 INFO Telegram: None - tarini's room
+2017-10-08 12:00:23.487285 INFO Telegram: Bathroom - tarini's room
+2017-10-08 12:00:23.505488 INFO Telegram: Tarini's Room - tarini's room
+2017-10-08 12:00:23.522084 INFO Telegram: Entity is a lights
+2017-10-08 12:00:24.718192 INFO Telegram: Turning on switch.tarinis_bedroom
+2017-10-08 12:00:24.760190 INFO Telegram: +---}
+2017-10-08 12:00:26.337771 INFO Telegram: {---+
+2017-10-08 12:00:26.369800 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': "Turn off Tarini's Room", 'user_id': 437911056}
+2017-10-08 12:00:26.392131 INFO Telegram: Rajen ---> Turn off Tarini's Room
+2017-10-08 12:00:26.408285 INFO Telegram: turn off tarini's room (👈 back to ) ---> *turn off tarini's room*
+2017-10-08 12:00:26.425841 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:00:26.442625 INFO Telegram: Entity - tarini's room
+2017-10-08 12:00:26.459268 INFO Telegram: Entity - tarini's room
+2017-10-08 12:00:26.478597 INFO Telegram: None - tarini's room
+2017-10-08 12:00:26.496823 INFO Telegram: None - tarini's room
+2017-10-08 12:00:26.515315 INFO Telegram: Bathroom - tarini's room
+2017-10-08 12:00:26.536627 INFO Telegram: Tarini's Room - tarini's room
+2017-10-08 12:00:26.563831 INFO Telegram: Entity is a lights
+2017-10-08 12:00:27.780796 INFO Telegram: Turning off switch.tarinis_bedroom
+2017-10-08 12:00:27.822198 INFO Telegram: +---}
+2017-10-08 12:00:35.719903 INFO Telegram: {---+
+2017-10-08 12:00:35.741233 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 12:00:35.756680 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 12:00:35.774140 INFO Telegram: Serving Main Menu
+2017-10-08 12:00:36.362197 INFO Telegram: +---}
+2017-10-08 12:39:40.578884 INFO Telegram: {---+
+2017-10-08 12:39:40.597128 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Scenes', 'user_id': 437911056}
+2017-10-08 12:39:40.630855 INFO Telegram: Rajen ---> Scenes
+2017-10-08 12:39:40.648069 INFO Telegram: Serving Scene Menu
+2017-10-08 12:39:42.181592 INFO Telegram: +---}
+2017-10-08 12:39:46.213802 INFO Telegram: {---+
+2017-10-08 12:39:46.245971 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Power', 'user_id': 437911056}
+2017-10-08 12:39:46.261232 INFO Telegram: Rajen ---> Turn on Power
+2017-10-08 12:39:46.275963 INFO Telegram: turn on power (👈 back to ) ---> *turn on power*
+2017-10-08 12:39:46.293471 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:39:46.313303 INFO Telegram: Entity - power
+2017-10-08 12:39:46.330022 INFO Telegram: Entity - power
+2017-10-08 12:39:46.347868 INFO Telegram: None - power
+2017-10-08 12:39:46.366056 INFO Telegram: None - power
+2017-10-08 12:39:46.383971 INFO Telegram: Bathroom - power
+2017-10-08 12:39:46.401965 INFO Telegram: Tarini's Room - power
+2017-10-08 12:39:46.420413 INFO Telegram: None - power
+2017-10-08 12:39:46.438393 INFO Telegram: None - power
+2017-10-08 12:39:46.457017 INFO Telegram: None - power
+2017-10-08 12:39:46.476543 INFO Telegram: None - power
+2017-10-08 12:39:46.494446 INFO Telegram: Entity is a scenes
+2017-10-08 12:39:48.155551 INFO Telegram: Turning on script.power
+2017-10-08 12:39:48.240365 INFO Telegram: +---}
+2017-10-08 12:39:55.540767 INFO Telegram: {---+
+2017-10-08 12:39:55.579401 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Tuner', 'user_id': 437911056}
+2017-10-08 12:39:55.595227 INFO Telegram: Rajen ---> Turn on Tuner
+2017-10-08 12:39:55.610668 INFO Telegram: turn on tuner (👈 back to ) ---> *turn on tuner*
+2017-10-08 12:39:55.627643 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:39:55.645113 INFO Telegram: Entity - tuner
+2017-10-08 12:39:55.662114 INFO Telegram: Entity - tuner
+2017-10-08 12:39:55.680456 INFO Telegram: None - tuner
+2017-10-08 12:39:55.699133 INFO Telegram: None - tuner
+2017-10-08 12:39:55.717975 INFO Telegram: Bathroom - tuner
+2017-10-08 12:39:55.736023 INFO Telegram: Tarini's Room - tuner
+2017-10-08 12:39:55.754213 INFO Telegram: None - tuner
+2017-10-08 12:39:55.773144 INFO Telegram: None - tuner
+2017-10-08 12:39:55.791489 INFO Telegram: None - tuner
+2017-10-08 12:39:55.810229 INFO Telegram: None - tuner
+2017-10-08 12:39:55.836014 INFO Telegram: None - tuner
+2017-10-08 12:39:55.854229 INFO Telegram: Entity is a scenes
+2017-10-08 12:39:57.102112 INFO Telegram: Turning on script.tuner
+2017-10-08 12:39:57.215144 INFO Telegram: +---}
+2017-10-08 12:39:59.162036 INFO Telegram: {---+
+2017-10-08 12:39:59.187834 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on CD', 'user_id': 437911056}
+2017-10-08 12:39:59.215559 INFO Telegram: Rajen ---> Turn on CD
+2017-10-08 12:39:59.231486 INFO Telegram: turn on cd (👈 back to ) ---> *turn on cd*
+2017-10-08 12:39:59.248159 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:39:59.265141 INFO Telegram: Entity - cd
+2017-10-08 12:39:59.285682 INFO Telegram: Entity - cd
+2017-10-08 12:39:59.303488 INFO Telegram: None - cd
+2017-10-08 12:39:59.322135 INFO Telegram: None - cd
+2017-10-08 12:39:59.340293 INFO Telegram: Bathroom - cd
+2017-10-08 12:39:59.365725 INFO Telegram: Tarini's Room - cd
+2017-10-08 12:39:59.383810 INFO Telegram: None - cd
+2017-10-08 12:39:59.402210 INFO Telegram: None - cd
+2017-10-08 12:39:59.421055 INFO Telegram: None - cd
+2017-10-08 12:39:59.440602 INFO Telegram: None - cd
+2017-10-08 12:39:59.459118 INFO Telegram: None - cd
+2017-10-08 12:39:59.484519 INFO Telegram: None - cd
+2017-10-08 12:39:59.504739 INFO Telegram: Entity is a scenes
+2017-10-08 12:40:00.622064 INFO Telegram: Turning on script.cd
+2017-10-08 12:40:00.725178 INFO Telegram: +---}
+2017-10-08 12:40:03.455137 INFO Telegram: {---+
+2017-10-08 12:40:03.475183 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Power', 'user_id': 437911056}
+2017-10-08 12:40:03.498199 INFO Telegram: Rajen ---> Turn on Power
+2017-10-08 12:40:03.515747 INFO Telegram: turn on power (👈 back to ) ---> *turn on power*
+2017-10-08 12:40:03.548195 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:40:03.570182 INFO Telegram: Entity - power
+2017-10-08 12:40:03.586652 INFO Telegram: Entity - power
+2017-10-08 12:40:03.604407 INFO Telegram: None - power
+2017-10-08 12:40:03.622905 INFO Telegram: None - power
+2017-10-08 12:40:03.640902 INFO Telegram: Bathroom - power
+2017-10-08 12:40:03.658542 INFO Telegram: Tarini's Room - power
+2017-10-08 12:40:03.676142 INFO Telegram: None - power
+2017-10-08 12:40:03.695007 INFO Telegram: None - power
+2017-10-08 12:40:03.713261 INFO Telegram: None - power
+2017-10-08 12:40:03.731305 INFO Telegram: None - power
+2017-10-08 12:40:03.749513 INFO Telegram: Entity is a scenes
+2017-10-08 12:40:04.959039 INFO Telegram: Turning on script.power
+2017-10-08 12:40:05.008146 INFO Telegram: +---}
+2017-10-08 12:40:14.305260 INFO Telegram: {---+
+2017-10-08 12:40:14.337449 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 12:40:14.352940 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 12:40:14.369385 INFO Telegram: Serving Main Menu
+2017-10-08 12:40:14.948327 INFO Telegram: +---}
+2017-10-08 12:40:17.450516 INFO Telegram: {---+
+2017-10-08 12:40:17.472090 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Switches', 'user_id': 437911056}
+2017-10-08 12:40:17.488259 INFO Telegram: Rajen ---> Switches
+2017-10-08 12:40:17.505148 INFO Telegram: Serving Switch Menu
+2017-10-08 12:40:18.110236 INFO Telegram: +---}
+2017-10-08 12:40:20.133396 INFO Telegram: {---+
+2017-10-08 12:40:20.163211 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on TV', 'user_id': 437911056}
+2017-10-08 12:40:20.178119 INFO Telegram: Rajen ---> Turn on TV
+2017-10-08 12:40:20.193237 INFO Telegram: turn on tv (👈 back to ) ---> *turn on tv*
+2017-10-08 12:40:20.212167 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:40:20.228580 INFO Telegram: Entity - tv
+2017-10-08 12:40:20.245665 INFO Telegram: Entity - tv
+2017-10-08 12:40:20.263360 INFO Telegram: None - tv
+2017-10-08 12:40:20.281297 INFO Telegram: None - tv
+2017-10-08 12:40:20.299493 INFO Telegram: Bathroom - tv
+2017-10-08 12:40:20.317332 INFO Telegram: Tarini's Room - tv
+2017-10-08 12:40:20.334671 INFO Telegram: None - tv
+2017-10-08 12:40:20.353478 INFO Telegram: None - tv
+2017-10-08 12:40:20.370703 INFO Telegram: Entity is a switches
+2017-10-08 12:40:21.315380 INFO Telegram: Turning on switch.tv
+2017-10-08 12:40:21.334076 INFO Telegram: +---}
+2017-10-08 12:40:31.485647 INFO Telegram: {---+
+2017-10-08 12:40:31.503410 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn off TV', 'user_id': 437911056}
+2017-10-08 12:40:31.520904 INFO Telegram: Rajen ---> Turn off TV
+2017-10-08 12:40:31.554033 INFO Telegram: turn off tv (👈 back to ) ---> *turn off tv*
+2017-10-08 12:40:31.578459 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:40:31.597606 INFO Telegram: Entity - tv
+2017-10-08 12:40:31.621506 INFO Telegram: Entity - tv
+2017-10-08 12:40:31.639106 INFO Telegram: None - tv
+2017-10-08 12:40:31.657824 INFO Telegram: None - tv
+2017-10-08 12:40:31.675880 INFO Telegram: Bathroom - tv
+2017-10-08 12:40:31.693404 INFO Telegram: Tarini's Room - tv
+2017-10-08 12:40:31.711376 INFO Telegram: None - tv
+2017-10-08 12:40:31.729756 INFO Telegram: None - tv
+2017-10-08 12:40:31.747798 INFO Telegram: Entity is a switches
+2017-10-08 12:40:33.136494 INFO Telegram: Turning off switch.tv
+2017-10-08 12:40:33.263589 INFO Telegram: +---}
+2017-10-08 12:40:37.303251 INFO Telegram: {---+
+2017-10-08 12:40:37.326091 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn off Lamp', 'user_id': 437911056}
+2017-10-08 12:40:37.342355 INFO Telegram: Rajen ---> Turn off Lamp
+2017-10-08 12:40:37.358097 INFO Telegram: turn off lamp (👈 back to ) ---> *turn off lamp*
+2017-10-08 12:40:37.375186 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:40:37.392405 INFO Telegram: Entity - lamp
+2017-10-08 12:40:37.409182 INFO Telegram: Entity - lamp
+2017-10-08 12:40:37.426767 INFO Telegram: None - lamp
+2017-10-08 12:40:37.445619 INFO Telegram: None - lamp
+2017-10-08 12:40:37.464367 INFO Telegram: Bathroom - lamp
+2017-10-08 12:40:37.482058 INFO Telegram: Tarini's Room - lamp
+2017-10-08 12:40:37.501726 INFO Telegram: None - lamp
+2017-10-08 12:40:37.521296 INFO Telegram: None - lamp
+2017-10-08 12:40:37.553152 INFO Telegram: None - lamp
+2017-10-08 12:40:37.570854 INFO Telegram: Entity is a switches
+2017-10-08 12:40:38.624031 INFO Telegram: Turning off switch.lamp
+2017-10-08 12:40:38.657411 INFO Telegram: +---}
+2017-10-08 12:40:40.590886 INFO Telegram: {---+
+2017-10-08 12:40:40.616170 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Lamp', 'user_id': 437911056}
+2017-10-08 12:40:40.646519 INFO Telegram: Rajen ---> Turn on Lamp
+2017-10-08 12:40:40.664361 INFO Telegram: turn on lamp (👈 back to ) ---> *turn on lamp*
+2017-10-08 12:40:40.681846 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:40:40.698563 INFO Telegram: Entity - lamp
+2017-10-08 12:40:40.715464 INFO Telegram: Entity - lamp
+2017-10-08 12:40:40.733629 INFO Telegram: None - lamp
+2017-10-08 12:40:40.752187 INFO Telegram: None - lamp
+2017-10-08 12:40:40.771347 INFO Telegram: Bathroom - lamp
+2017-10-08 12:40:40.789223 INFO Telegram: Tarini's Room - lamp
+2017-10-08 12:40:40.806783 INFO Telegram: None - lamp
+2017-10-08 12:40:40.825532 INFO Telegram: None - lamp
+2017-10-08 12:40:40.843701 INFO Telegram: None - lamp
+2017-10-08 12:40:40.862026 INFO Telegram: Entity is a switches
+2017-10-08 12:40:41.894183 INFO Telegram: Turning on switch.lamp
+2017-10-08 12:40:41.937086 INFO Telegram: +---}
+2017-10-08 12:40:46.349420 INFO Telegram: {---+
+2017-10-08 12:40:46.384130 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 12:40:46.399466 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 12:40:46.416025 INFO Telegram: Serving Main Menu
+2017-10-08 12:40:46.995509 INFO Telegram: +---}
+2017-10-08 12:40:50.875606 INFO Telegram: {---+
+2017-10-08 12:40:50.910946 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Scenes', 'user_id': 437911056}
+2017-10-08 12:40:50.926741 INFO Telegram: Rajen ---> Scenes
+2017-10-08 12:40:50.943669 INFO Telegram: Serving Scene Menu
+2017-10-08 12:40:51.505981 INFO Telegram: +---}
+2017-10-08 12:40:54.826344 INFO Telegram: {---+
+2017-10-08 12:40:54.856306 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Power', 'user_id': 437911056}
+2017-10-08 12:40:54.871612 INFO Telegram: Rajen ---> Turn on Power
+2017-10-08 12:40:54.887197 INFO Telegram: turn on power (👈 back to ) ---> *turn on power*
+2017-10-08 12:40:54.904964 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:40:54.921928 INFO Telegram: Entity - power
+2017-10-08 12:40:54.938647 INFO Telegram: Entity - power
+2017-10-08 12:40:54.956841 INFO Telegram: None - power
+2017-10-08 12:40:54.975133 INFO Telegram: None - power
+2017-10-08 12:40:55.001984 INFO Telegram: Bathroom - power
+2017-10-08 12:40:55.020196 INFO Telegram: Tarini's Room - power
+2017-10-08 12:40:55.070727 INFO Telegram: None - power
+2017-10-08 12:40:55.089084 INFO Telegram: None - power
+2017-10-08 12:40:55.108641 INFO Telegram: None - power
+2017-10-08 12:40:55.126901 INFO Telegram: None - power
+2017-10-08 12:40:55.144887 INFO Telegram: Entity is a scenes
+2017-10-08 12:40:56.229177 INFO Telegram: Turning on script.power
+2017-10-08 12:40:56.325969 INFO Telegram: +---}
+2017-10-08 12:40:59.462172 INFO Telegram: {---+
+2017-10-08 12:40:59.493055 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Power', 'user_id': 437911056}
+2017-10-08 12:40:59.507790 INFO Telegram: Rajen ---> Turn on Power
+2017-10-08 12:40:59.523162 INFO Telegram: turn on power (👈 back to ) ---> *turn on power*
+2017-10-08 12:40:59.554880 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:40:59.571481 INFO Telegram: Entity - power
+2017-10-08 12:40:59.587987 INFO Telegram: Entity - power
+2017-10-08 12:40:59.605894 INFO Telegram: None - power
+2017-10-08 12:40:59.624188 INFO Telegram: None - power
+2017-10-08 12:40:59.642620 INFO Telegram: Bathroom - power
+2017-10-08 12:40:59.659891 INFO Telegram: Tarini's Room - power
+2017-10-08 12:40:59.677190 INFO Telegram: None - power
+2017-10-08 12:40:59.695555 INFO Telegram: None - power
+2017-10-08 12:40:59.713515 INFO Telegram: None - power
+2017-10-08 12:40:59.731932 INFO Telegram: None - power
+2017-10-08 12:40:59.749829 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:01.006927 INFO Telegram: Turning on script.power
+2017-10-08 12:41:01.134781 INFO Telegram: +---}
+2017-10-08 12:41:07.675982 INFO Telegram: {---+
+2017-10-08 12:41:07.691608 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Power', 'user_id': 437911056}
+2017-10-08 12:41:07.710693 INFO Telegram: Rajen ---> Turn on Power
+2017-10-08 12:41:07.732212 INFO Telegram: turn on power (👈 back to ) ---> *turn on power*
+2017-10-08 12:41:07.753049 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:07.775000 INFO Telegram: Entity - power
+2017-10-08 12:41:07.792224 INFO Telegram: Entity - power
+2017-10-08 12:41:07.809722 INFO Telegram: None - power
+2017-10-08 12:41:07.827685 INFO Telegram: None - power
+2017-10-08 12:41:07.846570 INFO Telegram: Bathroom - power
+2017-10-08 12:41:07.863924 INFO Telegram: Tarini's Room - power
+2017-10-08 12:41:07.881317 INFO Telegram: None - power
+2017-10-08 12:41:07.900094 INFO Telegram: None - power
+2017-10-08 12:41:07.918134 INFO Telegram: None - power
+2017-10-08 12:41:07.936166 INFO Telegram: None - power
+2017-10-08 12:41:07.954436 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:09.205538 INFO Telegram: Turning on script.power
+2017-10-08 12:41:09.317968 INFO Telegram: +---}
+2017-10-08 12:41:15.774794 INFO Telegram: {---+
+2017-10-08 12:41:15.806636 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on CD', 'user_id': 437911056}
+2017-10-08 12:41:15.821616 INFO Telegram: Rajen ---> Turn on CD
+2017-10-08 12:41:15.836659 INFO Telegram: turn on cd (👈 back to ) ---> *turn on cd*
+2017-10-08 12:41:15.853556 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:15.870496 INFO Telegram: Entity - cd
+2017-10-08 12:41:15.886867 INFO Telegram: Entity - cd
+2017-10-08 12:41:15.904346 INFO Telegram: None - cd
+2017-10-08 12:41:15.922600 INFO Telegram: None - cd
+2017-10-08 12:41:15.940770 INFO Telegram: Bathroom - cd
+2017-10-08 12:41:15.957891 INFO Telegram: Tarini's Room - cd
+2017-10-08 12:41:15.975463 INFO Telegram: None - cd
+2017-10-08 12:41:15.994460 INFO Telegram: None - cd
+2017-10-08 12:41:16.012481 INFO Telegram: None - cd
+2017-10-08 12:41:16.057198 INFO Telegram: None - cd
+2017-10-08 12:41:16.081724 INFO Telegram: None - cd
+2017-10-08 12:41:16.107388 INFO Telegram: None - cd
+2017-10-08 12:41:16.124745 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:17.299165 INFO Telegram: Turning on script.cd
+2017-10-08 12:41:17.381683 INFO Telegram: +---}
+2017-10-08 12:41:20.000154 INFO Telegram: {---+
+2017-10-08 12:41:20.052341 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on CD', 'user_id': 437911056}
+2017-10-08 12:41:20.080490 INFO Telegram: Rajen ---> Turn on CD
+2017-10-08 12:41:20.095473 INFO Telegram: turn on cd (👈 back to ) ---> *turn on cd*
+2017-10-08 12:41:20.112475 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:20.128790 INFO Telegram: Entity - cd
+2017-10-08 12:41:20.145556 INFO Telegram: Entity - cd
+2017-10-08 12:41:20.162804 INFO Telegram: None - cd
+2017-10-08 12:41:20.181535 INFO Telegram: None - cd
+2017-10-08 12:41:20.199262 INFO Telegram: Bathroom - cd
+2017-10-08 12:41:20.216553 INFO Telegram: Tarini's Room - cd
+2017-10-08 12:41:20.234318 INFO Telegram: None - cd
+2017-10-08 12:41:20.252354 INFO Telegram: None - cd
+2017-10-08 12:41:20.270302 INFO Telegram: None - cd
+2017-10-08 12:41:20.288851 INFO Telegram: None - cd
+2017-10-08 12:41:20.307216 INFO Telegram: None - cd
+2017-10-08 12:41:20.325712 INFO Telegram: None - cd
+2017-10-08 12:41:20.351079 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:21.446359 INFO Telegram: Turning on script.cd
+2017-10-08 12:41:21.485185 INFO Telegram: +---}
+2017-10-08 12:41:29.968682 INFO Telegram: {---+
+2017-10-08 12:41:29.992672 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Volume Up', 'user_id': 437911056}
+2017-10-08 12:41:30.007627 INFO Telegram: Rajen ---> Turn on Volume Up
+2017-10-08 12:41:30.050653 INFO Telegram: turn on volume up (👈 back to ) ---> *turn on volume up*
+2017-10-08 12:41:30.072961 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:30.090190 INFO Telegram: Entity - volume up
+2017-10-08 12:41:30.107071 INFO Telegram: Entity - volume up
+2017-10-08 12:41:30.125203 INFO Telegram: None - volume up
+2017-10-08 12:41:30.143771 INFO Telegram: None - volume up
+2017-10-08 12:41:30.161787 INFO Telegram: Bathroom - volume up
+2017-10-08 12:41:30.179031 INFO Telegram: Tarini's Room - volume up
+2017-10-08 12:41:30.196971 INFO Telegram: None - volume up
+2017-10-08 12:41:30.215290 INFO Telegram: None - volume up
+2017-10-08 12:41:30.233583 INFO Telegram: None - volume up
+2017-10-08 12:41:30.252046 INFO Telegram: None - volume up
+2017-10-08 12:41:30.270192 INFO Telegram: None - volume up
+2017-10-08 12:41:30.288582 INFO Telegram: None - volume up
+2017-10-08 12:41:30.314693 INFO Telegram: None - volume up
+2017-10-08 12:41:30.333253 INFO Telegram: None - volume up
+2017-10-08 12:41:30.351319 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:31.071760 INFO Telegram: {---+
+2017-10-08 12:41:31.160239 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Volume Up', 'user_id': 437911056}
+2017-10-08 12:41:31.190367 INFO Telegram: Rajen ---> Turn on Volume Up
+2017-10-08 12:41:31.224901 INFO Telegram: turn on volume up (👈 back to ) ---> *turn on volume up*
+2017-10-08 12:41:31.270590 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:31.373345 INFO Telegram: Entity - volume up
+2017-10-08 12:41:31.450449 INFO Telegram: Entity - volume up
+2017-10-08 12:41:31.521857 INFO Telegram: None - volume up
+2017-10-08 12:41:31.567048 INFO Telegram: None - volume up
+2017-10-08 12:41:31.735058 INFO Telegram: Bathroom - volume up
+2017-10-08 12:41:31.803691 INFO Telegram: Tarini's Room - volume up
+2017-10-08 12:41:31.904691 INFO Telegram: None - volume up
+2017-10-08 12:41:32.039162 INFO Telegram: None - volume up
+2017-10-08 12:41:32.202943 INFO Telegram: None - volume up
+2017-10-08 12:41:32.314444 INFO Telegram: Turning on script.vol_up
+2017-10-08 12:41:32.340977 INFO Telegram: None - volume up
+2017-10-08 12:41:32.419100 INFO Telegram: {---+
+2017-10-08 12:41:32.424743 INFO Telegram: +---}
+2017-10-08 12:41:32.456964 INFO Telegram: None - volume up
+2017-10-08 12:41:32.480520 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Volume Up', 'user_id': 437911056}
+2017-10-08 12:41:32.514437 INFO Telegram: None - volume up
+2017-10-08 12:41:32.553001 INFO Telegram: Rajen ---> Turn on Volume Up
+2017-10-08 12:41:32.601330 INFO Telegram: None - volume up
+2017-10-08 12:41:32.620410 INFO Telegram: turn on volume up (👈 back to ) ---> *turn on volume up*
+2017-10-08 12:41:32.646817 INFO Telegram: None - volume up
+2017-10-08 12:41:32.688614 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:32.695870 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:32.746601 INFO Telegram: Entity - volume up
+2017-10-08 12:41:32.831905 INFO Telegram: Entity - volume up
+2017-10-08 12:41:32.868769 INFO Telegram: None - volume up
+2017-10-08 12:41:32.945163 INFO Telegram: None - volume up
+2017-10-08 12:41:32.977543 INFO Telegram: Bathroom - volume up
+2017-10-08 12:41:33.038516 INFO Telegram: Tarini's Room - volume up
+2017-10-08 12:41:33.167880 INFO Telegram: None - volume up
+2017-10-08 12:41:33.226760 INFO Telegram: None - volume up
+2017-10-08 12:41:33.327720 INFO Telegram: {---+
+2017-10-08 12:41:33.357473 INFO Telegram: None - volume up
+2017-10-08 12:41:33.440267 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Volume Up', 'user_id': 437911056}
+2017-10-08 12:41:33.514736 INFO Telegram: None - volume up
+2017-10-08 12:41:33.533581 INFO Telegram: Rajen ---> Turn on Volume Up
+2017-10-08 12:41:33.657181 INFO Telegram: turn on volume up (👈 back to ) ---> *turn on volume up*
+2017-10-08 12:41:33.828735 INFO Telegram: None - volume up
+2017-10-08 12:41:33.865715 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:33.934114 INFO Telegram: None - volume up
+2017-10-08 12:41:33.963127 INFO Telegram: {---+
+2017-10-08 12:41:34.075187 INFO Telegram: None - volume up
+2017-10-08 12:41:34.132689 INFO Telegram: Entity - volume up
+2017-10-08 12:41:34.174907 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Volume Up', 'user_id': 437911056}
+2017-10-08 12:41:34.215564 INFO Telegram: None - volume up
+2017-10-08 12:41:34.349794 INFO Telegram: Rajen ---> Turn on Volume Up
+2017-10-08 12:41:34.475963 INFO Telegram: Entity - volume up
+2017-10-08 12:41:34.506245 INFO Telegram: turn on volume up (👈 back to ) ---> *turn on volume up*
+2017-10-08 12:41:34.516013 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:34.667958 INFO Telegram: None - volume up
+2017-10-08 12:41:34.773106 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:34.943583 INFO Telegram: None - volume up
+2017-10-08 12:41:35.015331 INFO Telegram: Entity - volume up
+2017-10-08 12:41:35.041419 INFO Telegram: Bathroom - volume up
+2017-10-08 12:41:35.281463 INFO Telegram: Turning on script.vol_up
+2017-10-08 12:41:35.332304 INFO Telegram: Tarini's Room - volume up
+2017-10-08 12:41:35.388007 INFO Telegram: Entity - volume up
+2017-10-08 12:41:35.458569 INFO Telegram: None - volume up
+2017-10-08 12:41:35.478083 INFO Telegram: +---}
+2017-10-08 12:41:35.581976 INFO Telegram: None - volume up
+2017-10-08 12:41:35.707890 INFO Telegram: {---+
+2017-10-08 12:41:35.770071 INFO Telegram: None - volume up
+2017-10-08 12:41:35.803690 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Volume Up', 'user_id': 437911056}
+2017-10-08 12:41:35.827710 INFO Telegram: None - volume up
+2017-10-08 12:41:35.908794 INFO Telegram: Rajen ---> Turn on Volume Up
+2017-10-08 12:41:35.991379 INFO Telegram: Bathroom - volume up
+2017-10-08 12:41:35.961840 INFO Telegram: None - volume up
+2017-10-08 12:41:36.064233 INFO Telegram: {---+
+2017-10-08 12:41:36.238479 INFO Telegram: None - volume up
+2017-10-08 12:41:36.256843 INFO Telegram: turn on volume up (👈 back to ) ---> *turn on volume up*
+2017-10-08 12:41:36.364372 INFO Telegram: Tarini's Room - volume up
+2017-10-08 12:41:36.408380 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Volume Up', 'user_id': 437911056}
+2017-10-08 12:41:36.615102 INFO Telegram: None - volume up
+2017-10-08 12:41:36.654217 INFO Telegram: Rajen ---> Turn on Volume Up
+2017-10-08 12:41:36.693291 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:36.721738 INFO Telegram: None - volume up
+2017-10-08 12:41:36.741503 INFO Telegram: {---+
+2017-10-08 12:41:36.845946 INFO Telegram: None - volume up
+2017-10-08 12:41:36.953696 INFO Telegram: Turning on script.vol_up
+2017-10-08 12:41:36.926195 INFO Telegram: Entity - volume up
+2017-10-08 12:41:36.972691 INFO Telegram: turn on volume up (👈 back to ) ---> *turn on volume up*
+2017-10-08 12:41:37.006553 INFO Telegram: None - volume up
+2017-10-08 12:41:37.086025 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Volume Up', 'user_id': 437911056}
+2017-10-08 12:41:37.104411 INFO Telegram: None - volume up
+2017-10-08 12:41:37.202070 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:37.304484 INFO Telegram: Rajen ---> Turn on Volume Up
+2017-10-08 12:41:37.332897 INFO Telegram: +---}
+2017-10-08 12:41:37.364102 INFO Telegram: Entity - volume up
+2017-10-08 12:41:37.388363 INFO Telegram: None - volume up
+2017-10-08 12:41:37.397353 INFO Telegram: Entity - volume up
+2017-10-08 12:41:37.466671 INFO Telegram: turn on volume up (👈 back to ) ---> *turn on volume up*
+2017-10-08 12:41:37.532600 INFO Telegram: None - volume up
+2017-10-08 12:41:37.603683 INFO Telegram: Entity - volume up
+2017-10-08 12:41:37.622150 INFO Telegram: None - volume up
+2017-10-08 12:41:37.628487 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:37.675575 INFO Telegram: None - volume up
+2017-10-08 12:41:37.747218 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:37.841174 INFO Telegram: None - volume up
+2017-10-08 12:41:37.850602 INFO Telegram: None - volume up
+2017-10-08 12:41:37.859524 INFO Telegram: None - volume up
+2017-10-08 12:41:38.011391 INFO Telegram: Entity - volume up
+2017-10-08 12:41:38.052784 INFO Telegram: None - volume up
+2017-10-08 12:41:38.103546 INFO Telegram: None - volume up
+2017-10-08 12:41:38.189321 INFO Telegram: Entity - volume up
+2017-10-08 12:41:38.218315 INFO Telegram: Bathroom - volume up
+2017-10-08 12:41:38.287596 INFO Telegram: None - volume up
+2017-10-08 12:41:38.365523 INFO Telegram: Bathroom - volume up
+2017-10-08 12:41:38.434593 INFO Telegram: None - volume up
+2017-10-08 12:41:38.412188 INFO Telegram: None - volume up
+2017-10-08 12:41:38.483269 INFO Telegram: Tarini's Room - volume up
+2017-10-08 12:41:38.534077 INFO Telegram: Tarini's Room - volume up
+2017-10-08 12:41:38.565373 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:38.586232 INFO Telegram: None - volume up
+2017-10-08 12:41:38.657229 INFO Telegram: None - volume up
+2017-10-08 12:41:38.685846 INFO Telegram: None - volume up
+2017-10-08 12:41:38.886733 INFO Telegram: None - volume up
+2017-10-08 12:41:39.026581 INFO Telegram: None - volume up
+2017-10-08 12:41:39.096689 INFO Telegram: Bathroom - volume up
+2017-10-08 12:41:39.345971 INFO Telegram: None - volume up
+2017-10-08 12:41:39.372434 INFO Telegram: Tarini's Room - volume up
+2017-10-08 12:41:39.382901 INFO Telegram: None - volume up
+2017-10-08 12:41:39.520507 INFO Telegram: None - volume up
+2017-10-08 12:41:39.539288 INFO Telegram: None - volume up
+2017-10-08 12:41:39.604427 INFO Telegram: None - volume up
+2017-10-08 12:41:39.688923 INFO Telegram: None - volume up
+2017-10-08 12:41:39.704462 INFO Telegram: None - volume up
+2017-10-08 12:41:39.743224 INFO Telegram: None - volume up
+2017-10-08 12:41:39.896666 INFO Telegram: None - volume up
+2017-10-08 12:41:39.931670 INFO Telegram: None - volume up
+2017-10-08 12:41:39.968720 INFO Telegram: None - volume up
+2017-10-08 12:41:40.071610 INFO Telegram: None - volume up
+2017-10-08 12:41:40.142248 INFO Telegram: None - volume up
+2017-10-08 12:41:40.209211 INFO Telegram: None - volume up
+2017-10-08 12:41:40.297739 INFO Telegram: None - volume up
+2017-10-08 12:41:40.576399 INFO Telegram: None - volume up
+2017-10-08 12:41:40.636509 INFO Telegram: Turning on script.vol_up
+2017-10-08 12:41:40.615801 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:40.747480 INFO Telegram: None - volume up
+2017-10-08 12:41:40.839487 INFO Telegram: +---}
+2017-10-08 12:41:40.935696 INFO Telegram: None - volume up
+2017-10-08 12:41:41.066681 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:41.193032 INFO Telegram: None - volume up
+2017-10-08 12:41:41.540747 INFO Telegram: None - volume up
+2017-10-08 12:41:41.631870 INFO Telegram: Turning on script.vol_up
+2017-10-08 12:41:41.659390 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:41.825518 INFO Telegram: +---}
+2017-10-08 12:41:43.690063 INFO Telegram: Turning on script.vol_up
+2017-10-08 12:41:43.725117 INFO Telegram: +---}
+2017-10-08 12:41:44.000688 INFO Telegram: Turning on script.vol_up
+2017-10-08 12:41:44.088345 INFO Telegram: +---}
+2017-10-08 12:41:44.876984 INFO Telegram: Turning on script.vol_up
+2017-10-08 12:41:44.950536 INFO Telegram: +---}
+2017-10-08 12:41:47.312475 INFO Telegram: {---+
+2017-10-08 12:41:47.333715 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Volume Down', 'user_id': 437911056}
+2017-10-08 12:41:47.368876 INFO Telegram: Rajen ---> Turn on Volume Down
+2017-10-08 12:41:47.397586 INFO Telegram: turn on volume down (👈 back to ) ---> *turn on volume down*
+2017-10-08 12:41:47.436363 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:47.458352 INFO Telegram: Entity - volume down
+2017-10-08 12:41:47.475926 INFO Telegram: Entity - volume down
+2017-10-08 12:41:47.494956 INFO Telegram: None - volume down
+2017-10-08 12:41:47.513214 INFO Telegram: None - volume down
+2017-10-08 12:41:47.540502 INFO Telegram: Bathroom - volume down
+2017-10-08 12:41:47.576949 INFO Telegram: Tarini's Room - volume down
+2017-10-08 12:41:47.623578 INFO Telegram: None - volume down
+2017-10-08 12:41:47.655632 INFO Telegram: None - volume down
+2017-10-08 12:41:47.702589 INFO Telegram: None - volume down
+2017-10-08 12:41:47.727985 INFO Telegram: None - volume down
+2017-10-08 12:41:47.767588 INFO Telegram: None - volume down
+2017-10-08 12:41:47.807235 INFO Telegram: None - volume down
+2017-10-08 12:41:47.844373 INFO Telegram: None - volume down
+2017-10-08 12:41:47.865419 INFO Telegram: None - volume down
+2017-10-08 12:41:47.883809 INFO Telegram: None - volume down
+2017-10-08 12:41:47.901533 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:49.179129 INFO Telegram: {---+
+2017-10-08 12:41:49.319203 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Volume Down', 'user_id': 437911056}
+2017-10-08 12:41:49.443183 INFO Telegram: Rajen ---> Turn on Volume Down
+2017-10-08 12:41:49.512466 INFO Telegram: Turning on script.vol_down
+2017-10-08 12:41:49.526131 INFO Telegram: turn on volume down (👈 back to ) ---> *turn on volume down*
+2017-10-08 12:41:49.635985 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:41:49.641835 INFO Telegram: +---}
+2017-10-08 12:41:49.691576 INFO Telegram: Entity - volume down
+2017-10-08 12:41:49.718037 INFO Telegram: Entity - volume down
+2017-10-08 12:41:49.755588 INFO Telegram: None - volume down
+2017-10-08 12:41:49.790849 INFO Telegram: None - volume down
+2017-10-08 12:41:49.824395 INFO Telegram: Bathroom - volume down
+2017-10-08 12:41:49.863714 INFO Telegram: Tarini's Room - volume down
+2017-10-08 12:41:49.900463 INFO Telegram: None - volume down
+2017-10-08 12:41:49.946552 INFO Telegram: None - volume down
+2017-10-08 12:41:49.985006 INFO Telegram: None - volume down
+2017-10-08 12:41:50.059337 INFO Telegram: None - volume down
+2017-10-08 12:41:50.128572 INFO Telegram: None - volume down
+2017-10-08 12:41:50.167091 INFO Telegram: None - volume down
+2017-10-08 12:41:50.198656 INFO Telegram: None - volume down
+2017-10-08 12:41:50.242923 INFO Telegram: None - volume down
+2017-10-08 12:41:50.266328 INFO Telegram: None - volume down
+2017-10-08 12:41:50.284179 INFO Telegram: Entity is a scenes
+2017-10-08 12:41:51.397932 INFO Telegram: Turning on script.vol_down
+2017-10-08 12:41:51.477465 INFO Telegram: +---}
+2017-10-08 12:42:00.214009 INFO Telegram: {---+
+2017-10-08 12:42:00.231130 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Tuner', 'user_id': 437911056}
+2017-10-08 12:42:00.247040 INFO Telegram: Rajen ---> Turn on Tuner
+2017-10-08 12:42:00.262102 INFO Telegram: turn on tuner (👈 back to ) ---> *turn on tuner*
+2017-10-08 12:42:00.278931 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:42:00.297668 INFO Telegram: Entity - tuner
+2017-10-08 12:42:00.316712 INFO Telegram: Entity - tuner
+2017-10-08 12:42:00.334199 INFO Telegram: None - tuner
+2017-10-08 12:42:00.353218 INFO Telegram: None - tuner
+2017-10-08 12:42:00.377028 INFO Telegram: Bathroom - tuner
+2017-10-08 12:42:00.395164 INFO Telegram: Tarini's Room - tuner
+2017-10-08 12:42:00.412664 INFO Telegram: None - tuner
+2017-10-08 12:42:00.430775 INFO Telegram: None - tuner
+2017-10-08 12:42:00.449499 INFO Telegram: None - tuner
+2017-10-08 12:42:00.467682 INFO Telegram: None - tuner
+2017-10-08 12:42:00.487468 INFO Telegram: None - tuner
+2017-10-08 12:42:00.505627 INFO Telegram: Entity is a scenes
+2017-10-08 12:42:01.607391 INFO Telegram: Turning on script.tuner
+2017-10-08 12:42:01.650943 INFO Telegram: +---}
+2017-10-08 12:42:02.392769 INFO Telegram: {---+
+2017-10-08 12:42:02.413591 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Tuner', 'user_id': 437911056}
+2017-10-08 12:42:02.431059 INFO Telegram: Rajen ---> Turn on Tuner
+2017-10-08 12:42:02.451986 INFO Telegram: turn on tuner (👈 back to ) ---> *turn on tuner*
+2017-10-08 12:42:02.476349 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:42:02.496200 INFO Telegram: Entity - tuner
+2017-10-08 12:42:02.517626 INFO Telegram: Entity - tuner
+2017-10-08 12:42:02.556947 INFO Telegram: None - tuner
+2017-10-08 12:42:02.601244 INFO Telegram: None - tuner
+2017-10-08 12:42:02.638164 INFO Telegram: Bathroom - tuner
+2017-10-08 12:42:02.658907 INFO Telegram: Tarini's Room - tuner
+2017-10-08 12:42:02.681257 INFO Telegram: None - tuner
+2017-10-08 12:42:02.705833 INFO Telegram: None - tuner
+2017-10-08 12:42:02.739295 INFO Telegram: None - tuner
+2017-10-08 12:42:02.761083 INFO Telegram: None - tuner
+2017-10-08 12:42:02.797438 INFO Telegram: None - tuner
+2017-10-08 12:42:02.835311 INFO Telegram: Entity is a scenes
+2017-10-08 12:42:03.955351 INFO Telegram: Turning on script.tuner
+2017-10-08 12:42:04.000418 INFO Telegram: +---}
+2017-10-08 12:42:13.453608 INFO Telegram: {---+
+2017-10-08 12:42:13.486602 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Power', 'user_id': 437911056}
+2017-10-08 12:42:13.503949 INFO Telegram: Rajen ---> Turn on Power
+2017-10-08 12:42:13.519112 INFO Telegram: turn on power (👈 back to ) ---> *turn on power*
+2017-10-08 12:42:13.545693 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:42:13.567020 INFO Telegram: Entity - power
+2017-10-08 12:42:13.584768 INFO Telegram: Entity - power
+2017-10-08 12:42:13.602776 INFO Telegram: None - power
+2017-10-08 12:42:13.621541 INFO Telegram: None - power
+2017-10-08 12:42:13.640360 INFO Telegram: Bathroom - power
+2017-10-08 12:42:13.657961 INFO Telegram: Tarini's Room - power
+2017-10-08 12:42:13.676270 INFO Telegram: None - power
+2017-10-08 12:42:13.696286 INFO Telegram: None - power
+2017-10-08 12:42:13.723545 INFO Telegram: None - power
+2017-10-08 12:42:13.750994 INFO Telegram: None - power
+2017-10-08 12:42:13.768956 INFO Telegram: Entity is a scenes
+2017-10-08 12:42:14.819464 INFO Telegram: Turning on script.power
+2017-10-08 12:42:14.924942 INFO Telegram: +---}
+2017-10-08 12:42:17.772736 INFO Telegram: {---+
+2017-10-08 12:42:17.791234 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Power', 'user_id': 437911056}
+2017-10-08 12:42:17.810062 INFO Telegram: Rajen ---> Turn on Power
+2017-10-08 12:42:17.830109 INFO Telegram: turn on power (👈 back to ) ---> *turn on power*
+2017-10-08 12:42:17.857518 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:42:17.880229 INFO Telegram: Entity - power
+2017-10-08 12:42:17.896907 INFO Telegram: Entity - power
+2017-10-08 12:42:17.914912 INFO Telegram: None - power
+2017-10-08 12:42:17.933488 INFO Telegram: None - power
+2017-10-08 12:42:17.951461 INFO Telegram: Bathroom - power
+2017-10-08 12:42:17.968595 INFO Telegram: Tarini's Room - power
+2017-10-08 12:42:17.986551 INFO Telegram: None - power
+2017-10-08 12:42:18.005106 INFO Telegram: None - power
+2017-10-08 12:42:18.044758 INFO Telegram: None - power
+2017-10-08 12:42:18.082781 INFO Telegram: None - power
+2017-10-08 12:42:18.108362 INFO Telegram: Entity is a scenes
+2017-10-08 12:42:19.196638 INFO Telegram: Turning on script.power
+2017-10-08 12:42:19.266071 INFO Telegram: +---}
+2017-10-08 12:44:03.459052 INFO Telegram: {---+
+2017-10-08 12:44:03.480016 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 12:44:03.502734 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 12:44:03.541854 INFO Telegram: Serving Main Menu
+2017-10-08 12:44:04.175908 INFO Telegram: +---}
+2017-10-08 12:44:06.173570 INFO Telegram: {---+
+2017-10-08 12:44:06.211049 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Alarm Functions', 'user_id': 437911056}
+2017-10-08 12:44:06.226261 INFO Telegram: Rajen ---> Alarm Functions
+2017-10-08 12:44:06.243438 INFO Telegram: Serving Alarm Function Menu
+2017-10-08 12:44:06.798578 INFO Telegram: Current Alarm Status - *DISARMED*
+2017-10-08 12:44:06.816357 INFO Telegram: +---}
+2017-10-08 12:44:08.625543 INFO Telegram: {---+
+2017-10-08 12:44:08.691492 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:44:08.720683 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:44:08.742971 INFO Telegram: Sensor Status
+2017-10-08 12:44:08.774390 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:44:13.886286 INFO Telegram: {---+
+2017-10-08 12:44:13.918336 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:44:13.933643 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:44:13.953926 INFO Telegram: Sensor Status
+2017-10-08 12:44:13.974018 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[ON] - Alarm Switch
+
+2017-10-08 12:44:18.474673 INFO Telegram: {---+
+2017-10-08 12:44:18.494062 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:44:18.517504 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:44:18.547251 INFO Telegram: Sensor Status
+2017-10-08 12:44:18.584906 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:44:23.661698 INFO Telegram: {---+
+2017-10-08 12:44:23.682420 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:44:23.698361 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:44:23.718583 INFO Telegram: Sensor Status
+2017-10-08 12:44:23.756614 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:44:26.722589 INFO Telegram: {---+
+2017-10-08 12:44:26.745934 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:44:26.761630 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:44:26.778393 INFO Telegram: Sensor Status
+2017-10-08 12:44:26.797918 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[ON] - Alarm Switch
+
+2017-10-08 12:44:40.633611 INFO Telegram: {---+
+2017-10-08 12:44:40.668637 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 12:44:40.684530 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 12:44:40.701993 INFO Telegram: Serving Main Menu
+2017-10-08 12:44:41.287490 INFO Telegram: +---}
+2017-10-08 12:44:43.695283 INFO Telegram: {---+
+2017-10-08 12:44:43.727045 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Lights', 'user_id': 437911056}
+2017-10-08 12:44:43.742855 INFO Telegram: Rajen ---> Lights
+2017-10-08 12:44:43.766687 INFO Telegram: Serving Light Menu
+2017-10-08 12:44:44.436493 INFO Telegram: +---}
+2017-10-08 12:44:47.832372 INFO Telegram: {---+
+2017-10-08 12:44:47.857620 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on all lights', 'user_id': 437911056}
+2017-10-08 12:44:47.879856 INFO Telegram: Rajen ---> Turn on all lights
+2017-10-08 12:44:47.895073 INFO Telegram: turn on all lights (👈 back to ) ---> *turn on all lights*
+2017-10-08 12:44:47.911728 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:44:47.928101 INFO Telegram: Entity - all lights
+2017-10-08 12:44:47.945190 INFO Telegram: IS A ENTITY!!!
+2017-10-08 12:44:50.253865 INFO Telegram: Turning on ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 12:44:50.289351 INFO Telegram: +---}
+2017-10-08 12:44:54.574516 INFO Telegram: {---+
+2017-10-08 12:44:54.609495 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn off all lights', 'user_id': 437911056}
+2017-10-08 12:44:54.634610 INFO Telegram: Rajen ---> Turn off all lights
+2017-10-08 12:44:54.665589 INFO Telegram: turn off all lights (👈 back to ) ---> *turn off all lights*
+2017-10-08 12:44:54.691961 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:44:54.709387 INFO Telegram: Entity - all lights
+2017-10-08 12:44:54.726328 INFO Telegram: IS A ENTITY!!!
+2017-10-08 12:44:57.325789 INFO Telegram: Turning off ['switch.kitchen', 'switch.living_room', 'switch.dummy', 'switch.tarinis_bedroom', 'light.gateway_light_34ce0088d613']
+2017-10-08 12:44:57.365541 INFO Telegram: +---}
+2017-10-08 12:44:58.510486 INFO Telegram: {---+
+2017-10-08 12:44:58.551138 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Security hub', 'user_id': 437911056}
+2017-10-08 12:44:58.570444 INFO Telegram: Rajen ---> Turn on Security hub
+2017-10-08 12:44:58.585895 INFO Telegram: turn on security hub (👈 back to ) ---> *turn on security hub*
+2017-10-08 12:44:58.604300 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:44:58.621638 INFO Telegram: Entity - security hub
+2017-10-08 12:44:58.638239 INFO Telegram: Entity - security hub
+2017-10-08 12:44:58.655763 INFO Telegram: None - security hub
+2017-10-08 12:44:58.674727 INFO Telegram: None - security hub
+2017-10-08 12:44:58.692980 INFO Telegram: Bathroom - security hub
+2017-10-08 12:44:58.710985 INFO Telegram: Tarini's Room - security hub
+2017-10-08 12:44:58.728944 INFO Telegram: None - security hub
+2017-10-08 12:44:58.746399 INFO Telegram: Entity is a lights
+2017-10-08 12:44:59.637559 INFO Telegram: Turning on light.gateway_light_34ce0088d613
+2017-10-08 12:44:59.666372 INFO Telegram: +---}
+2017-10-08 12:45:02.640641 INFO Telegram: {---+
+2017-10-08 12:45:02.656168 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn off Security hub', 'user_id': 437911056}
+2017-10-08 12:45:02.671157 INFO Telegram: Rajen ---> Turn off Security hub
+2017-10-08 12:45:02.686158 INFO Telegram: turn off security hub (👈 back to ) ---> *turn off security hub*
+2017-10-08 12:45:02.703466 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:45:02.719949 INFO Telegram: Entity - security hub
+2017-10-08 12:45:02.736270 INFO Telegram: Entity - security hub
+2017-10-08 12:45:02.754375 INFO Telegram: None - security hub
+2017-10-08 12:45:02.772528 INFO Telegram: None - security hub
+2017-10-08 12:45:02.790502 INFO Telegram: Bathroom - security hub
+2017-10-08 12:45:02.808314 INFO Telegram: Tarini's Room - security hub
+2017-10-08 12:45:02.825770 INFO Telegram: None - security hub
+2017-10-08 12:45:02.844207 INFO Telegram: Entity is a lights
+2017-10-08 12:45:03.703492 INFO Telegram: Turning off light.gateway_light_34ce0088d613
+2017-10-08 12:45:03.722784 INFO Telegram: +---}
+2017-10-08 12:45:04.851629 INFO Telegram: {---+
+2017-10-08 12:45:04.871715 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Turn on Security hub', 'user_id': 437911056}
+2017-10-08 12:45:04.894510 INFO Telegram: Rajen ---> Turn on Security hub
+2017-10-08 12:45:04.919234 INFO Telegram: turn on security hub (👈 back to ) ---> *turn on security hub*
+2017-10-08 12:45:04.936798 INFO Telegram: Checking if entity is a light...
+2017-10-08 12:45:04.954209 INFO Telegram: Entity - security hub
+2017-10-08 12:45:04.971251 INFO Telegram: Entity - security hub
+2017-10-08 12:45:04.989249 INFO Telegram: None - security hub
+2017-10-08 12:45:05.007647 INFO Telegram: None - security hub
+2017-10-08 12:45:05.057001 INFO Telegram: Bathroom - security hub
+2017-10-08 12:45:05.078501 INFO Telegram: Tarini's Room - security hub
+2017-10-08 12:45:05.101918 INFO Telegram: None - security hub
+2017-10-08 12:45:05.122842 INFO Telegram: Entity is a lights
+2017-10-08 12:45:06.040512 INFO Telegram: Turning on light.gateway_light_34ce0088d613
+2017-10-08 12:45:06.145931 INFO Telegram: +---}
+2017-10-08 12:45:17.468263 INFO Telegram: {---+
+2017-10-08 12:45:17.492829 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 12:45:17.508070 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 12:45:17.525572 INFO Telegram: Serving Main Menu
+2017-10-08 12:45:18.143849 INFO Telegram: +---}
+2017-10-08 12:45:19.964703 INFO Telegram: {---+
+2017-10-08 12:45:19.980861 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Alarm Functions', 'user_id': 437911056}
+2017-10-08 12:45:19.999189 INFO Telegram: Rajen ---> Alarm Functions
+2017-10-08 12:45:20.038084 INFO Telegram: Serving Alarm Function Menu
+2017-10-08 12:45:20.675206 INFO Telegram: Current Alarm Status - *DISARMED*
+2017-10-08 12:45:20.696599 INFO Telegram: +---}
+2017-10-08 12:45:24.721054 INFO Telegram: {---+
+2017-10-08 12:45:24.740916 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Away', 'user_id': 437911056}
+2017-10-08 12:45:24.762115 INFO Telegram: Rajen ---> Arm Away
+2017-10-08 12:45:24.792440 INFO Telegram: Calling Alarm Service alarm_arm_instant from 437911056
+2017-10-08 12:45:25.388296 INFO Alarm: <<...
+2017-10-08 12:45:25.425844 INFO Alarm: Event Trigger for  :PENDING
+2017-10-08 12:45:25.467484 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:45:25.514177 INFO Alarm: Notifying
+2017-10-08 12:45:25.554156 INFO Alarm: [admin] 444908880
+2017-10-08 12:45:27.276216 INFO Alarm: [admin] 396287366
+2017-10-08 12:45:27.879753 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:45:27.896925 INFO Alarm: ...>>
+2017-10-08 12:45:38.823468 INFO Telegram: {---+
+2017-10-08 12:45:38.853417 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:45:38.876412 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:45:38.893404 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:45:39.509220 INFO Alarm: <<...
+2017-10-08 12:45:39.537837 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:45:39.583833 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:45:39.608210 INFO Alarm: Notifying
+2017-10-08 12:45:39.662245 INFO Alarm: [admin] 444908880
+2017-10-08 12:45:41.368265 INFO Alarm: [admin] 396287366
+2017-10-08 12:45:41.983873 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:45:42.048767 INFO Alarm: ...>>
+2017-10-08 12:45:43.652560 INFO Telegram: {---+
+2017-10-08 12:45:43.678324 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Away', 'user_id': 437911056}
+2017-10-08 12:45:43.704261 INFO Telegram: Rajen ---> Arm Away
+2017-10-08 12:45:43.723159 INFO Telegram: Calling Alarm Service alarm_arm_instant from 437911056
+2017-10-08 12:45:44.331968 INFO Alarm: <<...
+2017-10-08 12:45:44.359115 INFO Alarm: Event Trigger for  :PENDING
+2017-10-08 12:45:44.403755 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:45:44.446386 INFO Alarm: Notifying
+2017-10-08 12:45:44.508529 INFO Alarm: [admin] 444908880
+2017-10-08 12:45:46.057068 INFO Alarm: [admin] 396287366
+2017-10-08 12:45:46.608906 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:45:46.646117 INFO Alarm: ...>>
+2017-10-08 12:45:57.376145 INFO Telegram: {---+
+2017-10-08 12:45:57.410492 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:45:57.425952 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:45:57.442944 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:45:57.980852 INFO Alarm: <<...
+2017-10-08 12:45:58.086601 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:45:58.144814 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:45:58.183307 INFO Alarm: Notifying
+2017-10-08 12:45:58.271672 INFO Alarm: [admin] 444908880
+2017-10-08 12:45:59.790569 INFO Alarm: [admin] 396287366
+2017-10-08 12:46:00.349953 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:46:00.376921 INFO Alarm: ...>>
+2017-10-08 12:46:02.777957 INFO Telegram: {---+
+2017-10-08 12:46:02.816621 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Away Delay', 'user_id': 437911056}
+2017-10-08 12:46:02.847593 INFO Telegram: Rajen ---> Arm Away Delay
+2017-10-08 12:46:02.885614 INFO Telegram: Calling Alarm Service alarm_arm_away from 437911056
+2017-10-08 12:46:03.569516 INFO Alarm: <<...
+2017-10-08 12:46:03.684646 INFO Alarm: Event Trigger for  :PENDING
+2017-10-08 12:46:03.754275 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:46:03.788286 INFO Alarm: Notifying
+2017-10-08 12:46:03.844342 INFO Alarm: [admin] 444908880
+2017-10-08 12:46:05.578994 INFO Alarm: [admin] 396287366
+2017-10-08 12:46:06.193718 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:46:06.211325 INFO Alarm: ...>>
+2017-10-08 12:46:13.958871 INFO Telegram: {---+
+2017-10-08 12:46:13.979525 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '📢 Panic', 'user_id': 437911056}
+2017-10-08 12:46:13.994681 INFO Telegram: Rajen ---> 📢 Panic
+2017-10-08 12:46:14.011747 INFO Telegram: Calling Alarm Service alarm_trigger from 437911056
+2017-10-08 12:46:14.661578 INFO Alarm: <<...
+2017-10-08 12:46:14.790630 INFO Alarm: Event Trigger for  :TRIGGERED
+2017-10-08 12:46:14.847892 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:46:14.895867 INFO Alarm: Notifying
+2017-10-08 12:46:14.935348 INFO Alarm: [admin] 444908880
+2017-10-08 12:46:16.567180 INFO Alarm: [admin] 396287366
+2017-10-08 12:46:17.153070 INFO Alarm: [member] 444385343
+2017-10-08 12:46:17.731720 INFO Alarm: [member] 299386279
+2017-10-08 12:46:18.347290 INFO Alarm: [member] 255658098
+2017-10-08 12:46:18.917282 INFO Alarm: [member] 346686450
+2017-10-08 12:46:19.511364 INFO Alarm: 6 user(s) successfully notified
+2017-10-08 12:46:19.573676 INFO Alarm: ...>>
+2017-10-08 12:46:19.726311 INFO Telegram: {---+
+2017-10-08 12:46:19.744882 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:46:19.764357 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:46:19.789652 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:46:20.226008 INFO Alarm: <<...
+2017-10-08 12:46:20.274857 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:46:20.313113 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:46:20.344662 INFO Alarm: Notifying
+2017-10-08 12:46:20.420166 INFO Alarm: [admin] 444908880
+2017-10-08 12:46:21.109409 INFO Alarm: [admin] 396287366
+2017-10-08 12:46:21.715894 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:46:21.741042 INFO Alarm: ...>>
+2017-10-08 12:46:24.280766 INFO Telegram: {---+
+2017-10-08 12:46:24.306566 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Zone Bypass', 'user_id': 437911056}
+2017-10-08 12:46:24.321920 INFO Telegram: Rajen ---> Zone Bypass
+2017-10-08 12:46:24.339203 INFO Telegram: Bypass
+2017-10-08 12:46:24.356834 INFO Telegram: [{"from_last": "iPhone", "from_first": "Rajen", "chat_id": 437911056, "text": "Zone Bypass", "user_id": 437911056}, {"chatids": ["444908880", "396287366", "437911056"], "lights": ["switch.kitchen", "switch.living_room", "switch.dummy", "switch.tarinis_bedroom", "light.gateway_light_34ce0088d613"], "rooms": ["group.living_room", "group.bathroom", "group.bedroom", "group.kitchen"], "switches": ["switch.tv", "switch.lamp"], "alarm": {"functions": ["nonee"]}, "menu": ["Alarm Functions", "Rooms", "Lights,Switches,Scenes", "Cameras"], "groupname": "admin", "scenes": ["script.power", "script.tuner", "script.cd", "script.mute", "script.vol_up", "script.vol_down"]}]
+2017-10-08 12:46:30.415261 INFO Telegram: {---+
+2017-10-08 12:46:30.448914 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Bypass Downstairs', 'user_id': 437911056}
+2017-10-08 12:46:30.466282 INFO Telegram: Rajen ---> Bypass Downstairs
+2017-10-08 12:46:30.483503 INFO Telegram: bypass downstairs (👈 back to ) ---> *bypass downstairs*
+2017-10-08 12:46:30.500743 INFO Telegram: BYPASS ZONE
+2017-10-08 12:46:31.196240 INFO Telegram: Bypass
+2017-10-08 12:46:31.258164 INFO Telegram: [{"payload_event": {"from_last": "iPhone", "from_first": "Rajen", "chat_id": 437911056, "text": "bypass downstairs", "user_id": 437911056}, "accessgroup": {"chatids": ["444908880", "396287366", "437911056"], "lights": ["switch.kitchen", "switch.living_room", "switch.dummy", "switch.tarinis_bedroom", "light.gateway_light_34ce0088d613"], "rooms": ["group.living_room", "group.bathroom", "group.bedroom", "group.kitchen"], "switches": ["switch.tv", "switch.lamp"], "alarm": {"functions": ["nonee"]}, "menu": ["Alarm Functions", "Rooms", "Lights,Switches,Scenes", "Cameras"], "groupname": "admin", "scenes": ["script.power", "script.tuner", "script.cd", "script.mute", "script.vol_up", "script.vol_down"]}}]
+2017-10-08 12:46:31.266254 INFO Alarm: <<...
+2017-10-08 12:46:31.310334 INFO Alarm: ...>>
+2017-10-08 12:46:33.595219 INFO Telegram: {---+
+2017-10-08 12:46:33.625395 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Bypass Garage', 'user_id': 437911056}
+2017-10-08 12:46:33.660826 INFO Telegram: Rajen ---> Bypass Garage
+2017-10-08 12:46:33.689380 INFO Telegram: bypass garage (👈 back to ) ---> *bypass garage*
+2017-10-08 12:46:33.707112 INFO Telegram: BYPASS ZONE
+2017-10-08 12:46:34.266667 INFO Alarm: <<...
+2017-10-08 12:46:34.281896 INFO Alarm: ...>>
+2017-10-08 12:46:35.057140 INFO Telegram: Bypass
+2017-10-08 12:46:35.073077 INFO Telegram: [{"payload_event": {"from_last": "iPhone", "from_first": "Rajen", "chat_id": 437911056, "text": "bypass garage", "user_id": 437911056}, "accessgroup": {"chatids": ["444908880", "396287366", "437911056"], "lights": ["switch.kitchen", "switch.living_room", "switch.dummy", "switch.tarinis_bedroom", "light.gateway_light_34ce0088d613"], "rooms": ["group.living_room", "group.bathroom", "group.bedroom", "group.kitchen"], "switches": ["switch.tv", "switch.lamp"], "alarm": {"functions": ["nonee"]}, "menu": ["Alarm Functions", "Rooms", "Lights,Switches,Scenes", "Cameras"], "groupname": "admin", "scenes": ["script.power", "script.tuner", "script.cd", "script.mute", "script.vol_up", "script.vol_down"]}}]
+2017-10-08 12:46:36.154510 INFO Telegram: {---+
+2017-10-08 12:46:36.190006 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Bypass Kitchen', 'user_id': 437911056}
+2017-10-08 12:46:36.206477 INFO Telegram: Rajen ---> Bypass Kitchen
+2017-10-08 12:46:36.221739 INFO Telegram: bypass kitchen (👈 back to ) ---> *bypass kitchen*
+2017-10-08 12:46:36.239710 INFO Telegram: BYPASS ZONE
+2017-10-08 12:46:36.778145 INFO Alarm: <<...
+2017-10-08 12:46:36.798686 INFO Alarm: ...>>
+2017-10-08 12:46:37.057344 INFO Telegram: Bypass
+2017-10-08 12:46:37.073280 INFO Telegram: [{"payload_event": {"from_last": "iPhone", "from_first": "Rajen", "chat_id": 437911056, "text": "bypass kitchen", "user_id": 437911056}, "accessgroup": {"chatids": ["444908880", "396287366", "437911056"], "lights": ["switch.kitchen", "switch.living_room", "switch.dummy", "switch.tarinis_bedroom", "light.gateway_light_34ce0088d613"], "rooms": ["group.living_room", "group.bathroom", "group.bedroom", "group.kitchen"], "switches": ["switch.tv", "switch.lamp"], "alarm": {"functions": ["nonee"]}, "menu": ["Alarm Functions", "Rooms", "Lights,Switches,Scenes", "Cameras"], "groupname": "admin", "scenes": ["script.power", "script.tuner", "script.cd", "script.mute", "script.vol_up", "script.vol_down"]}}]
+2017-10-08 12:46:37.559991 INFO Telegram: {---+
+2017-10-08 12:46:37.585558 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Bypass Living Room', 'user_id': 437911056}
+2017-10-08 12:46:37.622391 INFO Telegram: Rajen ---> Bypass Living Room
+2017-10-08 12:46:37.730609 INFO Telegram: bypass living room (👈 back to ) ---> *bypass living room*
+2017-10-08 12:46:37.758952 INFO Telegram: BYPASS ZONE
+2017-10-08 12:46:39.046605 INFO Telegram: Bypass
+2017-10-08 12:46:39.062875 INFO Telegram: [{"payload_event": {"from_last": "iPhone", "from_first": "Rajen", "chat_id": 437911056, "text": "bypass living room", "user_id": 437911056}, "accessgroup": {"chatids": ["444908880", "396287366", "437911056"], "lights": ["switch.kitchen", "switch.living_room", "switch.dummy", "switch.tarinis_bedroom", "light.gateway_light_34ce0088d613"], "rooms": ["group.living_room", "group.bathroom", "group.bedroom", "group.kitchen"], "switches": ["switch.tv", "switch.lamp"], "alarm": {"functions": ["nonee"]}, "menu": ["Alarm Functions", "Rooms", "Lights,Switches,Scenes", "Cameras"], "groupname": "admin", "scenes": ["script.power", "script.tuner", "script.cd", "script.mute", "script.vol_up", "script.vol_down"]}}]
+2017-10-08 12:46:45.379922 INFO Telegram: {---+
+2017-10-08 12:46:45.413035 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 12:46:45.428754 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 12:46:45.446212 INFO Telegram: Serving Main Menu
+2017-10-08 12:46:46.111744 INFO Telegram: +---}
+2017-10-08 12:46:47.958536 INFO Telegram: {---+
+2017-10-08 12:46:47.992628 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Alarm Functions', 'user_id': 437911056}
+2017-10-08 12:46:48.008237 INFO Telegram: Rajen ---> Alarm Functions
+2017-10-08 12:46:48.043207 INFO Telegram: Serving Alarm Function Menu
+2017-10-08 12:46:48.606821 INFO Telegram: Current Alarm Status - *DISARMED*
+2017-10-08 12:46:48.639931 INFO Telegram: +---}
+2017-10-08 12:46:50.706837 INFO Telegram: {---+
+2017-10-08 12:46:50.736280 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Stay', 'user_id': 437911056}
+2017-10-08 12:46:50.751918 INFO Telegram: Rajen ---> Arm Stay
+2017-10-08 12:46:50.768929 INFO Telegram: Calling Alarm Service alarm_arm_home from 437911056
+2017-10-08 12:46:51.386860 INFO Alarm: <<...
+2017-10-08 12:46:51.444298 INFO Alarm: Event Trigger for  :ARMED_HOME
+2017-10-08 12:46:51.483613 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:46:51.519816 INFO Alarm: Notifying
+2017-10-08 12:46:51.576927 INFO Alarm: [admin] 444908880
+2017-10-08 12:46:53.267619 INFO Alarm: [admin] 396287366
+2017-10-08 12:46:53.879973 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:46:53.896894 INFO Alarm: ...>>
+2017-10-08 12:46:54.449230 INFO Telegram: {---+
+2017-10-08 12:46:54.484824 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:46:54.499828 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:46:54.516337 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:46:55.132619 INFO Alarm: <<...
+2017-10-08 12:46:55.185437 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:46:55.223108 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:46:55.262555 INFO Alarm: Notifying
+2017-10-08 12:46:55.320779 INFO Alarm: [admin] 444908880
+2017-10-08 12:46:56.847991 INFO Alarm: [admin] 396287366
+2017-10-08 12:46:57.271642 INFO Telegram: {---+
+2017-10-08 12:46:57.297162 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Away', 'user_id': 437911056}
+2017-10-08 12:46:57.398706 INFO Telegram: Rajen ---> Arm Away
+2017-10-08 12:46:57.479260 INFO Telegram: Calling Alarm Service alarm_arm_instant from 437911056
+2017-10-08 12:46:57.506103 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:46:57.568034 INFO Alarm: ...>>
+2017-10-08 12:46:58.238230 INFO Alarm: <<...
+2017-10-08 12:46:58.300018 INFO Alarm: Event Trigger for  :PENDING
+2017-10-08 12:46:58.345450 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:46:58.381486 INFO Alarm: Notifying
+2017-10-08 12:46:58.418187 INFO Alarm: [admin] 444908880
+2017-10-08 12:47:00.114249 INFO Alarm: [admin] 396287366
+2017-10-08 12:47:00.715599 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:47:00.732320 INFO Alarm: ...>>
+2017-10-08 12:47:05.473820 INFO Telegram: {---+
+2017-10-08 12:47:05.513078 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 12:47:05.536738 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 12:47:05.560877 INFO Telegram: Serving Main Menu
+2017-10-08 12:47:06.171573 INFO Telegram: +---}
+2017-10-08 12:47:08.588934 INFO Telegram: {---+
+2017-10-08 12:47:08.620117 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Alarm Functions', 'user_id': 437911056}
+2017-10-08 12:47:08.645745 INFO Telegram: Rajen ---> Alarm Functions
+2017-10-08 12:47:08.682408 INFO Telegram: Serving Alarm Function Menu
+2017-10-08 12:47:09.248555 INFO Telegram: Current Alarm Status - *PENDING*
+2017-10-08 12:47:09.266873 INFO Telegram: +---}
+2017-10-08 12:47:13.363081 INFO Telegram: {---+
+2017-10-08 12:47:13.384435 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 12:47:13.405641 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 12:47:13.423163 INFO Telegram: Serving Main Menu
+2017-10-08 12:47:13.996551 INFO Telegram: +---}
+2017-10-08 12:47:17.575856 INFO Telegram: {---+
+2017-10-08 12:47:17.607595 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Alarm Functions', 'user_id': 437911056}
+2017-10-08 12:47:17.642694 INFO Telegram: Rajen ---> Alarm Functions
+2017-10-08 12:47:17.662701 INFO Telegram: Serving Alarm Function Menu
+2017-10-08 12:47:18.244582 INFO Telegram: Current Alarm Status - *PENDING*
+2017-10-08 12:47:18.287213 INFO Telegram: +---}
+2017-10-08 12:47:20.341997 INFO Telegram: {---+
+2017-10-08 12:47:20.360781 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:47:20.382484 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:47:20.403368 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:47:20.966215 INFO Alarm: <<...
+2017-10-08 12:47:21.009692 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:47:21.135538 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:47:21.162268 INFO Alarm: Notifying
+2017-10-08 12:47:21.201133 INFO Alarm: [admin] 444908880
+2017-10-08 12:47:21.898061 INFO Alarm: [admin] 396287366
+2017-10-08 12:47:22.485936 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:47:22.511053 INFO Alarm: ...>>
+2017-10-08 12:47:23.469745 INFO Telegram: {---+
+2017-10-08 12:47:23.486652 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:47:23.503832 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:47:23.520680 INFO Telegram: Sensor Status
+2017-10-08 12:47:23.554668 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:47:27.357070 INFO Telegram: {---+
+2017-10-08 12:47:27.385840 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Zone Bypass', 'user_id': 437911056}
+2017-10-08 12:47:27.411917 INFO Telegram: Rajen ---> Zone Bypass
+2017-10-08 12:47:27.431278 INFO Telegram: Bypass
+2017-10-08 12:47:27.449103 INFO Telegram: [{"from_last": "iPhone", "from_first": "Rajen", "chat_id": 437911056, "text": "Zone Bypass", "user_id": 437911056}, {"chatids": ["444908880", "396287366", "437911056"], "lights": ["switch.kitchen", "switch.living_room", "switch.dummy", "switch.tarinis_bedroom", "light.gateway_light_34ce0088d613"], "rooms": ["group.living_room", "group.bathroom", "group.bedroom", "group.kitchen"], "switches": ["switch.tv", "switch.lamp"], "alarm": {"functions": ["nonee"]}, "menu": ["Alarm Functions", "Rooms", "Lights,Switches,Scenes", "Cameras"], "groupname": "admin", "scenes": ["script.power", "script.tuner", "script.cd", "script.mute", "script.vol_up", "script.vol_down"]}]
+2017-10-08 12:47:38.788296 INFO Telegram: {---+
+2017-10-08 12:47:38.822955 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 12:47:38.838061 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 12:47:38.855316 INFO Telegram: Serving Main Menu
+2017-10-08 12:47:39.459071 INFO Telegram: +---}
+2017-10-08 12:47:43.556330 INFO Telegram: {---+
+2017-10-08 12:47:43.587896 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Alarm Functions', 'user_id': 437911056}
+2017-10-08 12:47:43.614506 INFO Telegram: Rajen ---> Alarm Functions
+2017-10-08 12:47:43.631160 INFO Telegram: Serving Alarm Function Menu
+2017-10-08 12:47:44.184439 INFO Telegram: Current Alarm Status - *DISARMED*
+2017-10-08 12:47:44.219364 INFO Telegram: +---}
+2017-10-08 12:47:46.243697 INFO Telegram: {---+
+2017-10-08 12:47:46.259487 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:47:46.276976 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:47:46.295696 INFO Telegram: Sensor Status
+2017-10-08 12:47:46.326177 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:47:49.762695 INFO Telegram: {---+
+2017-10-08 12:47:49.781268 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:47:49.799416 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:47:49.823304 INFO Telegram: Sensor Status
+2017-10-08 12:47:49.850500 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[ON] - Alarm Switch
+
+2017-10-08 12:47:56.690366 INFO Telegram: {---+
+2017-10-08 12:47:56.710397 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:47:56.727794 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:47:56.752228 INFO Telegram: Sensor Status
+2017-10-08 12:47:56.788819 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:48:04.832035 INFO Telegram: {---+
+2017-10-08 12:48:04.861898 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Away', 'user_id': 437911056}
+2017-10-08 12:48:04.877462 INFO Telegram: Rajen ---> Arm Away
+2017-10-08 12:48:04.894113 INFO Telegram: Calling Alarm Service alarm_arm_instant from 437911056
+2017-10-08 12:48:05.516335 INFO Alarm: <<...
+2017-10-08 12:48:05.563393 INFO Alarm: Event Trigger for  :PENDING
+2017-10-08 12:48:05.599876 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:48:05.627151 INFO Alarm: Notifying
+2017-10-08 12:48:05.669023 INFO Alarm: [admin] 444908880
+2017-10-08 12:48:07.274463 INFO Alarm: [admin] 396287366
+2017-10-08 12:48:07.798656 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:48:07.824414 INFO Alarm: ...>>
+2017-10-08 12:48:18.983920 INFO Telegram: {---+
+2017-10-08 12:48:19.010355 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Force Arm', 'user_id': 437911056}
+2017-10-08 12:48:19.051693 INFO Telegram: Rajen ---> Force Arm
+2017-10-08 12:48:19.078700 INFO Telegram: Calling Alarm Service alarm_arm_force from 437911056
+2017-10-08 12:48:19.666332 INFO Alarm: <<...
+2017-10-08 12:48:19.707552 INFO Alarm: Event Trigger for  :ARMED_AWAY
+2017-10-08 12:48:19.753825 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:48:19.784247 INFO Alarm: Notifying
+2017-10-08 12:48:19.853094 INFO Alarm: [admin] 444908880
+2017-10-08 12:48:21.446298 INFO Alarm: [admin] 396287366
+2017-10-08 12:48:21.984452 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:48:22.007225 INFO Alarm: ...>>
+2017-10-08 12:48:24.765595 INFO Telegram: {---+
+2017-10-08 12:48:24.805117 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:48:24.822433 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:48:24.846783 INFO Telegram: Sensor Status
+2017-10-08 12:48:24.875212 INFO Telegram: [ON] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:48:29.217238 INFO Telegram: {---+
+2017-10-08 12:48:29.244211 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:48:29.269703 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:48:29.286607 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:48:29.853194 INFO Alarm: <<...
+2017-10-08 12:48:29.906298 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:48:29.943309 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:48:29.967664 INFO Alarm: Notifying
+2017-10-08 12:48:30.012035 INFO Alarm: [admin] 444908880
+2017-10-08 12:48:31.788885 INFO Alarm: [admin] 396287366
+2017-10-08 12:48:32.367037 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:48:32.384882 INFO Alarm: ...>>
+2017-10-08 12:48:35.296226 INFO Telegram: {---+
+2017-10-08 12:48:35.312566 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Stay', 'user_id': 437911056}
+2017-10-08 12:48:35.346454 INFO Telegram: Rajen ---> Arm Stay
+2017-10-08 12:48:35.364002 INFO Telegram: Calling Alarm Service alarm_arm_home from 437911056
+2017-10-08 12:48:35.900286 INFO Alarm: <<...
+2017-10-08 12:48:35.960184 INFO Alarm: Event Trigger for  :PENDING
+2017-10-08 12:48:35.998435 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:48:36.118640 INFO Alarm: Notifying
+2017-10-08 12:48:36.147246 INFO Alarm: [admin] 444908880
+2017-10-08 12:48:37.983891 INFO Alarm: [admin] 396287366
+2017-10-08 12:48:38.585947 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:48:38.623645 INFO Alarm: ...>>
+2017-10-08 12:48:41.104266 INFO Telegram: {---+
+2017-10-08 12:48:41.143060 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:48:41.158344 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:48:41.175926 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:48:41.728656 INFO Alarm: <<...
+2017-10-08 12:48:41.756417 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:48:41.794338 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:48:41.833476 INFO Alarm: Notifying
+2017-10-08 12:48:41.883153 INFO Alarm: [admin] 444908880
+2017-10-08 12:48:43.514631 INFO Alarm: [admin] 396287366
+2017-10-08 12:48:44.135447 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:48:44.157510 INFO Alarm: ...>>
+2017-10-08 12:48:49.962769 INFO Telegram: {---+
+2017-10-08 12:48:49.992079 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Away', 'user_id': 437911056}
+2017-10-08 12:48:50.007550 INFO Telegram: Rajen ---> Arm Away
+2017-10-08 12:48:50.052027 INFO Telegram: Calling Alarm Service alarm_arm_instant from 437911056
+2017-10-08 12:48:50.649405 INFO Alarm: <<...
+2017-10-08 12:48:50.716683 INFO Alarm: Event Trigger for  :PENDING
+2017-10-08 12:48:50.747258 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:48:50.793580 INFO Alarm: Notifying
+2017-10-08 12:48:50.956877 INFO Alarm: [admin] 444908880
+2017-10-08 12:48:51.646667 INFO Alarm: [admin] 396287366
+2017-10-08 12:48:52.216489 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:48:52.249951 INFO Alarm: ...>>
+2017-10-08 12:48:52.886536 INFO Telegram: {---+
+2017-10-08 12:48:52.904983 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:48:52.926914 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:48:52.947329 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:48:53.514212 INFO Alarm: <<...
+2017-10-08 12:48:53.549103 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:48:53.586789 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:48:53.624058 INFO Alarm: Notifying
+2017-10-08 12:48:53.658473 INFO Alarm: [admin] 444908880
+2017-10-08 12:48:55.279752 INFO Alarm: [admin] 396287366
+2017-10-08 12:48:55.830854 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:48:55.853980 INFO Alarm: ...>>
+2017-10-08 12:48:56.923185 INFO Telegram: {---+
+2017-10-08 12:48:56.952855 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Away', 'user_id': 437911056}
+2017-10-08 12:48:56.968086 INFO Telegram: Rajen ---> Arm Away
+2017-10-08 12:48:56.985752 INFO Telegram: Calling Alarm Service alarm_arm_instant from 437911056
+2017-10-08 12:48:57.612792 INFO Alarm: <<...
+2017-10-08 12:48:57.655138 INFO Alarm: Event Trigger for  :PENDING
+2017-10-08 12:48:57.687767 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:48:57.719518 INFO Alarm: Notifying
+2017-10-08 12:48:57.817492 INFO Alarm: [admin] 444908880
+2017-10-08 12:48:59.323994 INFO Alarm: [admin] 396287366
+2017-10-08 12:48:59.870325 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:48:59.889804 INFO Alarm: ...>>
+2017-10-08 12:49:06.195952 INFO Telegram: {---+
+2017-10-08 12:49:06.216435 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:49:06.232921 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:49:06.258568 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:49:06.745716 INFO Alarm: <<...
+2017-10-08 12:49:06.834119 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:49:06.865505 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:49:06.913270 INFO Alarm: Notifying
+2017-10-08 12:49:06.958062 INFO Alarm: [admin] 444908880
+2017-10-08 12:49:08.731611 INFO Alarm: [admin] 396287366
+2017-10-08 12:49:09.273551 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:49:09.295579 INFO Alarm: ...>>
+2017-10-08 12:49:22.005215 INFO Telegram: {---+
+2017-10-08 12:49:22.052196 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:49:22.092571 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:49:22.110011 INFO Telegram: Sensor Status
+2017-10-08 12:49:22.129919 INFO Telegram: [OFF] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:49:29.039042 INFO Telegram: {---+
+2017-10-08 12:49:29.066837 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:49:29.098877 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:49:29.115989 INFO Telegram: Sensor Status
+2017-10-08 12:49:29.135753 INFO Telegram: [OFF] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:49:36.548343 INFO Telegram: {---+
+2017-10-08 12:49:36.587487 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:49:36.603873 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:49:36.620236 INFO Telegram: Sensor Status
+2017-10-08 12:49:36.639747 INFO Telegram: [OFF] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:50:05.793987 INFO Telegram: {---+
+2017-10-08 12:50:05.814600 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:50:05.835438 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:50:05.869225 INFO Telegram: Sensor Status
+2017-10-08 12:50:05.888855 INFO Telegram: [OFF] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:50:12.539173 INFO Telegram: {---+
+2017-10-08 12:50:12.578135 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:50:12.598891 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:50:12.617151 INFO Telegram: Sensor Status
+2017-10-08 12:50:12.637353 INFO Telegram: [OFF] - Front Door
+[ON] - Lounge PIR
+[ON] - Alarm Switch
+
+2017-10-08 12:50:17.565980 INFO Telegram: {---+
+2017-10-08 12:50:17.598188 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:50:17.619806 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:50:17.637898 INFO Telegram: Sensor Status
+2017-10-08 12:50:17.658537 INFO Telegram: [OFF] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:50:51.215465 INFO Telegram: {---+
+2017-10-08 12:50:51.233455 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:50:51.252341 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:50:51.269886 INFO Telegram: Sensor Status
+2017-10-08 12:50:51.289521 INFO Telegram: [OFF] - Front Door
+[OFF] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:50:55.369231 INFO Telegram: {---+
+2017-10-08 12:50:55.396860 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Away', 'user_id': 437911056}
+2017-10-08 12:50:55.422261 INFO Telegram: Rajen ---> Arm Away
+2017-10-08 12:50:55.438970 INFO Telegram: Calling Alarm Service alarm_arm_instant from 437911056
+2017-10-08 12:50:56.054431 INFO Alarm: <<...
+2017-10-08 12:50:56.144672 INFO Alarm: Event Trigger for  :ARMED_AWAY
+2017-10-08 12:50:56.174115 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:50:56.234191 INFO Alarm: Notifying
+2017-10-08 12:50:56.266139 INFO Alarm: [admin] 444908880
+2017-10-08 12:50:57.757220 INFO Alarm: [admin] 396287366
+2017-10-08 12:50:58.322043 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:50:58.346771 INFO Alarm: ...>>
+2017-10-08 12:51:00.346740 INFO Alarm: <<...
+2017-10-08 12:51:00.384451 INFO Alarm: Event Trigger for  :TRIGGERED
+2017-10-08 12:51:00.422075 INFO Alarm: Triggered by       :Alarm Switch
+2017-10-08 12:51:00.460083 INFO Alarm: Notifying
+2017-10-08 12:51:00.486153 INFO Alarm: [admin] 444908880
+2017-10-08 12:51:01.175771 INFO Alarm: [admin] 396287366
+2017-10-08 12:51:01.760898 INFO Alarm: [admin] 437911056
+2017-10-08 12:51:02.298379 INFO Alarm: [member] 444385343
+2017-10-08 12:51:02.814117 INFO Alarm: [member] 299386279
+2017-10-08 12:51:03.769043 INFO Alarm: [member] 255658098
+2017-10-08 12:51:04.436621 INFO Alarm: [member] 346686450
+2017-10-08 12:51:05.100008 INFO Alarm: 7 user(s) successfully notified
+2017-10-08 12:51:05.133220 INFO Alarm: ...>>
+2017-10-08 12:51:06.188748 INFO Telegram: {---+
+2017-10-08 12:51:06.211015 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:51:06.226274 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:51:06.243403 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:51:06.720076 INFO Alarm: <<...
+2017-10-08 12:51:06.771836 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:51:06.807292 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:51:06.845440 INFO Alarm: Notifying
+2017-10-08 12:51:06.929925 INFO Alarm: [admin] 444908880
+2017-10-08 12:51:08.595262 INFO Alarm: [admin] 396287366
+2017-10-08 12:51:09.172489 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:51:09.195233 INFO Alarm: ...>>
+2017-10-08 12:51:12.207341 INFO Telegram: {---+
+2017-10-08 12:51:12.227453 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:51:12.248900 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:51:12.268027 INFO Telegram: Sensor Status
+2017-10-08 12:51:12.293145 INFO Telegram: [OFF] - Front Door
+[OFF] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:51:14.557727 INFO Telegram: {---+
+2017-10-08 12:51:14.585290 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Stay', 'user_id': 437911056}
+2017-10-08 12:51:14.611904 INFO Telegram: Rajen ---> Arm Stay
+2017-10-08 12:51:14.638659 INFO Telegram: Calling Alarm Service alarm_arm_home from 437911056
+2017-10-08 12:51:15.216034 INFO Alarm: <<...
+2017-10-08 12:51:15.262728 INFO Alarm: Event Trigger for  :ARMED_HOME
+2017-10-08 12:51:15.301323 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:51:15.344530 INFO Alarm: Notifying
+2017-10-08 12:51:15.379059 INFO Alarm: [admin] 444908880
+2017-10-08 12:51:17.088774 INFO Telegram: {---+
+2017-10-08 12:51:17.264245 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Tarini', 'chat_id': 255658098, 'text': '🏠 Menu', 'user_id': 255658098}
+2017-10-08 12:51:17.312324 INFO Telegram: Tarini ---> 🏠 Menu
+2017-10-08 12:51:17.323464 INFO Alarm: [admin] 396287366
+2017-10-08 12:51:17.360317 INFO Telegram: Serving Main Menu
+2017-10-08 12:51:18.235624 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:51:18.277176 INFO Alarm: ...>>
+2017-10-08 12:51:19.350360 INFO Telegram: +---}
+2017-10-08 12:51:43.438964 INFO Telegram: {---+
+2017-10-08 12:51:43.472733 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 12:51:43.488602 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 12:51:43.507368 INFO Telegram: Sensor Status
+2017-10-08 12:51:43.534029 INFO Telegram: [OFF] - Front Door
+[ON] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 12:51:48.231718 INFO Telegram: {---+
+2017-10-08 12:51:48.265472 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:51:48.281462 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:51:48.298256 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:51:48.836839 INFO Alarm: <<...
+2017-10-08 12:51:48.874849 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:51:48.922698 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:51:48.971171 INFO Alarm: Notifying
+2017-10-08 12:51:48.998982 INFO Alarm: [admin] 444908880
+2017-10-08 12:51:50.616350 INFO Alarm: [admin] 396287366
+2017-10-08 12:51:51.204657 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:51:51.229102 INFO Alarm: ...>>
+2017-10-08 12:55:36.449371 INFO Telegram: {---+
+2017-10-08 12:55:36.470207 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Stay', 'user_id': 437911056}
+2017-10-08 12:55:36.494308 INFO Telegram: Rajen ---> Arm Stay
+2017-10-08 12:55:36.513407 INFO Telegram: Calling Alarm Service alarm_arm_home from 437911056
+2017-10-08 12:55:37.060816 INFO Alarm: <<...
+2017-10-08 12:55:37.128057 INFO Alarm: Event Trigger for  :ARMED_HOME
+2017-10-08 12:55:37.184382 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:55:37.225872 INFO Alarm: Notifying
+2017-10-08 12:55:37.287516 INFO Alarm: [admin] 444908880
+2017-10-08 12:55:38.913834 INFO Alarm: [admin] 396287366
+2017-10-08 12:55:39.485751 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:55:39.507553 INFO Alarm: ...>>
+2017-10-08 12:55:45.743481 INFO Telegram: {---+
+2017-10-08 12:55:45.768877 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 12:55:45.804738 INFO Telegram: Rajen ---> Disarm
+2017-10-08 12:55:45.857808 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 12:55:46.451155 INFO Alarm: <<...
+2017-10-08 12:55:46.497578 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 12:55:46.535995 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:55:46.575093 INFO Alarm: Notifying
+2017-10-08 12:55:46.608915 INFO Alarm: [admin] 444908880
+2017-10-08 12:55:48.225005 INFO Alarm: [admin] 396287366
+2017-10-08 12:55:48.775336 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:55:48.810188 INFO Alarm: ...>>
+2017-10-08 12:55:48.978209 INFO Telegram: {---+
+2017-10-08 12:55:48.994376 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Away', 'user_id': 437911056}
+2017-10-08 12:55:49.131326 INFO Telegram: Rajen ---> Arm Away
+2017-10-08 12:55:49.154208 INFO Telegram: Calling Alarm Service alarm_arm_instant from 437911056
+2017-10-08 12:55:49.701545 INFO Alarm: <<...
+2017-10-08 12:55:49.734614 INFO Alarm: Event Trigger for  :ARMED_AWAY
+2017-10-08 12:55:49.783177 INFO Alarm: Triggered by       :Rajen
+2017-10-08 12:55:49.813365 INFO Alarm: Notifying
+2017-10-08 12:55:49.853793 INFO Alarm: [admin] 444908880
+2017-10-08 12:55:51.472206 INFO Alarm: [admin] 396287366
+2017-10-08 12:55:52.090654 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 12:55:52.114379 INFO Alarm: ...>>
+2017-10-08 13:31:31.098805 INFO Telegram: {---+
+2017-10-08 13:31:31.125392 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': 'Disarm', 'user_id': 346686450}
+2017-10-08 13:31:31.141474 INFO Telegram: Rajen ---> Disarm
+2017-10-08 13:31:31.158376 INFO Telegram: Calling Alarm Service alarm_disarm from 346686450
+2017-10-08 13:31:31.725718 INFO Alarm: <<...
+2017-10-08 13:31:31.771941 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 13:31:31.812405 INFO Alarm: Triggered by       :Rajen
+2017-10-08 13:31:31.851245 INFO Alarm: Notifying
+2017-10-08 13:31:31.891812 INFO Alarm: [admin] 444908880
+2017-10-08 13:31:33.779296 INFO Alarm: [admin] 396287366
+2017-10-08 13:31:34.359482 INFO Alarm: [admin] 437911056
+2017-10-08 13:31:34.981548 INFO Alarm: 3 user(s) successfully notified
+2017-10-08 13:31:35.008871 INFO Alarm: ...>>
+2017-10-08 13:32:28.543752 INFO Telegram: {---+
+2017-10-08 13:32:28.579792 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Arm Stay', 'user_id': 437911056}
+2017-10-08 13:32:28.604316 INFO Telegram: Rajen ---> Arm Stay
+2017-10-08 13:32:28.623682 INFO Telegram: Calling Alarm Service alarm_arm_home from 437911056
+2017-10-08 13:32:29.175054 INFO Alarm: <<...
+2017-10-08 13:32:29.218690 INFO Alarm: Event Trigger for  :ARMED_HOME
+2017-10-08 13:32:29.252543 INFO Alarm: Triggered by       :Rajen
+2017-10-08 13:32:29.304092 INFO Alarm: Notifying
+2017-10-08 13:32:29.349465 INFO Alarm: [admin] 444908880
+2017-10-08 13:32:30.957968 INFO Alarm: [admin] 396287366
+2017-10-08 13:32:31.558698 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 13:32:31.580952 INFO Alarm: ...>>
+2017-10-08 15:42:21.447902 INFO Telegram: {---+
+2017-10-08 15:42:21.469253 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Sensor Overview', 'user_id': 437911056}
+2017-10-08 15:42:21.491722 INFO Telegram: Rajen ---> Sensor Overview
+2017-10-08 15:42:21.513059 INFO Telegram: Sensor Status
+2017-10-08 15:42:21.545841 INFO Telegram: [OFF] - Front Door
+[OFF] - Lounge PIR
+[OFF] - Alarm Switch
+
+2017-10-08 15:43:31.418967 INFO Telegram: {---+
+2017-10-08 15:43:31.487945 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 15:43:31.556238 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 15:43:31.593207 INFO Telegram: Serving Main Menu
+2017-10-08 15:43:37.123416 INFO Telegram: +---}
+2017-10-08 15:44:02.266637 INFO Telegram: {---+
+2017-10-08 15:44:02.319906 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': '🏠 Menu', 'user_id': 437911056}
+2017-10-08 15:44:02.359079 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 15:44:02.395860 INFO Telegram: Serving Main Menu
+2017-10-08 15:44:02.690830 INFO Telegram: {---+
+2017-10-08 15:44:02.830494 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Lights', 'user_id': 437911056}
+2017-10-08 15:44:02.843065 INFO Telegram: {---+
+2017-10-08 15:44:02.888932 INFO Telegram: Rajen ---> Lights
+2017-10-08 15:44:02.910937 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Lights', 'user_id': 437911056}
+2017-10-08 15:44:02.966025 INFO Telegram: Serving Light Menu
+2017-10-08 15:44:02.996518 INFO Telegram: Rajen ---> Lights
+2017-10-08 15:44:03.198911 INFO Telegram: Serving Light Menu
+2017-10-08 15:44:12.907741 INFO Telegram: +---}
+2017-10-08 15:44:13.400971 INFO Telegram: +---}
+2017-10-08 15:44:13.598396 INFO Telegram: +---}
+2017-10-08 15:44:31.370393 INFO Telegram: {---+
+2017-10-08 15:44:31.401830 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Lights', 'user_id': 437911056}
+2017-10-08 15:44:31.416901 INFO Telegram: Rajen ---> Lights
+2017-10-08 15:44:31.434197 INFO Telegram: Serving Light Menu
+2017-10-08 15:44:40.035427 INFO Telegram: {---+
+2017-10-08 15:44:40.084551 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Rajen', 'chat_id': 346686450, 'text': '🏠 Menu', 'user_id': 346686450}
+2017-10-08 15:44:40.115428 INFO Telegram: Rajen ---> 🏠 Menu
+2017-10-08 15:44:40.132655 INFO Telegram: Serving Main Menu
+2017-10-08 15:44:41.593566 INFO Telegram: +---}
+2017-10-08 15:44:50.281570 INFO Telegram: +---}
+2017-10-08 17:14:56.699477 INFO Alarm: <<...
+2017-10-08 17:14:56.775900 INFO Alarm: Event Trigger for  :TRIGGERED
+2017-10-08 17:14:56.869172 INFO Alarm: Triggered by       :Front Door
+2017-10-08 17:14:56.895585 INFO Alarm: Notifying
+2017-10-08 17:14:56.924012 INFO Alarm: [admin] 444908880
+2017-10-08 17:14:58.725526 INFO Alarm: [admin] 396287366
+2017-10-08 17:14:59.266419 INFO Alarm: [admin] 437911056
+2017-10-08 17:14:59.791961 INFO Alarm: [member] 444385343
+2017-10-08 17:15:00.366623 INFO Alarm: [member] 299386279
+2017-10-08 17:15:00.981530 INFO Alarm: [member] 255658098
+2017-10-08 17:15:01.588014 INFO Alarm: [member] 346686450
+2017-10-08 17:15:02.175003 INFO Alarm: 7 user(s) successfully notified
+2017-10-08 17:15:02.192269 INFO Alarm: ...>>
+2017-10-08 17:15:51.269082 INFO Telegram: {---+
+2017-10-08 17:15:51.299527 INFO Telegram: {'from_last': 'iPhone', 'from_first': 'Rajen', 'chat_id': 437911056, 'text': 'Disarm', 'user_id': 437911056}
+2017-10-08 17:15:51.315872 INFO Telegram: Rajen ---> Disarm
+2017-10-08 17:15:51.332672 INFO Telegram: Calling Alarm Service alarm_disarm from 437911056
+2017-10-08 17:15:51.861013 INFO Alarm: <<...
+2017-10-08 17:15:51.935026 INFO Alarm: Event Trigger for  :DISARMED
+2017-10-08 17:15:52.043199 INFO Alarm: Triggered by       :Rajen
+2017-10-08 17:15:52.131249 INFO Alarm: Notifying
+2017-10-08 17:15:52.166002 INFO Alarm: [admin] 444908880
+2017-10-08 17:15:54.300830 INFO Alarm: [admin] 396287366
+2017-10-08 17:15:54.878441 INFO Alarm: 2 user(s) successfully notified
+2017-10-08 17:15:54.905794 INFO Alarm: ...>>
+2017-10-08 20:53:06.849294 INFO Telegram: {---+
+2017-10-08 20:53:06.887227 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Daverin', 'chat_id': 299386279, 'text': '🏠 Menu', 'user_id': 299386279}
+2017-10-08 20:53:06.902506 INFO Telegram: Daverin ---> 🏠 Menu
+2017-10-08 20:53:06.919257 INFO Telegram: Serving Main Menu
+2017-10-08 20:53:17.213670 INFO Telegram: +---}
+2017-10-08 20:53:41.178005 INFO Telegram: {---+
+2017-10-08 20:53:41.208802 INFO Telegram: {'from_last': 'Nadesan', 'from_first': 'Daverin', 'chat_id': 299386279, 'text': 'Alarm Functions', 'user_id': 299386279}
+2017-10-08 20:53:41.231853 INFO Telegram: Daverin ---> Alarm Functions
+2017-10-08 20:53:41.248840 INFO Telegram: Serving Alarm Function Menu
+2017-10-08 20:53:42.680525 INFO Telegram: Current Alarm Status - *DISARMED*
+2017-10-08 20:53:42.707890 INFO Telegram: +---}
