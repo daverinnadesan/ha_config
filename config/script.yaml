@@ -1,0 +1,15 @@
+update_ha_config:
+  alias: Update Config and Restart
+  sequence:
+    - service: shell_command.pull_config
+    - delay:
+        minutes: 2
+    - service: homeassistant.restart
+
+update_ha_source:
+  alias: Update Config and Restart
+  sequence:
+    - service: shell_command.pull_source
+    - delay:
+        minutes: 15
+    - service: homeassistant.restart
