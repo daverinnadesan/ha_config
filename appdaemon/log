@@ -9636,3 +9636,353 @@
 2017-10-11 05:04:47.383404 INFO Telegram: Ultimate ---> 🏠 Menu
 2017-10-11 05:04:47.416868 INFO Telegram: Serving Main Menu
 2017-10-11 05:04:49.402854 INFO Telegram: +---}
+2017-10-11 16:48:36.546104 INFO AppDaemon Version 2.1.7 starting
+2017-10-11 16:48:36.561601 INFO Configuration read from: /home/homeassistant/config/appdaemon/appdaemon.yaml
+2017-10-11 16:48:39.244012 INFO Got initial state
+2017-10-11 16:48:39.262010 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/alexa.py
+2017-10-11 16:48:39.282025 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 16:48:39.307479 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 16:48:42.034907 INFO Telegram: Listening for telegram texts...
+2017-10-11 16:48:42.050017 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-11 16:48:42.068846 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-11 16:48:42.216605 INFO Alarm: Listening for Alarm Triggers....
+2017-10-11 16:48:42.220169 INFO App initialization complete
+2017-10-11 16:48:42.240440 INFO Dashboards are disabled
+2017-10-11 16:48:42.255776 INFO Starting API
+2017-10-11 16:48:42.391316 INFO Connected to Home Assistant 0.54.0
+2017-10-11 16:54:22.745070 INFO AppDaemon Version 2.1.7 starting
+2017-10-11 16:54:22.758205 INFO Configuration read from: /home/homeassistant/config/appdaemon/appdaemon.yaml
+2017-10-11 16:54:23.032367 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:54:28.155293 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:54:33.252132 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:54:38.368089 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:54:43.471620 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:54:48.602933 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:54:53.702740 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:54:58.830822 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:03.941829 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:09.051292 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:14.175006 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:19.275337 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:24.392167 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:29.518392 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:34.630252 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:39.732149 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:44.864389 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:49.920221 WARNING Unable to connect to Home Assistant, retrying in 5 seconds
+2017-10-11 16:55:58.066769 INFO Got initial state
+2017-10-11 16:55:58.095117 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/alexa.py
+2017-10-11 16:55:58.114395 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 16:55:58.139758 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 16:56:00.843104 INFO Telegram: Listening for telegram texts...
+2017-10-11 16:56:00.855107 INFO Loading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-11 16:56:00.891345 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-11 16:56:00.962369 INFO Alarm: Listening for Alarm Triggers....
+2017-10-11 16:56:00.970062 INFO App initialization complete
+2017-10-11 16:56:00.984704 INFO Dashboards are disabled
+2017-10-11 16:56:00.987397 INFO Starting API
+2017-10-11 16:56:01.135776 INFO Connected to Home Assistant 0.54.0
+2017-10-11 16:56:02.004050 WARNING Scheduler clock skew detected - delta = 1.0037000179290771 - resetting
+2017-10-11 17:17:45.281158 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:17:50.345889 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:17:55.398723 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:00.456595 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:05.510186 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:10.611880 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:15.725084 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:20.872718 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:25.991986 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:31.129935 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:36.245108 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:41.352933 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:46.539979 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:51.657508 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:18:56.769413 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:01.880744 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:07.010062 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:12.130197 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:17.247707 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:22.350904 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:27.464549 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:32.584654 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:37.725760 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:42.868713 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:48.009621 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:53.129847 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:19:58.290357 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:20:03.432834 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:20:08.545146 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:20:13.736608 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:20:19.174823 INFO Got initial state
+2017-10-11 17:20:19.184750 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alexa.py
+2017-10-11 17:20:19.193072 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 17:20:19.206541 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 17:20:19.369208 INFO Telegram: Listening for telegram texts...
+2017-10-11 17:20:19.373323 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-11 17:20:19.384659 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-11 17:20:19.454639 INFO Alarm: Listening for Alarm Triggers....
+2017-10-11 17:20:19.458019 INFO App initialization complete
+2017-10-11 17:20:19.766809 INFO Connected to Home Assistant 0.54.0
+2017-10-11 17:24:41.872550 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:24:46.933029 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:24:52.044537 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:24:57.155773 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:02.276650 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:07.385709 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:12.493975 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:17.614182 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:22.747729 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:27.858586 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:33.027004 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:38.129218 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:43.236520 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:48.348952 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:53.471036 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:25:58.639929 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:03.779919 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:08.911618 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:14.041926 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:19.155800 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:24.266624 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:29.431132 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:34.619621 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:39.732033 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:44.863572 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:49.994070 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:26:55.066056 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:27:00.600495 INFO Got initial state
+2017-10-11 17:27:00.635101 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alexa.py
+2017-10-11 17:27:00.662340 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 17:27:00.700201 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 17:27:00.821894 INFO Telegram: Listening for telegram texts...
+2017-10-11 17:27:00.842443 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-11 17:27:00.893896 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-11 17:27:01.021457 INFO Alarm: Listening for Alarm Triggers....
+2017-10-11 17:27:01.025918 INFO App initialization complete
+2017-10-11 17:27:01.999118 INFO Connected to Home Assistant 0.54.0
+2017-10-11 17:27:02.436289 WARNING Scheduler clock skew detected - delta = 1.4322600364685059 - resetting
+2017-10-11 17:29:52.539642 INFO /home/homeassistant/config/appdaemon/appdaemon.yaml modified
+2017-10-11 17:31:20.461747 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 17:31:20.646042 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 17:31:20.724495 INFO Telegram: Listening for telegram texts...
+2017-10-11 17:44:27.397640 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:44:32.464536 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:44:37.571851 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:44:42.701532 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:44:47.819891 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:44:52.944428 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:44:58.067614 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:03.238351 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:08.358884 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:13.482799 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:18.608893 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:23.732909 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:28.932722 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:34.043030 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:39.169038 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:44.299371 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:49.446340 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:54.573830 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:45:59.688208 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:46:04.813262 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:46:09.930621 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:46:15.051326 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:46:20.183701 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:46:25.295725 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:46:30.407872 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:46:35.472873 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:46:41.033185 INFO Got initial state
+2017-10-11 17:46:41.078117 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alexa.py
+2017-10-11 17:46:41.114767 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 17:46:41.174510 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 17:46:41.286573 INFO Telegram: Listening for telegram texts...
+2017-10-11 17:46:41.295555 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-11 17:46:41.325406 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-11 17:46:41.449662 INFO Alarm: Listening for Alarm Triggers....
+2017-10-11 17:46:41.463848 INFO App initialization complete
+2017-10-11 17:46:41.780454 INFO Connected to Home Assistant 0.54.0
+2017-10-11 17:47:21.800323 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:47:26.874845 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:47:31.996967 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:47:37.168040 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:47:42.306808 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:47:47.428741 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:47:52.539485 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:47:57.699415 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:02.814819 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:07.940299 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:13.065501 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:18.174329 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:23.337495 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:28.471771 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:33.603214 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:38.730142 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:43.901212 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:49.030729 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:54.159329 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:48:59.285397 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:49:04.396783 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:49:09.585974 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:49:14.764571 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:49:19.932874 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:49:25.075249 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:49:30.205842 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:49:35.321149 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:49:40.451788 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:49:46.073325 INFO Got initial state
+2017-10-11 17:49:46.101030 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alexa.py
+2017-10-11 17:49:46.129262 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 17:49:46.180847 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 17:49:46.340667 INFO Telegram: Listening for telegram texts...
+2017-10-11 17:49:46.371922 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-11 17:49:46.410440 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-11 17:49:46.520100 INFO Alarm: Listening for Alarm Triggers....
+2017-10-11 17:49:46.544907 INFO App initialization complete
+2017-10-11 17:49:47.199583 INFO Connected to Home Assistant 0.54.0
+2017-10-11 17:49:47.544764 WARNING Scheduler clock skew detected - delta = 1.1083650588989258 - resetting
+2017-10-11 17:52:41.994195 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:52:47.055679 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:52:52.184053 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:52:57.295705 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:02.400656 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:07.535566 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:12.671770 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:17.795448 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:22.905511 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:28.011140 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:33.141638 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:38.267287 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:43.388735 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:48.508614 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:53.624630 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:53:58.751634 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:03.890793 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:09.000681 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:14.126879 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:19.245377 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:24.352563 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:29.484963 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:34.597472 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:39.720444 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:44.800634 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:49.927729 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:54:55.437600 INFO Got initial state
+2017-10-11 17:54:55.467676 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alexa.py
+2017-10-11 17:54:55.489623 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 17:54:55.545878 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 17:54:55.642758 INFO Telegram: Listening for telegram texts...
+2017-10-11 17:54:55.660847 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-11 17:54:55.703187 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-11 17:54:55.800724 INFO Alarm: Listening for Alarm Triggers....
+2017-10-11 17:54:55.808480 INFO App initialization complete
+2017-10-11 17:54:56.027371 INFO Connected to Home Assistant 0.54.0
+2017-10-11 17:57:56.973917 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:02.046641 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:07.142999 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:12.303917 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:17.416301 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:22.527243 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:27.647119 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:32.755520 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:37.859788 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:42.977682 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:48.116682 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:53.232410 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:58:58.347711 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:03.479356 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:08.595838 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:13.715629 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:18.827162 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:23.952454 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:29.079538 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:34.202068 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:39.324872 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:44.454816 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:49.583138 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:54.712408 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 17:59:59.790181 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:00:04.919887 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:00:10.264660 INFO Got initial state
+2017-10-11 18:00:10.284820 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alexa.py
+2017-10-11 18:00:10.299559 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 18:00:10.333677 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 18:00:10.392997 INFO Telegram: Listening for telegram texts...
+2017-10-11 18:00:10.415266 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-11 18:00:10.430860 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-11 18:00:10.527208 INFO Alarm: Listening for Alarm Triggers....
+2017-10-11 18:00:10.530623 INFO App initialization complete
+2017-10-11 18:00:10.650621 INFO Connected to Home Assistant 0.54.0
+2017-10-11 18:47:29.131596 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:47:34.200710 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:47:39.307667 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:47:44.409010 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:47:49.516717 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:47:54.621166 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:47:59.740663 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:04.849111 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:09.948770 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:15.068254 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:20.175603 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:25.325687 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:30.427025 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:35.521852 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:40.685490 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:45.831346 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:50.951786 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:48:56.105649 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:01.284846 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:06.395582 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:11.491390 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:16.603314 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:21.774837 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:26.942228 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:32.093777 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:37.198368 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:42.328179 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:47.464686 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:49:53.342217 INFO Got initial state
+2017-10-11 18:49:53.366237 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alexa.py
+2017-10-11 18:49:53.389445 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 18:49:53.429674 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 18:49:53.504186 INFO Telegram: Listening for telegram texts...
+2017-10-11 18:49:53.510646 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-11 18:49:53.535996 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-11 18:49:53.647371 INFO Alarm: Listening for Alarm Triggers....
+2017-10-11 18:49:53.650757 INFO App initialization complete
+2017-10-11 18:49:53.896638 INFO Connected to Home Assistant 0.54.0
+2017-10-11 18:49:54.090778 WARNING Scheduler clock skew detected - delta = 1.5460078716278076 - resetting
+2017-10-11 18:54:22.907943 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:54:27.965641 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:54:33.066794 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:54:38.175330 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:54:43.295249 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:54:48.404314 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:54:53.509729 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:54:58.610091 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:03.733601 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:08.845213 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:13.955059 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:19.068857 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:24.175355 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:29.287180 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:34.399012 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:39.492906 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:44.628147 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:49.758166 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:54.857873 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:55:59.974107 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:56:05.070190 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:56:10.174779 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:56:15.296541 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:56:20.414159 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:56:25.529963 WARNING Disconnected from Home Assistant, retrying in 5 seconds
+2017-10-11 18:56:31.044465 INFO Got initial state
+2017-10-11 18:56:31.071576 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alexa.py
+2017-10-11 18:56:31.080127 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/telegram.py
+2017-10-11 18:56:31.127743 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-11 18:56:31.211446 INFO Telegram: Listening for telegram texts...
+2017-10-11 18:56:31.219195 INFO Reloading Module: /home/homeassistant/config/appdaemon/apps/alarm.py
+2017-10-11 18:56:31.240251 INFO Loading Object Alarm using class AlarmReaction from module alarm
+2017-10-11 18:56:31.315505 INFO Alarm: Listening for Alarm Triggers....
+2017-10-11 18:56:31.318897 INFO App initialization complete
+2017-10-11 18:56:31.467114 INFO Connected to Home Assistant 0.54.0
