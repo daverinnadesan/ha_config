@@ -3,7 +3,7 @@ Living Room:
     control: hidden
     entities:
         - light.lamp
-        - light.living_room_light
+        - switch.main_light
         - switch.living_room_outlet_1
         - switch.living_room_outlet_2
 Bathroom:

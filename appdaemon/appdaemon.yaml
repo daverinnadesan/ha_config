@@ -1,0 +1,127 @@
+AppDaemon:
+  logfile: /home/homeassistant/config/appdaemon/log
+  errorfile: /home/homeassistant/config/appdaemon/errorLog
+  threads: 10
+  api_port: 5000
+
+HASS:
+  ha_url: http://localhost:8123
+  ha_key: daver1ns
+
+Alarm:
+  module: alarm
+  class: AlarmReaction
+  notify_triggered:
+    - admin
+    - member
+  notify_warning:
+    - admin
+    - member
+  notify_disarmed:
+    - admin
+  notify_armed_home:
+    - admin
+  notify_armed_away:
+    - admin
+  notify_pending:
+    - admin
+  lights:
+    - entity_id: switch.main_light
+    - entity_id: switch.lamp
+    - entity_id: light.lifx_light_14e35a
+    - entity_id: light.bathroom_light
+      effect: Police
+  xiaomis:
+    - gw_mac: 34:CE:00:88:D6:13
+      ringtone_id: 2
+      ringtone_vol: 10
+
+Telegram:
+  module: telegram
+  class: TelegramBotEventListener
+  groups:
+    admin:
+      chatids:
+        - "444908880"
+        - "396287366"
+      menu:
+        - Alarm Functions
+        - Rooms
+        - Lights,Switches,Scenes
+        - Cameras
+      switches:
+        - switch.kettle
+        - switch.heater
+        - switch.geyser
+        - switch.fan
+        - switch.bedroom_outlet
+        - switch.living_room_outlet_1
+        - switch.living_room_outlet_2
+      lights:
+        - switch.main_light
+        - light.bathroom_light
+        - light.lamp
+        - light.lifx_light_14e35a
+      rooms:
+        - group.living_room
+        - group.bathroom
+        - group.bedroom
+        - group.kitchen
+      scenes:
+        - script.power
+        - script.tuner
+        - script.cd
+        - script.mute
+        - script.vol_up
+        - script.vol_down
+      alarm:
+        functions:
+          - nonee
+    member:
+      chatids:
+        - "299386279"
+      menu:
+        - Alarm Functions
+        - Rooms
+        - Lights,Switches
+        - Cameras
+      switches:
+        - switch.kettle
+      lights:
+        - switch.main_light
+        - light.bathroom_light
+        - light.lamp
+        - light.lifx_light_14e35a
+      rooms:
+        - group.living_room
+        - group.bathroom
+      scenes:
+        - script.power
+      alarm:
+        functions:
+          - sensorBypass
+          - sensorOverview
+    guest:
+      chatids:
+        - "4423908880"
+      menu:
+        - Rooms
+        - Lights,Switches
+        - Scenes
+      switches:
+        - switch.kettle
+      lights:
+        - switch.main_light
+        - light.bathroom_light
+        - light.lamp
+        - light.lifx_light_14e35a
+      rooms:
+        - group.living_room
+        - group.bathroom
+      scenes:
+        - script.new
+      alarm:
+        functions:
+          - sensorBypass
+          - sensorOverview
+          - disarm

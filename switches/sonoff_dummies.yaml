@@ -8,9 +8,27 @@
   qos: 0
   retain: true
 - platform: mqtt
+  name: "Heater"
+  state_topic: "stat/sonoff/four_channel/POWER1"
+  command_topic: "cmnd/sonoff/four_channel/power1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true
+- platform: mqtt
+  name: "Fan"
+  state_topic: "stat/sonoff/four_channel/POWER1"
+  command_topic: "cmnd/sonoff/four_channel/power1"
+  payload_on: "ON"
+  payload_off: "OFF"
+  optimistic: false
+  qos: 0
+  retain: true
+- platform: mqtt
   name: "Living Room outlet 1"
-  state_topic: "home/livingRoom/switch1"
-  command_topic: "home/livingRoom/switch1"
+  state_topic: "stat/sonoff/four_channel/POWER2"
+  command_topic: "cmnd/sonoff/four_channel/power2"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
@@ -18,8 +36,8 @@
   retain: true
 - platform: mqtt
   name: "Living Room outlet 2"
-  state_topic: "home/livingRoom/switch2"
-  command_topic: "home/livingRoom/switch2"
+  state_topic: "stat/sonoff/four_channel/POWER3"
+  command_topic: "cmnd/sonoff/four_channel/power3"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
@@ -27,8 +45,8 @@
   retain: true 
 - platform: mqtt
   name: "Geyser"
-  state_topic: "home/geyser/switch1"
-  command_topic: "home/geyser/switch1"
+  state_topic: "stat/sonoff/four_channel/POWER4"
+  command_topic: "cmnd/sonoff/four_channel/power4"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
@@ -36,8 +54,8 @@
   retain: true 
 - platform: mqtt
   name: "Kettle"
-  state_topic: "home/kettle/switch1"
-  command_topic: "home/kettle/switch1"
+  state_topic: "stat/sonoff/pow/POWER"
+  command_topic: "cmnd/sonoff/pow/power"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false

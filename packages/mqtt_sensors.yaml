@@ -1,0 +1,19 @@
+binary_sensor:     
+  - platform: template
+    sensors:
+      front_door:
+        friendly_name: 'Front Door'
+        device_class: opening
+        value_template: "{{ states.light.lamp.state == 'on' }}"
+      kitchen_window:
+        friendly_name: 'Kitchen Window'
+        device_class: opening
+        value_template: "{{ states.light.lifx_light_14e35a.state == 'on' }}"
+      garage_door:
+        friendly_name: 'Garage Door'
+        device_class: opening
+        value_template: "{{ states.light.bathroom_light.state == 'on' }}"
+      living_room_door:
+        friendly_name: 'Living Room Door'
+        device_class: opening
+        value_template: "{{ states.switch.main_light.state == 'on' }}"

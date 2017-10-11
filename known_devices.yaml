@@ -70,3 +70,84 @@ b827eb78007d:
   picture:
   track: true
   vendor: Raspberry Pi Foundation
+
+34ea34f427fc:
+  hide_if_away: false
+  icon:
+  mac: 34:EA:34:F4:27:FC
+  name: 34ea34f427fc
+  picture:
+  track: true
+  vendor: unknown
+
+a434d95f07bc:
+  hide_if_away: false
+  icon:
+  mac: A4:34:D9:5F:07:BC
+  name: a434d95f07bc
+  picture:
+  track: true
+  vendor: Intel Corporate
+
+d027000db9d8:
+  hide_if_away: false
+  icon:
+  mac: D0:27:00:0D:B9:D8
+  name: d027000db9d8
+  picture:
+  track: true
+  vendor: unknown
+
+5ccf7f924ddc:
+  hide_if_away: false
+  icon:
+  mac: 5C:CF:7F:92:4D:DC
+  name: 5ccf7f924ddc
+  picture:
+  track: true
+  vendor: Espressif Inc.
+
+d02700174b90:
+  hide_if_away: false
+  icon:
+  mac: D0:27:00:17:4B:90
+  name: d02700174b90
+  picture:
+  track: true
+  vendor: unknown
+
+'600194891398':
+  hide_if_away: false
+  icon:
+  mac: 60:01:94:89:13:98
+  name: '600194891398'
+  picture:
+  track: true
+  vendor: Espressif Inc.
+
+5ccf7fb452be:
+  hide_if_away: false
+  icon:
+  mac: 5C:CF:7F:B4:52:BE
+  name: 5ccf7fb452be
+  picture:
+  track: true
+  vendor: unknown
+
+34ce0088d613:
+  hide_if_away: false
+  icon:
+  mac: 34:CE:00:88:D6:13
+  name: 34ce0088d613
+  picture:
+  track: true
+  vendor: XIAOMI Electronics,CO.,LTD
+
+34ce0084e32d:
+  hide_if_away: false
+  icon:
+  mac: 34:CE:00:84:E3:2D
+  name: 34ce0084e32d
+  picture:
+  track: true
+  vendor: XIAOMI Electronics,CO.,LTD

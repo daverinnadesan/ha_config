@@ -1,0 +1,13 @@
+light.lifx_light_14e35a:
+  friendly_name: Desk Light
+  telegram_name: Desk
+  delay_confirmation: 4
+light.bathroom_light:
+  friendly_name: Bathroom Light
+  telegram_name: Bathroom
+light.lamp:
+  friendly_name: Desk Lamp
+  telegram_name: Lamp
+switch.main_light:
+  statefull: False
+  telegram_name: Main Light

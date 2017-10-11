@@ -6,7 +6,7 @@ homeassistant:
   unit_system: metric
   time_zone: Africa/Johannesburg
   packages: !include_dir_named packages
-  customize: !include_dir_merge_named customize
+  customize: !include customize.yaml
 
 mqtt: !include config/mqtt.yaml
 http: !include config/http.yaml
@@ -16,7 +16,7 @@ light: !include_dir_merge_list lights
 sensor: !include_dir_merge_list sensors
 switch: !include_dir_merge_list switches
 group: !include_dir_merge_named groups
-emulated_hue: !include config/emulated_hue.yaml
+alexa:
 
 frontend:
 config:
@@ -26,6 +26,5 @@ conversation:
 history:
 logbook:
 sun:
-
 
 
