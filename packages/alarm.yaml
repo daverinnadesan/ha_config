@@ -24,7 +24,7 @@ alarm_control_panel:
   platform: bwalarm
   name: House
   pending_time: 30
-  trigger_time: 60
+  trigger_time: 600
   alarm: input_boolean.alarm
   warning: input_boolean.warning
   immediate:
