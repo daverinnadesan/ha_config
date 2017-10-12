@@ -5,16 +5,19 @@ import json
 
 ALARM_KEYBOARD = {
     "Arm Stay".format(u'\U0001f3E1',u'\U0001f512')	: 'armStay',
-    "Arm Away Delay".format(u'\U000023f3')					: 'armAwayDelay',
+    "Force Arm Stay".format(u'\U0001f3E1',u'\U0001f512')	: 'armStayForce',
 		"Arm Away".format(u'\U0001f510')								: 'armAway',
+    "Arm Away Delay".format(u'\U000023f3')					: 'armAwayDelay',
+		"Force Arm Away".format(u'\U0001f510')					: 'armAwayForce',
+		"Force Arm Away Delay".format(u'\U0001f510')		: 'armAwayDelayForce',
+    "Disarm".format(u'\U0001f513')									: 'disarm',
     "Sensor Overview".format(u'\U0001f440')					: 'sensorOverview',
     "Zone Bypass".format(u'\U0001f515')							: 'sensorBypass',
 		"{} Menu".format(u'\U0001f3e0')									: 'backToMenu',
     "{} Panic".format(u'\U0001f4e2')								: 'panic',
     "{}".format(u'\U0001f4f9')											: 'cameras',
-    "Disarm".format(u'\U0001f513')									: 'disarm',
-		"Force Arm"																			: 'forceArm',
 		"Alarm Functions"																: 'alarmFunctions',
+		"Refresh Status"																: 'status',
 		"Rooms"																					: 'rooms',
     "{} Rooms".format(u'\U0001f448')								: 'rooms',
 		'Lights'					 															:"lights",
@@ -28,37 +31,71 @@ ALARM_KEYBOARD = {
 		}
 ALARM_KEYBOARD_REVERSED = {v: k for k, v in ALARM_KEYBOARD.items()}
 KEYBOARD_STRUCTURE = {
-	'disarmed' : ['armStay',
-							['armAway','armAwayDelay'],
-							'sensorBypass',
-							'sensorOverview',
-							['backToMenu','panic','cameras']],
-	'armed_home' : ['disarm',
-							'sensorBypass',
-							'sensorOverview',
-							['backToMenu','panic','cameras']],
-	'armed_away' : ['disarm',
-							'sensorBypass',
-							'sensorOverview',
-							['backToMenu','panic','cameras']],
-	'pending' : ['disarm',
-							'forceArm',
-							['backToMenu','panic']],
-	'warning' : ['disarm',
-							'forceArm',
-							'sensorOverview',
-							['backToMenu','panic','cameras']],
-	'triggered' : ['disarm',
-							'sensorOverview',
-							['backToMenu','cameras']]}
+	'disarmed' : 							['armStay',
+											['armAway','armAwayDelay'],
+												'sensorBypass',
+												'sensorOverview',
+												'status',
+											['backToMenu','panic','cameras']],
+	'armed_home' : 					['disarm',
+												'sensorBypass',
+												'sensorOverview',
+												'status',
+											['backToMenu','panic','cameras']],
+	'armed_away' : 					['disarm',
+												'sensorBypass',
+												'sensorOverview',
+												'status',
+											['backToMenu','panic','cameras']],
+	'armed_away_fail' : ['armAwayForce',
+												'armAway',
+												'sensorBypass',
+												'sensorOverview',
+											['backToMenu','panic','cameras']],
+	'pending_fail' : 			['armAwayDelayForce',
+												'armAwayDelay',
+												'sensorBypass',
+												'sensorOverview',
+											['backToMenu','panic','cameras']],
+	'armed_home_fail' : ['armStayForce',
+												'armStay',
+												'sensorBypass',
+												'sensorOverview',
+											['backToMenu','panic','cameras']],
+	'pending' : 						['disarm',
+												'armAwayForce',
+												'status',
+											['backToMenu','panic']],
+	'warning' : 						['disarm',
+												'armAwayForce',
+												'armStayForce',
+												'sensorOverview',
+												'status',
+											['backToMenu','panic','cameras']],
+	'triggered' : 					['disarm',
+												'sensorOverview',
+												'status',
+											['backToMenu','cameras']]}
 
-TEXT_TO_SERVICE = {
-	'armStay':'alarm_arm_home',
-	'armAwayDelay':'alarm_arm_away',
-	'armAway':'alarm_arm_instant',
-	'disarm':'alarm_disarm',
-	'forceArm':'alarm_arm_force',
-	'panic':'alarm_trigger'
+KEY_TO_SERVICE = {
+	'armStay'						:'alarm_arm_home',
+	'armStayForce'			:'alarm_arm_home_force',
+	'armAway'						:'alarm_arm_away',
+	'armAwayForce'			:'alarm_arm_away_force',
+	'armAwayDelay'			:'alarm_arm_away_delay',
+	'armAwayDelayForce' :'alarm_arm_away_delay_force',
+	'disarm'						:'alarm_disarm',
+	'panic'							:'alarm_trigger'
+}
+KEY_TO_EXPECTED_OUTCOME = {
+	'armStay'						:'armed_home',
+	'armStayForce'			:'armed_home',
+	'armAway'						:'armed_away',
+	'armAwayForce'			:'armed_away',
+	'armAwayDelay'			:'pending',
+	'armAwayDelayForce'	:'pending',
+	'disarm'						:'disarmed',
+	'panic'							:'triggered'
 }
 class TelegramBotEventListener(appapi.AppDaemon):
 	"""Event Listener for Telegram bot events"""
@@ -78,16 +115,6 @@ class TelegramBotEventListener(appapi.AppDaemon):
 					return accessgroup
 		return accessgroup
 		
-	def pretty(self,d, indent=0):
-		x = ''
-		self.log("{} - {}".format(d,type(d)))
-		for key, value in d.items():
-				x+=('\t' * indent + str(key))
-				if isinstance(value, dict):
-						self.pretty(value, indent+1)
-				else:
-						x+=('\t' * (indent+1) + str(value))
-		return x
 	def receive_telegram_text(self, event_id, payload_event, *args):
 		assert event_id == 'telegram_text'
 		self.log("{---+")
@@ -123,18 +150,35 @@ class TelegramBotEventListener(appapi.AppDaemon):
 
 	def alarmFunction(self, payload_event, accessgroup):
 		alarm_command = ALARM_KEYBOARD.get(payload_event['text'])
-		alarm_service = TEXT_TO_SERVICE[alarm_command]
+		alarm_service = KEY_TO_SERVICE[alarm_command]
 		chatid = str(payload_event['chat_id'])
 		self.log("Calling Alarm Service {} from {}".format(alarm_service,chatid))
 		service_result = self.call_service("alarm_control_panel/{}".format(alarm_service),entity_id = "alarm_control_panel.house", code = {'chat_id':chatid,'name':payload_event['from_first']})
 		true_service_result = self.getTrueResult(service_result,"alarm_control_panel.house")
-		#self.log("Service Result - {}".format(true_service_result))
-		if true_service_result['state'] == 'pending':
-			message = "Pending due to {}".format(true_service_result.get('attributes')['trippedsensors'])
-			self.handle = self.listen_state(self.armDelayCallback, entity_id = 'alarm_control_panel.house',old = 'pending', chat_id = payload_event['chat_id'], accessgroup = accessgroup)	
+		if true_service_result is None:
+				trippedSensors = self.get_state("alarm_control_panel.house","trippedsensors")
+				state = self.get_state("alarm_control_panel.house")
+				if state == KEY_TO_EXPECTED_OUTCOME[alarm_command]:
+  					message = "Already {}".format(str(state).upper())
+				elif state == 'disarmed':
+						message = "*{}* Fail due to {}".format(alarm_command.upper(), trippedSensors)
+						state = '{}_fail'.format(KEY_TO_EXPECTED_OUTCOME[alarm_command])
+				else:
+						message = "*{}* Fail for unknow reason".format(alarm_command.upper())
 		else:
-			message = "Alarm *{}*".format(str(true_service_result['message']).upper())
-		keyboard = self.getKeyboard(true_service_result['state'], accessgroup)
+				state = true_service_result['state']
+				trippedSensors = true_service_result['attributes']['trippedsensors']
+				if state == KEY_TO_EXPECTED_OUTCOME[alarm_command]:
+						message = "Alarm successfully changed to *{}*".format(true_service_result['state'].upper())
+						if state == "pending":
+							self.handle = self.listen_state(self.armDelayCallback, entity_id = 'alarm_control_panel.house',old = 'pending',new = 'armed_away', chat_id = payload_event['chat_id'], accessgroup = accessgroup)	
+				elif state == 'disarmed':
+						message = "*{}* Fail due to {}".format(alarm_command.upper(), trippedSensors)
+						state = '{}_fail'.format(KEY_TO_EXPECTED_OUTCOME[alarm_command])
+						self.log("STATE - ".format(state))
+				else:
+						message = "*{}* Fail for unknow reason".format(alarm_command.upper())
+		keyboard = self.getKeyboard(state, accessgroup)
 		self.call_service("telegram_bot/send_message",
 			target = payload_event['chat_id'],
 			message = message,
@@ -146,7 +190,7 @@ class TelegramBotEventListener(appapi.AppDaemon):
 			keyboard = self.getKeyboard(new, kwargs['accessgroup'])
 			self.call_service("telegram_bot/send_message",
 				target = kwargs['chat_id'],
-				message = "Alarm *{}*".format(new.upper()),
+				message = "Alarm successfully changed to *{}*".format(new.upper()),
 				keyboard = keyboard)
 		self.cancel_listen_event(self.handle)
     	
@@ -159,8 +203,7 @@ class TelegramBotEventListener(appapi.AppDaemon):
 					self.cancel_listen_event(self.handle)
 				item['message'] = item['state']
 				return item
-		return {"state":self.get_state(entity_id), "message":"Aready {}".format(self.get_state(entity_id))}
-
+		return None
 	
 
 	def sensorStatus(self, payload_event, accessgroup):
@@ -204,7 +247,10 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		splitText = payload_event['text'].split()
 		self.log("BYPASS ZONE")
 		all_group_states = self.get_state('group')
-		friendly_name_text = "{} sensors".format(' '.join(splitText[1:]))
+		name_text = ' '.join(splitText[1:])
+		bare_function = splitText[0]
+		function = ALARM_KEYBOARD[bare_function]
+		friendly_name_text = "{} sensors".format(name_text)
 		entity_id = None
 		for group in all_group_states.items():
 				if type(group[1]) == dict:
@@ -214,13 +260,31 @@ class TelegramBotEventListener(appapi.AppDaemon):
 						entity_id = group[0]
 						break
 		if entity_id:
-			handle = self.call_service("alarm_control_panel/alarm_arm_{}_zone".format(ALARM_KEYBOARD[splitText[0]]),zone = entity_id)
+			handle = self.call_service("alarm_control_panel/alarm_{}_zone".format(function),zone = entity_id)
+			message = None
+			if handle == list():
+					state = self.get_state("alarm_control_panel.house")
+					trippedSensors = self.get_state("alarm_control_panel.house","trippedsensors")
+					if state in ['armed_home', 'armed_away']:
+							message = "{} of {} Fail due to {}".format(bare_function.title(),name_text.title(), trippedSensors)
+					else:
+							message = "Sorry {} Already {}".format(name_text.title(),bare_function)
+			else:
+					self.log("HANDLE - <{}>".format(handle))
+					trippedSensors = handle[0]['attributes']['trippedsensors']
+					if trippedSensors != list():
+							message = "{} of {} Fail due to {}".format(bare_function.title(),name_text.title(), trippedSensors)
+			if message:
+  				self.call_service("telegram_bot/send_message",
+						target = payload_event['chat_id'],
+						message = message,
+						disable_notification = True)
 			self.run_in(self.bypass,1,payload_event = payload_event, accessgroup = accessgroup)
 			#self.listenForService()
 
 	def bypass(self,*args):
 		self.log("Bypass")
-		self.log(args)
+		#self.log(args)
 		payload_event = args[0]
 		accessgroup = payload_event.get('accessgroup')
 		if accessgroup is not None:
@@ -238,12 +302,13 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		for zone_id in alarm_zones:
 			zone_friendly_name = all_group_states[zone_id]['attributes']['friendly_name'].replace(" Sensors","")
 			if set(all_group_states[zone_id]['attributes']['entity_id']) <= set(bypassedSensors):
-					keyboard.append("Enable {0},{0} Sensors".format(zone_friendly_name))
+					keyboard.append("Enable {0}".format(zone_friendly_name))
 					message+="{} {}\n".format(u'\U0000274C',zone_friendly_name)
 			else:
-					keyboard.append("Bypass {0},{0} Sensors".format(zone_friendly_name))
+					keyboard.append("Bypass {0}".format(zone_friendly_name))
 					message+="{} {}\n".format(u'\U00002705',zone_friendly_name)
-		
+
+		keyboard.append(ALARM_KEYBOARD_REVERSED['sensorOverview'])
 		keyboard.append("{} Menu,{} Alarm Functions".format(u'\U0001f3e0',u'\U0001f448'))
 		self.call_service("telegram_bot/send_message",
 					target = payload_event['chat_id'],
@@ -500,16 +565,19 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		
 ALARM_KEYBOARD_TO_METHOD = {
 	'armStay'          :TelegramBotEventListener.alarmFunction,
+	'armStayForce'     :TelegramBotEventListener.alarmFunction,
+	'armAway'          :TelegramBotEventListener.alarmFunction,
+	'armAwayForce' 	   :TelegramBotEventListener.alarmFunction,
 	'armAwayDelay' 	   :TelegramBotEventListener.alarmFunction,
+	'armAwayDelayForce':TelegramBotEventListener.alarmFunction,
 	'sensorOverview'   :TelegramBotEventListener.sensorStatus,
 	'sensorBypass'     :TelegramBotEventListener.bypass,
 	'backToMenu'       :TelegramBotEventListener.printMenu,
 	'panic'       	   :TelegramBotEventListener.alarmFunction,
 	'cameras'    		   :TelegramBotEventListener.cameras,
 	'disarm'           :TelegramBotEventListener.alarmFunction,
-	'armAway'          :TelegramBotEventListener.alarmFunction,
-	'forceArm' 				 :TelegramBotEventListener.alarmFunction,
 	'alarmFunctions'	 :TelegramBotEventListener.alarm_functions,
+	'status'					 :TelegramBotEventListener.alarm_functions,
 	'rooms'						 :TelegramBotEventListener.rooms,
 	'lights'					 :TelegramBotEventListener.control_lights,
 	'switches'				 :TelegramBotEventListener.control_switches,
