@@ -6,8 +6,8 @@ import json
 class AlarmReaction(appapi.AppDaemon):
     def initialize(self):
         self.log("Listening for Alarm Triggers....")
-        self.listen_state(self.alarmLights, self.args['alarm_lights'])
-        self.listen_state(self.alarmSounds, self.args['alarm_sounds'])
+        #self.listen_state(self.alarmLights, self.args['alarm_lights'])
+        #self.listen_state(self.alarmSounds, self.args['alarm_sounds'])
         self.listen_event(self.alarmListener, 'state_changed', entity_id = 'alarm_control_panel.house')
         self.telegram = self.get_app("Telegram")
 
@@ -30,10 +30,11 @@ class AlarmReaction(appapi.AppDaemon):
         self.log("...>>")
 
     def getTriggeredBy(self, data):
-        triggered_by = data['new_state']['attributes']['triggeredBy']
-        if triggered_by is None:
+        triggered_by = data['new_state']['attributes'].get('triggeredBy',None)
+        self.log("TRIGGEDER YBY - {}".format(triggered_by))
+        if triggered_by in [list(),None,'','None']:
             if data['new_state']['state'] in ['triggered','warning']:
-                triggered_by = {'name': self.friendly_name(data['new_state']['attributes']['changedby'])}
+                triggered_by = {'name': self.friendly_name(data['new_state']['attributes']['changed_by'])}
             else:
                 triggered_by = {'name':'Web Console'}
         else:
@@ -115,4 +116,3 @@ class AlarmReaction(appapi.AppDaemon):
         self.log("OFF - {}".format(lights))
         self.call_service("homeassistant/turn_off", entity_id = lights)
         self.turn_on(lights, True)
-
