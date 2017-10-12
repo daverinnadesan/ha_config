@@ -33,20 +33,20 @@ DOMAIN = 'alarm_control_panel'
 
 # Add a new state for the time after an delayed sensor and an actual alarm
 STATE_ALARM_WARNING = 'warning'
-STATE_ALARM_ARMED_INSTANT = 'instant'
-STATE_ALARM_ARMED_HOME_ATTEMPT = 'attempt_home'
 
 
 class Events(enum.Enum):
-    ImmediateTrip = 1
-    DelayedTrip   = 2
-    ArmHome       = 3
-    ArmAway       = 4
-    Timeout       = 5
-    Disarm        = 6
-    Trigger       = 7
-    ArmInstant    = 8
-    ArmForce      = 9
+    ImmediateTrip       = 1
+    DelayedTrip         = 2
+    ArmHome             = 3
+    ArmHomeForce        = 4
+    ArmAway             = 5
+    ArmAwayForce        = 6
+    ArmAwayDelay        = 7
+    ArmAwayDelayForce   = 8
+    Timeout             = 9
+    Disarm              = 10
+    Trigger             = 11
     
 PLATFORM_SCHEMA = vol.Schema({
     vol.Required(CONF_PLATFORM):  'bwalarm',
@@ -73,46 +73,61 @@ def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
     @asyncio.coroutine
     def async_alarm_service_handler(service):
         service_name = service.service
-        if service_name == 'alarm_arm_instant':
+        if service_name == 'alarm_arm_away_delay':
             code = service.data.get('code')
-            alarm.alarm_arm_instant(str(code))
-        elif service_name == 'alarm_arm_force':
+            alarm.alarm_arm_away_delay(str(code))
+        elif service_name == 'alarm_arm_away_force':
             code = service.data.get('code')
-            alarm.alarm_arm_force(str(code))
-        elif service_name == 'alarm_arm_bypass_sensor':
-            sensor = service.data.get('sensors')
-            alarm.alarm_arm_bypass_sensor(sensor)   
-        elif service_name == 'alarm_arm_unbypass_sensor':
-            sensor = service.data.get('sensors')
-            alarm.alarm_arm_unbypass_sensor(sensor)
-        elif service_name == 'alarm_arm_bypass_zone':
+            alarm.alarm_arm_away_force(str(code))
+        elif service_name == 'alarm_arm_away_delay_force':
+            code = service.data.get('code')
+            alarm.alarm_arm_away_delay_force(str(code))
+        elif service_name == 'alarm_arm_home_force':
+            code = service.data.get('code')
+            alarm.alarm_arm_home_force(str(code))
+        elif service_name == 'alarm_bypass_sensor':
+            sensor = service.data.get('sensor')
+            alarm.alarm_bypass_sensor(sensor)   
+        elif service_name == 'alarm_unbypass_sensor':
+            sensor = service.data.get('sensor')
+            alarm.alarm_unbypass_sensor(sensor)
+        elif service_name == 'alarm_bypass_zone':
             zone = service.data.get('zone')
-            alarm.alarm_arm_bypass_zone(zone)   
-        elif service_name == 'alarm_arm_unbypass_zone':
+            alarm.alarm_bypass_zone(zone)   
+        elif service_name == 'alarm_unbypass_zone':
             zone = service.data.get('zone')
-            alarm.alarm_arm_unbypass_zone(zone)               
+            alarm.alarm_unbypass_zone(zone)   
+                        
     hass.services.async_register(
-                DOMAIN, "alarm_arm_instant", 
+                DOMAIN, "alarm_arm_away_delay", 
                 async_alarm_service_handler
             )
     hass.services.async_register(
-                DOMAIN, "alarm_arm_force", 
+                DOMAIN, "alarm_arm_away_force", 
                 async_alarm_service_handler
             )
     hass.services.async_register(
-                DOMAIN, "alarm_arm_bypass_sensor", 
+                DOMAIN, "alarm_arm_away_delay_force", 
                 async_alarm_service_handler
             )
     hass.services.async_register(
-                DOMAIN, "alarm_arm_unbypass_sensor", 
+                DOMAIN, "alarm_arm_home_force", 
                 async_alarm_service_handler
             )
     hass.services.async_register(
-                DOMAIN, "alarm_arm_bypass_zone", 
+                DOMAIN, "alarm_bypass_sensor", 
                 async_alarm_service_handler
             )
     hass.services.async_register(
-                DOMAIN, "alarm_arm_unbypass_zone", 
+                DOMAIN, "alarm_unbypass_sensor", 
+                async_alarm_service_handler
+            )
+    hass.services.async_register(
+                DOMAIN, "alarm_bypass_zone", 
+                async_alarm_service_handler
+            )
+    hass.services.async_register(
+                DOMAIN, "alarm_unbypass_zone", 
                 async_alarm_service_handler
             )
 class BWAlarm(alarm.AlarmControlPanel):
@@ -133,12 +148,12 @@ class BWAlarm(alarm.AlarmControlPanel):
         self._trigger_time = datetime.timedelta(seconds=config[CONF_TRIGGER_TIME])
 
         self._lasttrigger  = ""
-        self._triggered_by = ""
+        self.triggered_by = ""
         self._state        = STATE_ALARM_DISARMED
         self._returnto     = STATE_ALARM_DISARMED
         self._timeoutat    = None
-
         self.bypassedsensors = set()
+        self.tripped_sensors = set()
         self.clearsignals()
 
 
@@ -151,8 +166,6 @@ class BWAlarm(alarm.AlarmControlPanel):
     @property
     def changed_by(self) -> str:   return self._lasttrigger
     @property
-    def triggered_by(self) -> str:   return self._triggered_by
-    @property
     def state(self) -> str:        return self._state
     @property
     def device_state_attributes(self):
@@ -164,7 +177,6 @@ class BWAlarm(alarm.AlarmControlPanel):
             'zones':            sorted(list(self._zones)),
             'trippedsensors':   sorted(list(self.tripped_sensors)),
             'bypassedsensors':  sorted(list(self.bypassedsensors)),
-            'changedby':        self.changed_by,
             'triggeredBy':      self.triggered_by
         }
 
@@ -184,73 +196,108 @@ class BWAlarm(alarm.AlarmControlPanel):
         if new is None or new.state != STATE_ON:
             return
         eid = event.data['entity_id']
-        self._triggered_by = None
         if eid in self.immediate:
             self._lasttrigger = eid
+            self.triggered_by = set()
             self.process_event(Events.ImmediateTrip)
         elif eid in self.delayed:
             self._lasttrigger = eid
+            self.triggered_by = set()
             self.process_event(Events.DelayedTrip)
 
     def alarm_disarm(self, code=None):
-        self._triggered_by = code
+        self.triggered_by = code
         self.process_event(Events.Disarm)
 
     def alarm_arm_home(self, code=None):
-        self._triggered_by = code
+        self.triggered_by = code
         self.process_event(Events.ArmHome)
 
-    def alarm_arm_away(self, code=None):
-        self._triggered_by = code
-        self.process_event(Events.ArmAway)
-    
-    def alarm_arm_instant(self, code=None):
-        self._triggered_by = code
-        self.process_event(Events.ArmInstant)
+    def alarm_arm_home_force(self, code=None):
+        self.triggered_by = code
+        self.process_event(Events.ArmHomeForce)
 
-    def alarm_arm_force(self, code=None):
-        self._triggered_by = code
-        self.process_event(Events.ArmForce)
+    def alarm_arm_away(self, code=None):
+        self.triggered_by = code
+        self.process_event(Events.ArmAway)
+
+    def alarm_arm_away_force(self, code=None):
+        self.triggered_by = code
+        self.process_event(Events.ArmAwayForce)
+
+    def alarm_arm_away_delay(self, code=None):
+        self.triggered_by = code
+        self.process_event(Events.ArmAwayDelay)
+
+    def alarm_arm_away_delay_force(self, code=None):
+        self.triggered_by = code
+        self.process_event(Events.ArmAwayDelayForce)
 
     def alarm_trigger(self, code=None):
-        self._triggered_by = code
+        self.triggered_by = code
         self.process_event(Events.Trigger)
 
-    def alarm_arm_bypass_sensor(self, sensor):
-        self.bypassedsensors |= set(sensor)
+    def alarm_bypass_sensor(self, sensor):
+        _LOGGER.info("RSDATA_ALARM --> Bypass Sensor ({})".format(sensor))
+        self.bypassedsensors.add(sensor)
+        _LOGGER.info("Successful bypass of <{}>".format(sensor))
         self.schedule_update_ha_state()
 
-    def alarm_arm_unbypass_sensor(self, sensor):
-        self.bypassedsensors -= set(sensors)
+    def alarm_unbypass_sensor(self, sensor):
+        _LOGGER.info("RSDATA_ALARM --> Unbypass Sensor ({})".format(sensor))
+        if self.noton(sensor):
+            self.bypassedsensors.remove(sensor)
+            _LOGGER.info("Successful unbypass of <{}>".format(sensor))
+        else:
+            self.tripped_sensors = set()
+            self.tripped_sensors.add(sensor)
+            _LOGGER.info("UnSuccessful unbypass - <{}>".format(self.tripped_sensors))
         self.schedule_update_ha_state()
 
-    def alarm_arm_bypass_zone(self, zone_eid):
-        _LOGGER.info(zone_eid)
+    def alarm_bypass_zone(self, zone_eid):
+        _LOGGER.info("RSDATA_ALARM --> Bypass Zone ({})".format(zone_eid))
         zone = self._hass.states.get(zone_eid)
+        self.tripped_sensors = set()
         _LOGGER.info(zone)
-        if zone:
+        if zone and self._state in [STATE_ALARM_ARMED_AWAY, STATE_ALARM_ARMED_HOME, STATE_ALARM_DISARMED]:
             zone_sensors = zone.attributes['entity_id']
-            _LOGGER.info("{} - {}".format(zone_sensors,type(zone_sensors)))
+            _LOGGER.info("{} Sensors - <{}>".format(zone_eid, zone_sensors))
             self.bypassedsensors |= set(zone_sensors)
             self.immediate -= set(zone_sensors)
             self.delayed -= set(zone_sensors)
             self.ignored = self._allinputs - (self.immediate | self.delayed)
+            _LOGGER.info("Successful bypass of {} - <{}>".format(zone_eid, zone_sensors))
             self.schedule_update_ha_state()
         else:
-            _LOGGER.info("Something went wrong...:(")
+            self.tripped_sensors = set()
+            _LOGGER.error("Something went wrong...:(")
 
-    def alarm_arm_unbypass_zone(self, zone_eid):
-        _LOGGER.info(zone_eid)
+    def alarm_unbypass_zone(self, zone_eid):
+        _LOGGER.info("RSDATA_ALARM --> Unbypass Zone ({})".format(zone_eid))
         zone = self._hass.states.get(zone_eid)
+        self.tripped_sensors = set()
         _LOGGER.info(zone)
-        if zone:
-            zone_sensors = zone.attributes['entity_id']
-            _LOGGER.info(zone_sensors)
-            self.bypassedsensors -= set(zone_sensors)
-            self.immediate |= set(zone_sensors)&self._immediate
-            self.delayed |= set(zone_sensors)&self._delayed
-            self.ignored = self._allinputs - (self.immediate | self.delayed)
+        if zone and self._state in [STATE_ALARM_ARMED_AWAY, STATE_ALARM_ARMED_HOME, STATE_ALARM_DISARMED]:
+            zone_sensors = set(zone.attributes['entity_id'])
+            zone_sensors_not_on = set(filter(self.noton, zone_sensors))
+            _LOGGER.info("{} Sensors - <{}>".format(zone_eid, zone_sensors))
+            if  self._state in [STATE_ALARM_ARMED_AWAY, STATE_ALARM_ARMED_HOME]:
+                if zone_sensors_not_on == zone_sensors:
+                    self.bypassedsensors -= zone_sensors
+                    self.immediate |= zone_sensors&self._immediate
+                    self.delayed |= zone_sensors&self._delayed
+                    self.ignored = self._allinputs - (self.immediate | self.delayed)
+                    _LOGGER.info("Successful unbypass of {} - <{}>".format(zone_eid, zone_sensors))
+                else:
+                    self.tripped_sensors = zone_sensors - zone_sensors_not_on
+                    _LOGGER.info("UnSuccessful unbypass - <{}>".format(self.tripped_sensors))
+            else:
+                _LOGGER.info("Successful unbypass of {} - <{}>".format(zone_eid, zone_sensors))
+                self.bypassedsensors -= zone_sensors
             self.schedule_update_ha_state()
+        else:
+            self.tripped_sensors = set()
+            _LOGGER.error("Something went wrong...:(")
 
 
     ### Internal processing
@@ -277,7 +324,6 @@ class BWAlarm(alarm.AlarmControlPanel):
         """ Clear all our signals, we aren't listening anymore """
         self.immediate = set()
         self.delayed = set()
-        self.tripped_sensors = set()
         self.bypassedsensors = set()
         self.ignored = self._allinputs.copy()
 
@@ -304,76 +350,79 @@ class BWAlarm(alarm.AlarmControlPanel):
         elif event == Events.Trigger:
             self._state = STATE_ALARM_TRIGGERED 
         elif old == STATE_ALARM_DISARMED:
-            if   event == Events.ArmHome:       self._state = STATE_ALARM_ARMED_HOME_ATTEMPT
-            elif event == Events.ArmAway:       self._state = STATE_ALARM_PENDING
-            elif event == Events.ArmInstant:    self._state = STATE_ALARM_ARMED_INSTANT
+            if   event == Events.ArmHome:               self._state = STATE_ALARM_ARMED_HOME
+            elif event == Events.ArmHomeForce:          self._state = STATE_ALARM_ARMED_HOME
+            elif event == Events.ArmAway:               self._state = STATE_ALARM_ARMED_AWAY
+            elif event == Events.ArmAwayForce:          self._state = STATE_ALARM_ARMED_AWAY
+            elif event == Events.ArmAwayDelay:          self._state = STATE_ALARM_ARMED_AWAY
+            elif event == Events.ArmAwayDelayForce:     self._state = STATE_ALARM_ARMED_AWAY
         elif old == STATE_ALARM_PENDING:
-            if   event == Events.Timeout:       self._state = self._returnto
-            elif event == Events.ArmForce:      self._state = self._returnto
+            if   event == Events.Timeout:               self._state = STATE_ALARM_ARMED_AWAY
+            elif event == Events.ArmAwayForce:          self._state = STATE_ALARM_ARMED_AWAY
         elif old == STATE_ALARM_ARMED_HOME or \
              old == STATE_ALARM_ARMED_AWAY:
-            if   event == Events.ImmediateTrip: self._state = STATE_ALARM_TRIGGERED
-            elif event == Events.DelayedTrip:   self._state = STATE_ALARM_WARNING
+            if   event == Events.ImmediateTrip:         self._state = STATE_ALARM_TRIGGERED
+            elif event == Events.DelayedTrip:           self._state = STATE_ALARM_WARNING
         elif old == STATE_ALARM_WARNING:
-            if   event == Events.Timeout:       self._state = STATE_ALARM_TRIGGERED
+            if   event == Events.Timeout:               self._state = STATE_ALARM_TRIGGERED
         elif old == STATE_ALARM_TRIGGERED:
-            if   event == Events.Timeout:       self._state = self._returnto
+            if   event == Events.Timeout:               self._state = self._returnto
 
         new = self._state
         if old != new: 
-            _LOGGER.debug("Alarm changing from {} to {}".format(old, new))
+            _LOGGER.debug("Alarm changing from {} to {} ({})".format(old, new, event))
             # Things to do on entering state
             if new == STATE_ALARM_WARNING:
-                _LOGGER.debug("Turning on warning")
+                _LOGGER.info("RSDATA_ALARM --> Turning on warning")
                 input_boolean.turn_on(self._hass, self._warning)
                 self._timeoutat = now() + self._pending_time
             elif new == STATE_ALARM_TRIGGERED:
-                _LOGGER.debug("Turning on alarm")
+                _LOGGER.info("RSDATA_ALARM --> Turning on alarm")
                 input_boolean.turn_on(self._hass, self._alarm)
                 self._timeoutat = now() + self._trigger_time
-            elif new == STATE_ALARM_PENDING:
-                _LOGGER.debug("Pending user leaving house")
-                input_boolean.turn_on(self._hass, self._warning)
-                self._timeoutat = now() + self._pending_time
+            elif new == STATE_ALARM_DISARMED:
+                _LOGGER.info("RSDATA_ALARM --> Disarming alarm")
+                self._returnto = STATE_ALARM_DISARMED
+                self.clearsignals()
+            elif new == STATE_ALARM_ARMED_AWAY:
+                _LOGGER.info("RSDATA_ALARM --> Attempt Arm (Away)")
                 self._returnto = STATE_ALARM_ARMED_AWAY
                 self.setsignals(False)
-            elif new == STATE_ALARM_ARMED_HOME_ATTEMPT:
+                if   event == Events.ArmAway or  (event == Events.Timeout and old == STATE_ALARM_PENDING):
+                    if self.tripped_sensors != set():
+                        self._state = STATE_ALARM_DISARMED
+                        self.clearsignals()
+                elif event == Events.ArmAwayForce or (event == Events.Timeout and old == STATE_ALARM_TRIGGERED):
+                    self.bypassedsensors|=self.tripped_sensors
+                elif event == Events.ArmAwayDelayForce:
+                    self.bypassedsensors|=self.tripped_sensors
+                    self._state = STATE_ALARM_PENDING
+                    self._timeoutat = now() + self._pending_time
+                elif event == Events.ArmAwayDelay:
+                    if self.tripped_sensors != set():
+                        self._state = STATE_ALARM_DISARMED
+                        self.clearsignals()
+                    else:
+                        self._state = STATE_ALARM_PENDING
+                        self._timeoutat = now() + self._pending_time
+            elif new == STATE_ALARM_ARMED_HOME:
+                _LOGGER.info("RSDATA_ALARM --> Attempt Arm (Home)")
                 self._returnto = STATE_ALARM_ARMED_HOME
                 self.setsignals(True)
-                if self.tripped_sensors != set():
-                    self._state = STATE_ALARM_PENDING
-                    self._timeoutat = now() + self._pending_time
-                else:
-                    self._state = STATE_ALARM_ARMED_HOME    
-            elif new == STATE_ALARM_ARMED_AWAY:
-                self.setsignals(False)
-                self.bypassedsensors|=self.tripped_sensors
-                self._returnto = new
-            elif new == STATE_ALARM_ARMED_HOME:
-                self.setsignals(True)
-                self.bypassedsensors|=self.tripped_sensors
-                self._returnto = new
-            elif new == STATE_ALARM_DISARMED:
-                self._returnto = new
-                self.clearsignals()
-            elif new == STATE_ALARM_ARMED_INSTANT:
-                _LOGGER.debug("Arm Instant")
-                self._returnto = STATE_ALARM_ARMED_AWAY
-                self.setsignals(False)
-                if self.tripped_sensors != set():
-                    self._state = STATE_ALARM_PENDING
-                    self._timeoutat = now() + self._pending_time
-                else:
-                    self._state = STATE_ALARM_ARMED_AWAY
+                if   event == Events.ArmHome:
+                    if self.tripped_sensors != set():
+                        self._state = STATE_ALARM_DISARMED
+                        self.clearsignals()
+                elif event == Events.ArmHomeForce or (event == Events.Timeout and old == STATE_ALARM_TRIGGERED):
+                    self.bypassedsensors|=self.tripped_sensors
 
             # Things to do on leaving state
             if old == STATE_ALARM_WARNING or old == STATE_ALARM_PENDING:
                 _LOGGER.debug("Turning off warning")
-                #input_boolean.turn_off(self._hass, self._warning)
+                input_boolean.turn_off(self._hass, self._warning)
             elif old == STATE_ALARM_TRIGGERED:
                 _LOGGER.debug("Turning off alarm")
-                #input_boolean.turn_off(self._hass, self._alarm)
+                input_boolean.turn_off(self._hass, self._alarm)
 
             # Let HA know that something changed
-            self.schedule_update_ha_state()
-
+        self.schedule_update_ha_state()
