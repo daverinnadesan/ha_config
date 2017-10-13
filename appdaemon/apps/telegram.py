@@ -97,6 +97,18 @@ KEY_TO_EXPECTED_OUTCOME = {
 	'disarm'						:'disarmed',
 	'panic'							:'triggered'
 }
+KEY_ON_OFF = {
+	'on'						:True,
+	'off'						:False
+}
+BOOL_TO_SERVICE = {
+	True						:"turn_on",
+	False						:"turn_off"
+}
+BOOL_TO_STATE = {
+	True						: "on",
+	False						: "off"
+}
 class TelegramBotEventListener(appapi.AppDaemon):
 	"""Event Listener for Telegram bot events"""
 	def initialize(self):
@@ -104,6 +116,8 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		self.listen_event(self.receive_telegram_text, 'telegram_text')
 		self.handle = None
 		self.handleIncomingCode = None
+		self.running_state_listeners = set()
+		self.delay = 1
 
 	def getAccessGroup(self,userID, groupItems):
 		accessgroup = None
@@ -154,7 +168,7 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		chatid = str(payload_event['chat_id'])
 		self.log("Calling Alarm Service {} from {}".format(alarm_service,chatid))
 		service_result = self.call_service("alarm_control_panel/{}".format(alarm_service),entity_id = "alarm_control_panel.house", code = {'chat_id':chatid,'name':payload_event['from_first']})
-		true_service_result = self.getTrueResult(service_result,"alarm_control_panel.house")
+		true_service_result = self.getTrueResultAlarm(service_result,"alarm_control_panel.house")
 		if true_service_result is None:
 				trippedSensors = self.get_state("alarm_control_panel.house","trippedsensors")
 				state = self.get_state("alarm_control_panel.house")
@@ -194,14 +208,21 @@ class TelegramBotEventListener(appapi.AppDaemon):
 				keyboard = keyboard)
 		self.cancel_listen_event(self.handle)
     	
-	def getTrueResult(self, data, entity_id):
+	def getTrueResultAlarm(self, data, entity_id):
 		#self.log("DATA - {}".format(data))
 		for item in data:
 			#self.log("ITEM - {}".format(item))
 			if item.get('entity_id') == entity_id:
 				if self.handle is not None:
 					self.cancel_listen_event(self.handle)
-				item['message'] = item['state']
+				return item
+		return None
+	
+	def getTrueResultGeneral(self, data, entity_id):
+  		#self.log("DATA - {}".format(data))
+		for item in data:
+			#self.log("ITEM - {}".format(item))
+			if item.get('entity_id') == entity_id:
 				return item
 		return None
 	
@@ -322,7 +343,7 @@ class TelegramBotEventListener(appapi.AppDaemon):
 	def panic(self, payload_event, accessgroup):
 		self.log("Panic")
 		result = self.call_service("alarm_control_panel/alarm_trigger",entity_id = "alarm_control_panel.house",code = {'chat_id':payload_event['chat_id'],'name':payload_event['from_first']})
-		result = self.getTrueResult(result,"alarm_control_panel.house")
+		result = self.getTrueResultAlarm(result,"alarm_control_panel.house")
 		self.log("True Result - {}".format(result))		
 		keyboard = self.getKeyboard("triggered", accessgroup)
 		self.call_service("telegram_bot/send_message",
@@ -445,18 +466,124 @@ class TelegramBotEventListener(appapi.AppDaemon):
 		self.log("Invalid Turn on/off request")
 		self.errorMessage(payload_event, "Invalid Request")
 				
+	
 	def entity_turn_on_off(self, entity_id,friendly_name, isOn, payload_event):
-		self.call_service("telegram_bot/send_message",
-					target = payload_event['chat_id'],
-					message = "Done {}".format(u'\U0001f44c'),
-					disable_notification = False)
-		if isOn:
-			self.call_service("homeassistant/turn_on", entity_id = entity_id)
-			self.log("Turning on {}".format(entity_id))
+		self.log("EID - <{}>".format(entity_id))
+		entity_id_set = set()
+		delay = self.delay
+		if type(entity_id) == str:
+			state = self.get_state(entity_id)
+			state_mode = self.get_state(entity_id, "statefull")
+			entity_delay = self.get_state(entity_id, "delay_confirmation")
+			if entity_delay:
+				delay = entity_delay
+			entity_id_set.add(entity_id)
 		else:
-			self.call_service("homeassistant/turn_off", entity_id = entity_id)
-			self.log("Turning off {}".format(entity_id))
-		self.log("+---}")
+			state = not isOn
+			state_mode = False
+			friendly_name = 'group'
+			entity_id_set|= set(entity_id)
+
+		self.log("RUNNING STATE LISTENERS - <{}>".format(self.running_state_listeners))
+		if entity_id_set.intersection(self.running_state_listeners) != set():
+			self.call_service("telegram_bot/send_message",
+						target = payload_event['chat_id'],
+						message = "{} is currently being controlled".format(friendly_name.title()),
+						disable_notification = False)
+			return
+		else:
+			if type(entity_id) == str:
+				self.running_state_listeners.add(entity_id)
+			else:
+				self.running_state_listeners |= set(entity_id)
+		self.log("RUNNING STATE LISTENERS 2- <{}>".format(self.running_state_listeners))
+		self.log("State Mode - {}".format(state_mode))
+		self.log("STATE - {}".format(state))
+		if state_mode != False and KEY_ON_OFF[state] == isOn:
+			self.running_state_listeners.remove(entity_id)
+			self.call_service("telegram_bot/send_message",
+						target = payload_event['chat_id'],
+						message = "{} is already turned {}".format(friendly_name.title(),state),
+						disable_notification = False)
+		else:
+			self.log("{} {}".format(BOOL_TO_SERVICE[isOn], entity_id))
+			listen_handle = self.listen_state(self.entity_state_change, entity_id, isOn = isOn, payload_event = payload_event, friendly_name = friendly_name, state_mode = state_mode)
+			service_handle = self.call_service("homeassistant/{}".format(BOOL_TO_SERVICE[isOn]), entity_id = entity_id)
+			if type(entity_id) == list:
+				self.call_service("telegram_bot/send_message",
+					target = payload_event['chat_id'],
+					message = "Done :)",
+					disable_notification = False)
+			timer_handle = self.run_in(self.cancel_handle,delay,listen_handle = listen_handle, service_handle = service_handle)
+			self.log("+---}")
+
+	def entity_state_change (self, entity, attribute, old, new, kwargs):
+			self.log("<{}> - <{}> - <{}> - {} -> {}".format(entity, attribute, kwargs, old, new))
+			friendly_name = kwargs['friendly_name']
+			isOn = kwargs['isOn']
+			payload_event = kwargs['payload_event']
+			if KEY_ON_OFF[new] == isOn:
+					message = "Done :)\n{} is {}".format(friendly_name.title(),new)
+			else:
+					message = "(Weird) Unable to turn {} {}".format(friendly_name.title(), new)
+			self.call_service("telegram_bot/send_message",
+				target = payload_event['chat_id'],
+				message = message,
+				disable_notification = False)
+
+	def cancel_handle(self, *args):
+			listen_handle = args[0]['listen_handle']
+			service_handle = args[0]['service_handle']
+			entity,attribute, kwargs = self.info_listen_state(listen_handle)
+			self.cancel_listen_state(listen_handle)
+			self.log("CANCELLING - {}>{}>{}".format(entity, attribute, kwargs))
+			friendly_name = kwargs['friendly_name']
+			isOn = kwargs['isOn']
+			payload_event = kwargs['payload_event']
+			if type(entity) == str:
+				self.running_state_listeners.remove(entity)
+				state = self.get_state(entity)
+				self.log("STATE - <{}>".format(state))
+				state_mode = kwargs['state_mode']
+				if state_mode ==False:
+						message =  "Unable to turn {0} {1}\n ---> {1} may already be turned {0}".format(BOOL_TO_STATE[isOn], friendly_name.title())
+				else:
+						message = "Unable to turn {} {}".format(BOOL_TO_STATE[isOn], friendly_name.title())
+				if (state_mode == False and service_handle == list()) or KEY_ON_OFF[state] != isOn:
+						self.log("WARNING - DELAYED FAILED CANCEL")
+						self.call_service("telegram_bot/send_message",
+							target = payload_event['chat_id'],
+							message = message,
+							disable_notification = False)
+			else:
+					self.log("EIDs - {}".format(entity))
+					self.running_state_listeners-=set(entity)
+					state = self.get_state()
+					faultList = []
+					for eid in entity:
+							state = self.get_state(eid)
+							if KEY_ON_OFF[state] != isOn:
+									faultList.append(eid)
+					if faultList == list():
+  						return
+					else:
+							message = "Unable to turn {} {}".format(BOOL_TO_STATE[isOn], self.friendly_name(faultList.pop()))
+							for eid in faultList:
+									message += ", {}".format(self.friendly_name(eid))
+					self.call_service("telegram_bot/send_message",
+						target = payload_event['chat_id'],
+						message = message,
+						disable_notification = False)
+
+	def checkState(self, *args):
+			entity_id = args[0]['entity_id']
+			payload_event = args[0]['payload_event']
+			isOn = args[0]['isOn']
+			state = self.get_state(entity_id)
+			if KEY_ON_OFF[state] == isOn:
+					self.log("COMPLETED 2")
+			else:
+					self.log("ERROR 2")
 	def getKeyboard(self,keyboard_type,accessgroup,payload_event = None):
 		keyboard = []
 		if keyboard_type=="menu":
