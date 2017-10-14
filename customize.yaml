@@ -40,9 +40,15 @@ script.vol_up:
   icon: mdi:volume-plus
 switch.tarinis_bedroom:
   friendly_name: Bedroom light
+  statefull: False
   telegram_name: Tarini's Room
 switch.dummy:
   friendly_name: Bathroom Light
   telegram_name: Bathroom
+  statefull: False
 group.bedroom:
   friendly_name: Tarini 's Bedroom
+switch.kitchen:
+  statefull: False
+switch.living_room:
+  statefull: False
