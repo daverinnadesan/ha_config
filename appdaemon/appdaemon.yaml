@@ -3,7 +3,6 @@ AppDaemon:
   errorfile: /home/homeassistant/config/appdaemon/errorLog
   threads: 10
   api_port: 5000
-
 HASS:
   ha_url: http://localhost:8123
   ha_key: daver1ns
