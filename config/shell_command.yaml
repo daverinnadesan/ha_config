@@ -1,3 +1,5 @@
  pull_config: bash /home/homeassistant/scripts/pull_config.script
  push_config: bash /home/homeassistant/scripts/push_config.script
  pull_source: bash /home/homeassistant/scripts/pull_source.script
+ pull_scripts: bash /home/homeassistant/scripts/pull_scripts.script
+ push_scripts: bash /home/homeassistant/scripts/push_scripts.script
