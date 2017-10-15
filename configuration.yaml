@@ -18,7 +18,7 @@ sensor: !include_dir_merge_list sensors
 switch: !include_dir_merge_list switches
 group: !include_dir_merge_named groups
 shell_command: !include config/shell_command.yaml
-
+script: !include config/script.yaml
 
 
 frontend:
