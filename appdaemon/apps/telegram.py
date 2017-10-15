@@ -3,6 +3,7 @@ import uuid
 import enum
 import json
 
+
 ALARM_KEYBOARD = {
     "Arm Stay".format(u'\U0001f3E1',u'\U0001f512')	: 'armStay',
     "Force Arm Stay".format(u'\U0001f3E1',u'\U0001f512')	: 'armStayForce',
