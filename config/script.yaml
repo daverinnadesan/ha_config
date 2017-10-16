@@ -7,7 +7,7 @@ update_ha_config:
     - service: homeassistant.restart
 
 update_ha_source:
-  alias: Update Config and Restart
+  alias: Update Source and Restart
   sequence:
     - service: shell_command.pull_source
     - delay:
