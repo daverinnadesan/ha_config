@@ -2,7 +2,15 @@ import appdaemon.appapi as appapi
 import uuid
 import enum
 import json
+import random
+import datetime
 
+#thumbs = [	U+1F44D U+1F3FF	,U+1F44D U+1F3FE, U+1F44D U+1F3FD	, 	U+1F44D U+1F3FC, U+1F44D U+1F3FB, U+1F44D	]
+thumbs = ["{}{}".format(u'\U0001f44d',u'\U0001f3ff'),"{}{}".format(u'\U0001f44d',u'\U0001f3fe'), "{}{}".format(u'\U0001f44d',u'\U0001f3fd'), "{}{}".format(u'\U0001f44d',u'\U0001f3fc'), "{}{}".format(u'\U0001f44d',u'\U0001f3fc'), "{}".format(u'\U0001f44d')]
+fingers = ["{}{}".format(u'\U0001f44c',u'\U0001f3ff'),"{}{}".format(u'\U0001f44c',u'\U0001f3fe'), "{}{}".format(u'\U0001f44c',u'\U0001f3fd'), "{}{}".format(u'\U0001f44c',u'\U0001f3fc'), "{}{}".format(u'\U0001f44c',u'\U0001f3fc'), "{}".format(u'\U0001f44c')]
+#fingers = [u'\U0001f3ff', u'\U0001f3fe', u'\U0001f3fd', u'\U0001f3fc', u'\U0001f3fc', u'\U0001f44d']
+
+fingers = []
 ALARM_KEYBOARD = {
     "Arm Stay".format(u'\U0001f3E1',u'\U0001f512')	: 'armStay',
     "Force Arm Stay".format(u'\U0001f3E1',u'\U0001f512')	: 'armStayForce',
@@ -27,7 +35,8 @@ ALARM_KEYBOARD = {
 		"{} Alarm Functions".format(u'\U0001f448')      :'alarmFunctions',
 		"enable"	   																		:'unbypass',
 		"bypass"																				:'bypass',
-		"Cameras"																				:"cameras"
+		"Cameras"																				:"cameras",
+		"Done "																					:"done1"
 		}
 ALARM_KEYBOARD_REVERSED = {v: k for k, v in ALARM_KEYBOARD.items()}
 KEYBOARD_STRUCTURE = {
@@ -132,7 +141,14 @@ class TelegramBotEventListener(appapi.AppDaemon):
 	def receive_telegram_text(self, event_id, payload_event, *args):
 		assert event_id == 'telegram_text'
 		self.log("{---+")
-		self.log(str(payload_event))
+		timestamp_text = datetime.datetime.fromtimestamp(payload_event['date'])
+		timestamp_now = datetime.datetime.now()
+		age_of_text = (timestamp_now - timestamp_text).total_seconds()
+		if age_of_text > 10:
+			self.errorMessage(payload_event,"Message expired")
+			self.log("ERROR - Nah this text too old fam ...{} fucking seconds old".format(age_of_text))
+			return
+		self.log("[{}] - {}".format(age_of_text,str(payload_event)))
 		accessgroup = self.getAccessGroup(str(payload_event["user_id"]),self.args["groups"].items())
 		#self.log("ACCESS GROUP - <{}>".format(accessgroup))
 		self.log("{} ---> {}".format(payload_event["from_first"],payload_event["text"]))
@@ -512,7 +528,7 @@ class TelegramBotEventListener(appapi.AppDaemon):
 			if type(entity_id) == list:
 				self.call_service("telegram_bot/send_message",
 					target = payload_event['chat_id'],
-					message = "Done :)",
+					message = "{}{}".format(ALARM_KEYBOARD_REVERSED['done1'],random.choice(thumbs)),
 					disable_notification = False)
 			timer_handle = self.run_in(self.cancel_handle,delay,listen_handle = listen_handle, service_handle = service_handle)
 			self.log("+---}")
@@ -523,7 +539,7 @@ class TelegramBotEventListener(appapi.AppDaemon):
 			isOn = kwargs['isOn']
 			payload_event = kwargs['payload_event']
 			if KEY_ON_OFF[new] == isOn:
-					message = "Done :)\n{} is {}".format(friendly_name.title(),new)
+					message = "{}{}\n{} is {}".format(ALARM_KEYBOARD_REVERSED['done1'],random.choice(thumbs), friendly_name.title(),new)
 			else:
 					message = "(Weird) Unable to turn {} {}".format(friendly_name.title(), new)
 			self.call_service("telegram_bot/send_message",
@@ -546,7 +562,7 @@ class TelegramBotEventListener(appapi.AppDaemon):
 				self.log("STATE - <{}>".format(state))
 				state_mode = kwargs['state_mode']
 				if state_mode ==False:
-						message =  "Unable to turn {0} {1}\n ---> {1} may already be turned {0}".format(BOOL_TO_STATE[isOn], friendly_name.title())
+						message =  "{}{}\n{} is {}".format(ALARM_KEYBOARD_REVERSED['done1'],random.choice(thumbs),friendly_name.title(),BOOL_TO_STATE[isOn])
 				else:
 						message = "Unable to turn {} {}".format(BOOL_TO_STATE[isOn], friendly_name.title())
 				if (state_mode == False and service_handle == list()) or KEY_ON_OFF[state] != isOn:
