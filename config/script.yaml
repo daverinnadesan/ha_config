@@ -14,7 +14,7 @@ update_ha_source:
         minutes: 15
     - service: homeassistant.restart
 
-update_ha_source:
+update_ha_scripts:
   alias: Update Scripts and Restart
   sequence:
     - service: shell_command.pull_scripts
