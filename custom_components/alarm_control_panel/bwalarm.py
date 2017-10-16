@@ -196,7 +196,7 @@ class BWAlarm(alarm.AlarmControlPanel):
         if new is None or new.state != STATE_ON:
             return
         eid = event.data['entity_id']
-        if eid in self.immediate:
+        if eid in self.immediate or (eid in self.delayed and self._state == STATE_ALARM_ARMED_AWAY):
             self._lasttrigger = eid
             self.triggered_by = set()
             self.process_event(Events.ImmediateTrip)
