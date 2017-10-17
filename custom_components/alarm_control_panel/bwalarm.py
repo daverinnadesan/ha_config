@@ -313,11 +313,12 @@ class BWAlarm(alarm.AlarmControlPanel):
         self.immediate = set(filter(self.noton, self.immediate))
         self.delayed = set(filter(self.noton, self.delayed))
         self.tripped_sensors = (self._immediate - self.immediate) | (self._delayed - self.delayed)
+        if not athome:
+            self.immediate |= self.delayed
+            self.delayed = set()
         self.tripped_sensors -= self.bypassedsensors
         _LOGGER.info("Tripped Sensors - <{}>".format(self.tripped_sensors))
-        if athome:
-            self.immediate -= self._notathome
-            self.delayed -= self._notathome
+        _LOGGER.info("Bypassed Sensors - <{}>".format(self.bypassedsensors))
         self.ignored = self._allinputs - (self.immediate | self.delayed)
 
     def clearsignals(self):
@@ -408,6 +409,7 @@ class BWAlarm(alarm.AlarmControlPanel):
             elif new == STATE_ALARM_ARMED_HOME:
                 _LOGGER.info("RSDATA_ALARM --> Attempt Arm (Home)")
                 self._returnto = STATE_ALARM_ARMED_HOME
+                self.bypassedsensors|=self._notathome
                 self.setsignals(True)
                 if   event == Events.ArmHome:
                     if self.tripped_sensors != set():
