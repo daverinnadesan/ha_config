@@ -3,3 +3,7 @@
  pull_source: bash /home/homeassistant/scripts/pull_source.script
  pull_scripts: bash /home/homeassistant/scripts/pull_scripts.script
  push_scripts: bash /home/homeassistant/scripts/push_scripts.script
+ pull_appdaemon_apps: bash /home/homeassistant/scripts/pull_appdaemon.script
+ push_appdaemon_apps: bash /home/homeassistant/scripts/push_appdaemon.script
+ pull_custom_components: bash /home/homeassistant/scripts/pull_custom_components.script
+ push_custom_components: bash /home/homeassistant/scripts/push_custom_components.script
