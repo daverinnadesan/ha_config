@@ -6416,3 +6416,7 @@
 2017-10-20 03:12:20.238467 INFO Telegram: <light.lifx_light_14e35a> - <state> - <{'state_mode': None, 'payload_event': {'chat_id': 444908880, 'date': 1508461936, 'data': 1508461936, 'text': 'turn on desk', 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'friendly_name': 'desk', 'isOn': True}> - off -> on
 2017-10-20 03:12:21.874698 INFO Telegram: CANCELLING - light.lifx_light_14e35a>None>{'state_mode': None, 'payload_event': {'chat_id': 444908880, 'date': 1508461936, 'data': 1508461936, 'text': 'turn on desk', 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'friendly_name': 'desk', 'isOn': True}
 2017-10-20 03:12:21.890816 INFO Telegram: STATE - <on>
+2017-10-20 03:29:34.844787 INFO /home/homeassistant/config/appdaemon/appdaemon.yaml modified
+2017-10-20 03:29:35.790438 INFO App 'Telegram' changed - reloading
+2017-10-20 03:29:35.802565 INFO Loading Object Telegram using class TelegramBotEventListener from module telegram
+2017-10-20 03:29:35.825829 INFO Telegram: Listening for telegram texts...
