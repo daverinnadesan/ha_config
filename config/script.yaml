@@ -28,5 +28,8 @@ update_ha_modules:
     - service: shell_command.pull_appdaemon_apps
     - service: shell_command.pull_custom_components
     - delay:
+        minutes: 2    
+    - service: shell_command.push_config
+    - delay:
         minutes: 1
     - service: homeassistant.restart
