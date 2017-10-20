@@ -7,8 +7,4 @@ telegram_bot:
       - -220710108
       - 396287366
 
-notify:
-  - name: telegram_user1
-    platform: telegram
-    chat_id: 299386279
 

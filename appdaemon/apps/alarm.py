@@ -13,10 +13,8 @@ class AlarmReaction(appapi.AppDaemon):
 
     def alarmListener(self, event_name, data, kwargs):
         self.log("<<...")
-        if data['old_state']['state'] != data['new_state']['state']:
-            self.trigger(data,kwargs)
-        else:
-            self.log("...>>")
+        self.trigger(data,kwargs)
+        self.log("...>>")
 
     def trigger(self, data, kwargs):
         #self.log("ARMED HOME - <{}> - <{}>".format(data,kwargs))

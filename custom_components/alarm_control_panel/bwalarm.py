@@ -196,7 +196,7 @@ class BWAlarm(alarm.AlarmControlPanel):
         if new is None or new.state != STATE_ON:
             return
         eid = event.data['entity_id']
-        if eid in self.immediate or (eid in self.delayed and self._state == STATE_ALARM_ARMED_AWAY):
+        if eid in self.immediate:
             self._lasttrigger = eid
             self.triggered_by = set()
             self.process_event(Events.ImmediateTrip)
@@ -313,11 +313,12 @@ class BWAlarm(alarm.AlarmControlPanel):
         self.immediate = set(filter(self.noton, self.immediate))
         self.delayed = set(filter(self.noton, self.delayed))
         self.tripped_sensors = (self._immediate - self.immediate) | (self._delayed - self.delayed)
+        if not athome:
+            self.immediate |= self.delayed
+            self.delayed = set()
         self.tripped_sensors -= self.bypassedsensors
         _LOGGER.info("Tripped Sensors - <{}>".format(self.tripped_sensors))
-        if athome:
-            self.immediate -= self._notathome
-            self.delayed -= self._notathome
+        _LOGGER.info("Bypassed Sensors - <{}>".format(self.bypassedsensors))
         self.ignored = self._allinputs - (self.immediate | self.delayed)
 
     def clearsignals(self):
@@ -367,17 +368,18 @@ class BWAlarm(alarm.AlarmControlPanel):
             if   event == Events.Timeout:               self._state = STATE_ALARM_TRIGGERED
         elif old == STATE_ALARM_TRIGGERED:
             if   event == Events.Timeout:               self._state = self._returnto
+            elif event == Events.DelayedTrip:           self._state = STATE_ALARM_TRIGGERED
 
         new = self._state
-        if old != new: 
-            _LOGGER.debug("Alarm changing from {} to {} ({})".format(old, new, event))
+        if old != new or new == STATE_ALARM_TRIGGERED:
+            _LOGGER.info("RSDATA_ALARM --> Changing from {} to {} ({})".format(old, new, event))
             # Things to do on entering state
             if new == STATE_ALARM_WARNING:
-                _LOGGER.info("RSDATA_ALARM --> Turning on warning")
+                _LOGGER.info("RSDATA_ALARM --> Turning on warning by {}".format(self._lasttrigger))
                 input_boolean.turn_on(self._hass, self._warning)
                 self._timeoutat = now() + self._pending_time
             elif new == STATE_ALARM_TRIGGERED:
-                _LOGGER.info("RSDATA_ALARM --> Turning on alarm")
+                _LOGGER.info("RSDATA_ALARM --> Triggered alarm by {}".format(self._lasttrigger))
                 input_boolean.turn_on(self._hass, self._alarm)
                 self._timeoutat = now() + self._trigger_time
             elif new == STATE_ALARM_DISARMED:
@@ -408,6 +410,7 @@ class BWAlarm(alarm.AlarmControlPanel):
             elif new == STATE_ALARM_ARMED_HOME:
                 _LOGGER.info("RSDATA_ALARM --> Attempt Arm (Home)")
                 self._returnto = STATE_ALARM_ARMED_HOME
+                self.bypassedsensors|=self._notathome
                 self.setsignals(True)
                 if   event == Events.ArmHome:
                     if self.tripped_sensors != set():
@@ -418,10 +421,10 @@ class BWAlarm(alarm.AlarmControlPanel):
 
             # Things to do on leaving state
             if old == STATE_ALARM_WARNING or old == STATE_ALARM_PENDING:
-                _LOGGER.debug("Turning off warning")
+                _LOGGER.info("RSDATA_ALARM --> Turning off warning")
                 input_boolean.turn_off(self._hass, self._warning)
-            elif old == STATE_ALARM_TRIGGERED:
-                _LOGGER.debug("Turning off alarm")
+            elif old == STATE_ALARM_TRIGGERED and old != new:
+                _LOGGER.info("RSDATA_ALARM --> Turning off alarm")
                 input_boolean.turn_off(self._hass, self._alarm)
 
             # Let HA know that something changed

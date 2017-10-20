@@ -4798,3 +4798,530 @@ TabError: inconsistent use of tabs and spaces in indentation
 TabError: inconsistent use of tabs and spaces in indentation
 
 2017-10-09 21:04:59.950108 WARNING ------------------------------------------------------------
+2017-10-12 13:41:11.159714 WARNING ------------------------------------------------------------
+2017-10-12 13:41:11.174555 WARNING Unexpected error during loading of telegram.py:
+2017-10-12 13:41:11.182828 WARNING ------------------------------------------------------------
+2017-10-12 13:41:11.207772 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 38
+    "Done {}".format(random.choice(thumbs))					:"done1"
+                                           					^
+SyntaxError: invalid syntax
+
+2017-10-12 13:41:11.210457 WARNING ------------------------------------------------------------
+2017-10-12 13:42:26.141196 WARNING ------------------------------------------------------------
+2017-10-12 13:42:26.153919 WARNING Unexpected error during loading of telegram.py:
+2017-10-12 13:42:26.164082 WARNING ------------------------------------------------------------
+2017-10-12 13:42:26.169684 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 38
+    "Done {}".format(random.choice(thumbs))					:"done1"
+                                           					^
+SyntaxError: invalid syntax
+
+2017-10-12 13:42:26.172278 WARNING ------------------------------------------------------------
+2017-10-12 13:43:36.132545 WARNING ------------------------------------------------------------
+2017-10-12 13:43:36.143884 WARNING Unexpected error during loading of telegram.py:
+2017-10-12 13:43:36.146499 WARNING ------------------------------------------------------------
+2017-10-12 13:43:36.151671 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 38
+    "Done {}".format(random.choice(thumbs))					:"done1"
+                                           					^
+SyntaxError: invalid syntax
+
+2017-10-12 13:43:36.164854 WARNING ------------------------------------------------------------
+2017-10-12 13:43:37.140071 WARNING ------------------------------------------------------------
+2017-10-12 13:43:37.153207 WARNING Unexpected error during loading of telegram.py:
+2017-10-12 13:43:37.156191 WARNING ------------------------------------------------------------
+2017-10-12 13:43:37.173666 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 38
+    "Done {}".format(random.choice(thumbs))					:"done1"
+                                           					^
+SyntaxError: invalid syntax
+
+2017-10-12 13:43:37.176280 WARNING ------------------------------------------------------------
+2017-10-12 13:44:24.034157 WARNING ------------------------------------------------------------
+2017-10-12 13:44:24.053878 WARNING Unexpected error in worker for App Telegram:
+2017-10-12 13:44:24.057034 WARNING Worker Ags: {'new_state': 'on', 'name': 'Telegram', 'function': <bound method TelegramBotEventListener.entity_state_change of <telegram.TelegramBotEventListener object at 0xb5a92a10>>, 'entity': 'switch.main_light', 'attribute': 'state', 'kwargs': {'isOn': True, 'payload_event': {'text': 'turn on main light', 'chat_id': 444908880, 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'state_mode': False, 'friendly_name': 'main light'}, 'id': UUID('40447230-5596-489c-a5d1-1541d2914776'), 'type': 'attr', 'old_state': 'off'}
+2017-10-12 13:44:24.059482 WARNING ------------------------------------------------------------
+2017-10-12 13:44:24.213281 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 525, in worker
+    ha.sanitize_state_kwargs(args["kwargs"]))
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 534, in entity_state_change
+    message = "{}\n{} is {}".format(ALARM_KEYBOARD['done'],friendly_name.title(),new)
+KeyError: 'done'
+
+2017-10-12 13:44:24.236194 WARNING ------------------------------------------------------------
+2017-10-12 13:44:51.813946 WARNING ------------------------------------------------------------
+2017-10-12 13:44:51.836204 WARNING Unexpected error in worker for App Telegram:
+2017-10-12 13:44:51.855274 WARNING Worker Ags: {'new_state': 'off', 'name': 'Telegram', 'function': <bound method TelegramBotEventListener.entity_state_change of <telegram.TelegramBotEventListener object at 0xb5a92a10>>, 'entity': 'switch.main_light', 'attribute': 'state', 'kwargs': {'isOn': False, 'payload_event': {'text': 'turn off main light', 'chat_id': 444908880, 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'state_mode': False, 'friendly_name': 'main light'}, 'id': UUID('40447230-5596-489c-a5d1-1541d2914776'), 'type': 'attr', 'old_state': 'on'}
+2017-10-12 13:44:51.857960 WARNING ------------------------------------------------------------
+2017-10-12 13:44:51.861778 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 525, in worker
+    ha.sanitize_state_kwargs(args["kwargs"]))
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 534, in entity_state_change
+    message = "{}\n{} is {}".format(ALARM_KEYBOARD['done'],friendly_name.title(),new)
+KeyError: 'done'
+
+2017-10-12 13:44:51.919909 WARNING ------------------------------------------------------------
+2017-10-12 13:45:15.564073 WARNING ------------------------------------------------------------
+2017-10-12 13:45:15.588455 WARNING Unexpected error in worker for App Telegram:
+2017-10-12 13:45:15.591548 WARNING Worker Ags: {'new_state': 'on', 'name': 'Telegram', 'function': <bound method TelegramBotEventListener.entity_state_change of <telegram.TelegramBotEventListener object at 0xb5a92a10>>, 'entity': 'switch.main_light', 'attribute': 'state', 'kwargs': {'isOn': True, 'payload_event': {'text': 'turn on main light', 'chat_id': 444908880, 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'state_mode': False, 'friendly_name': 'main light'}, 'id': UUID('40447230-5596-489c-a5d1-1541d2914776'), 'type': 'attr', 'old_state': 'off'}
+2017-10-12 13:45:15.634485 WARNING ------------------------------------------------------------
+2017-10-12 13:45:15.638484 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 525, in worker
+    ha.sanitize_state_kwargs(args["kwargs"]))
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 534, in entity_state_change
+    message = "{}\n{} is {}".format(ALARM_KEYBOARD['done'],friendly_name.title(),new)
+KeyError: 'done'
+
+2017-10-12 13:45:15.641090 WARNING ------------------------------------------------------------
+2017-10-12 13:55:48.131650 WARNING ------------------------------------------------------------
+2017-10-12 13:55:48.148634 WARNING Unexpected error during loading of telegram.py:
+2017-10-12 13:55:48.151129 WARNING ------------------------------------------------------------
+2017-10-12 13:55:48.162515 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 8
+    thumbs = ["{}{}".format(u'\U0001f44d',u'\U0001f3ff'),"{}{}".format(u'\U0001f44d',u'\U0001f3fe'), "{}{}".format(u'\U0001f44d',u'\U0001f3fd'), "{}{}".format(u'\U0001f44d',u'\U0001f3fc')u'\U0001f3fc', "{}{}".format(u'\U0001f44d',u'\U0001f3fc'), "{}".format(u'\U0001f44d')]
+                                                                                                                                                                                                       ^
+SyntaxError: invalid syntax
+
+2017-10-12 13:55:48.175556 WARNING ------------------------------------------------------------
+2017-10-12 14:03:18.436401 WARNING ------------------------------------------------------------
+2017-10-12 14:03:18.452789 WARNING Unexpected error in worker for App Telegram:
+2017-10-12 14:03:18.456060 WARNING Worker Ags: {'new_state': 'on', 'name': 'Telegram', 'function': <bound method TelegramBotEventListener.entity_state_change of <telegram.TelegramBotEventListener object at 0xb59421f0>>, 'entity': 'switch.main_light', 'attribute': 'state', 'kwargs': {'isOn': True, 'payload_event': {'text': 'turn on main light', 'chat_id': 444908880, 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'state_mode': False, 'friendly_name': 'main light'}, 'id': UUID('da084fec-c2c4-450b-bd59-d80179c07453'), 'type': 'attr', 'old_state': 'off'}
+2017-10-12 14:03:18.458638 WARNING ------------------------------------------------------------
+2017-10-12 14:03:18.584127 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/random.py", line 253, in choice
+    i = self._randbelow(len(seq))
+  File "/srv/homeassistant/lib/python3.4/random.py", line 230, in _randbelow
+    r = getrandbits(k)          # 0 <= r < 2**k
+ValueError: number of bits must be greater than zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 525, in worker
+    ha.sanitize_state_kwargs(args["kwargs"]))
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 534, in entity_state_change
+    message = "{}{}\n{} is {}".format(ALARM_KEYBOARD_REVERSED['done1'],random.choice(fingers), friendly_name.title(),new)
+  File "/srv/homeassistant/lib/python3.4/random.py", line 255, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+
+2017-10-12 14:03:18.586740 WARNING ------------------------------------------------------------
+2017-10-12 14:03:25.784277 WARNING ------------------------------------------------------------
+2017-10-12 14:03:25.786807 WARNING Unexpected error in worker for App Telegram:
+2017-10-12 14:03:25.789728 WARNING Worker Ags: {'new_state': 'off', 'name': 'Telegram', 'function': <bound method TelegramBotEventListener.entity_state_change of <telegram.TelegramBotEventListener object at 0xb59421f0>>, 'entity': 'switch.main_light', 'attribute': 'state', 'kwargs': {'isOn': False, 'payload_event': {'text': 'turn off main light', 'chat_id': 444908880, 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'state_mode': False, 'friendly_name': 'main light'}, 'id': UUID('da084fec-c2c4-450b-bd59-d80179c07453'), 'type': 'attr', 'old_state': 'on'}
+2017-10-12 14:03:25.835491 WARNING ------------------------------------------------------------
+2017-10-12 14:03:25.841006 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/random.py", line 253, in choice
+    i = self._randbelow(len(seq))
+  File "/srv/homeassistant/lib/python3.4/random.py", line 230, in _randbelow
+    r = getrandbits(k)          # 0 <= r < 2**k
+ValueError: number of bits must be greater than zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 525, in worker
+    ha.sanitize_state_kwargs(args["kwargs"]))
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 534, in entity_state_change
+    message = "{}{}\n{} is {}".format(ALARM_KEYBOARD_REVERSED['done1'],random.choice(fingers), friendly_name.title(),new)
+  File "/srv/homeassistant/lib/python3.4/random.py", line 255, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+
+2017-10-12 14:03:25.868829 WARNING ------------------------------------------------------------
+2017-10-12 14:03:45.774097 WARNING ------------------------------------------------------------
+2017-10-12 14:03:45.793869 WARNING Unexpected error in worker for App Telegram:
+2017-10-12 14:03:45.796860 WARNING Worker Ags: {'new_state': 'on', 'name': 'Telegram', 'function': <bound method TelegramBotEventListener.entity_state_change of <telegram.TelegramBotEventListener object at 0xb59421f0>>, 'entity': 'switch.main_light', 'attribute': 'state', 'kwargs': {'isOn': True, 'payload_event': {'text': 'turn on main light', 'chat_id': 444908880, 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'state_mode': False, 'friendly_name': 'main light'}, 'id': UUID('da084fec-c2c4-450b-bd59-d80179c07453'), 'type': 'attr', 'old_state': 'off'}
+2017-10-12 14:03:45.799413 WARNING ------------------------------------------------------------
+2017-10-12 14:03:45.849431 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/random.py", line 253, in choice
+    i = self._randbelow(len(seq))
+  File "/srv/homeassistant/lib/python3.4/random.py", line 230, in _randbelow
+    r = getrandbits(k)          # 0 <= r < 2**k
+ValueError: number of bits must be greater than zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 525, in worker
+    ha.sanitize_state_kwargs(args["kwargs"]))
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 534, in entity_state_change
+    message = "{}{}\n{} is {}".format(ALARM_KEYBOARD_REVERSED['done1'],random.choice(fingers), friendly_name.title(),new)
+  File "/srv/homeassistant/lib/python3.4/random.py", line 255, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+
+2017-10-12 14:03:45.870563 WARNING ------------------------------------------------------------
+2017-10-12 16:07:17.844714 WARNING ------------------------------------------------------------
+2017-10-12 16:07:17.884195 WARNING Unexpected error in worker for App Telegram:
+2017-10-12 16:07:17.888461 WARNING Worker Ags: {'name': 'Telegram', 'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb5a92870>>, 'data': {'text': 'Turn off Main Light', 'from_first': 'Ultimate', 'date': 1508112317, 'chat_id': 444908880, 'from_last': 'Dav', 'user_id': 444908880}, 'event': 'telegram_text', 'kwargs': {}, 'id': UUID('9fbded6b-86f5-4d47-a607-ca2ad7ce1fc2'), 'type': 'event'}
+2017-10-12 16:07:17.905609 WARNING ------------------------------------------------------------
+2017-10-12 16:07:17.951173 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 146, in receive_telegram_text
+    age_of_text = (timestamp_now - timestamp_text).total_seconds()
+TypeError: unsupported operand type(s) for -: 'datetime.date' and 'datetime.datetime'
+
+2017-10-12 16:07:17.985008 WARNING ------------------------------------------------------------
+2017-10-12 16:20:18.559958 WARNING ------------------------------------------------------------
+2017-10-12 16:20:18.599731 WARNING Unexpected error in worker for App Telegram:
+2017-10-12 16:20:18.606255 WARNING Worker Ags: {'name': 'Telegram', 'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb59447b0>>, 'data': {'text': 'Turn off Main Light', 'from_first': 'Ultimate', 'date': 1508113097, 'chat_id': 444908880, 'from_last': 'Dav', 'user_id': 444908880}, 'event': 'telegram_text', 'kwargs': {}, 'id': UUID('4c01f9f5-f9b6-45a5-8c16-f841ab0f976b'), 'type': 'event'}
+2017-10-12 16:20:18.608811 WARNING ------------------------------------------------------------
+2017-10-12 16:20:18.668642 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 145, in receive_telegram_text
+    timestamp_now = datetime()
+TypeError: 'module' object is not callable
+
+2017-10-12 16:20:18.683887 WARNING ------------------------------------------------------------
+2017-10-12 16:21:57.934467 WARNING ------------------------------------------------------------
+2017-10-12 16:21:57.949527 WARNING Unexpected error in worker for App Telegram:
+2017-10-12 16:21:57.983278 WARNING Worker Ags: {'name': 'Telegram', 'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb5b17fd0>>, 'data': {'text': 'Turn off Main Light', 'from_first': 'Ultimate', 'date': 1508113197, 'chat_id': 444908880, 'from_last': 'Dav', 'user_id': 444908880}, 'event': 'telegram_text', 'kwargs': {}, 'id': UUID('d6a96a74-37d1-4ac3-a538-83d2bf92ad52'), 'type': 'event'}
+2017-10-12 16:21:58.000359 WARNING ------------------------------------------------------------
+2017-10-12 16:21:58.031359 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 145, in receive_telegram_text
+    timestamp_now = datetime.now()
+AttributeError: 'module' object has no attribute 'now'
+
+2017-10-12 16:21:58.061916 WARNING ------------------------------------------------------------
+2017-10-16 02:37:11.368545 WARNING ------------------------------------------------------------
+2017-10-16 02:37:11.381713 WARNING Unexpected error during loading of telegram.py:
+2017-10-16 02:37:11.384372 WARNING ------------------------------------------------------------
+2017-10-16 02:37:11.397806 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 149
+    return
+         ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+2017-10-16 02:37:11.405752 WARNING ------------------------------------------------------------
+2017-10-16 02:42:05.424545 WARNING ------------------------------------------------------------
+2017-10-16 02:42:05.439379 WARNING Unexpected error in worker for App Telegram:
+2017-10-16 02:42:05.462004 WARNING Worker Ags: {'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb595d810>>, 'data': {'text': 'Turn on Lamp', 'from_last': 'Dav', 'date': 1508114525, 'chat_id': 444908880, 'user_id': 444908880, 'from_first': 'Ultimate'}, 'event': 'telegram_text', 'kwargs': {}, 'id': UUID('08e7c6ba-e603-445b-bf26-091cc963b578'), 'type': 'event', 'name': 'Telegram'}
+2017-10-16 02:42:05.472569 WARNING ------------------------------------------------------------
+2017-10-16 02:42:05.494914 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 150, in receive_telegram_text
+    self.errorMessage("[{}] - {}".format(age_of_text,str(payload_event)))
+TypeError: errorMessage() missing 1 required positional argument: 'error_text'
+
+2017-10-16 02:42:05.497489 WARNING ------------------------------------------------------------
+2017-10-16 03:53:29.714305 WARNING ------------------------------------------------------------
+2017-10-16 03:53:29.730430 WARNING Unexpected error in worker for App Telegram:
+2017-10-16 03:53:29.743297 WARNING Worker Ags: {'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb5a92930>>, 'data': {'text': 'Turn off Main Light', 'from_last': 'Dav', 'data': 1508118808, 'chat_id': 444908880, 'user_id': 444908880, 'from_first': 'Ultimate'}, 'event': 'telegram_text', 'kwargs': {}, 'id': UUID('6976db3d-c708-481d-8938-3ac0ae13932a'), 'type': 'event', 'name': 'Telegram'}
+2017-10-16 03:53:29.765043 WARNING ------------------------------------------------------------
+2017-10-16 03:53:29.807920 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 144, in receive_telegram_text
+    timestamp_text = datetime.datetime.fromtimestamp(payload_event['date'])
+KeyError: 'date'
+
+2017-10-16 03:53:29.843848 WARNING ------------------------------------------------------------
+2017-10-16 04:02:44.686057 WARNING ------------------------------------------------------------
+2017-10-16 04:02:44.715158 WARNING Unexpected error in worker for App Telegram:
+2017-10-16 04:02:44.734455 WARNING Worker Ags: {'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb5a92930>>, 'data': {'text': 'Turn off Main Light', 'from_last': 'Dav', 'data': 1508119364, 'chat_id': 444908880, 'user_id': 444908880, 'from_first': 'Ultimate'}, 'event': 'telegram_text', 'kwargs': {}, 'id': UUID('6976db3d-c708-481d-8938-3ac0ae13932a'), 'type': 'event', 'name': 'Telegram'}
+2017-10-16 04:02:44.736943 WARNING ------------------------------------------------------------
+2017-10-16 04:02:44.740780 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 144, in receive_telegram_text
+    timestamp_text = datetime.datetime.fromtimestamp(payload_event['date'])
+KeyError: 'date'
+
+2017-10-16 04:02:44.765856 WARNING ------------------------------------------------------------
+2017-10-16 22:13:25.699601 WARNING ------------------------------------------------------------
+2017-10-16 22:13:25.702150 WARNING Unexpected error in worker for App Telegram:
+2017-10-16 22:13:25.705712 WARNING Worker Ags: {'function': <bound method TelegramBotEventListener.cancel_handle of <telegram.TelegramBotEventListener object at 0xb5b65cd0>>, 'id': UUID('abe637c1-89c6-44e2-aaa6-e8d3aed4ae47'), 'kwargs': {'service_handle': [{'last_changed': '2017-10-16T20:13:23.017269+00:00', 'last_updated': '2017-10-16T20:13:23.017269+00:00', 'state': 'off', 'attributes': {'device_class': 'opening', 'friendly_name': 'Front Door'}, 'entity_id': 'binary_sensor.front_door'}, {'last_changed': '2017-10-16T20:13:22.883049+00:00', 'last_updated': '2017-10-16T20:13:22.883049+00:00', 'state': 'off', 'attributes': {'supported_features': 0, 'assumed_state': False, 'telegram_name': 'Lamp', 'friendly_name': 'Desk Lamp'}, 'entity_id': 'light.lamp'}, {'last_changed': '2017-10-16T20:13:22.971162+00:00', 'last_updated': '2017-10-16T20:13:22.971162+00:00', 'state': 'off', 'attributes': {'order': 0, 'friendly_name': 'Living Room', 'control': 'hidden', 'assumed_state': True, 'entity_id': ['light.lamp', 'switch.main_light', 'switch.living_room_outlet_1', 'switch.living_room_outlet_2'], 'icon': 'mdi:home'}, 'entity_id': 'group.living_room'}, {'last_changed': '2017-10-16T20:13:23.061044+00:00', 'last_updated': '2017-10-16T20:13:23.061044+00:00', 'state': 'off', 'attributes': {'order': 14, 'friendly_name': 'all lights', 'hidden': True, 'assumed_state': False, 'entity_id': ['light.lifx_light_14e35a', 'light.lamp', 'light.bathroom_light'], 'auto': True}, 'entity_id': 'group.all_lights'}], 'listen_handle': UUID('378fe6f5-04a6-432e-b252-b8c8ad5a9a8d')}, 'name': 'Telegram', 'type': 'timer'}
+2017-10-16 22:13:25.708211 WARNING ------------------------------------------------------------
+2017-10-16 22:13:25.712168 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 518, in worker
+    function(ha.sanitize_timer_kwargs(args["kwargs"]))
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 581, in cancel_handle
+    if KEY_ON_OFF[state] != isOn:
+KeyError: 'unavailable'
+
+2017-10-16 22:13:25.714873 WARNING ------------------------------------------------------------
+2017-10-17 05:23:48.915934 WARNING ------------------------------------------------------------
+2017-10-17 05:23:48.939807 WARNING Unexpected error in worker for App Telegram:
+2017-10-17 05:23:48.959489 WARNING Worker Ags: {'function': <bound method TelegramBotEventListener.cancel_handle of <telegram.TelegramBotEventListener object at 0xb5a92f50>>, 'id': UUID('0fcf06ed-7bee-4387-8290-c898b4755001'), 'kwargs': {'service_handle': [{'last_changed': '2017-10-17T03:23:45.588177+00:00', 'last_updated': '2017-10-17T03:23:45.588177+00:00', 'state': 'off', 'attributes': {'order': 0, 'friendly_name': 'Living Room', 'control': 'hidden', 'assumed_state': True, 'entity_id': ['light.lamp', 'switch.main_light', 'switch.living_room_outlet_1', 'switch.living_room_outlet_2'], 'icon': 'mdi:home'}, 'entity_id': 'group.living_room'}, {'last_changed': '2017-10-17T03:23:45.981653+00:00', 'last_updated': '2017-10-17T03:23:45.981653+00:00', 'state': 'off', 'attributes': {'order': 5, 'friendly_name': 'Rooms', 'view': True, 'hidden': True, 'assumed_state': True, 'entity_id': ['group.living_room', 'group.bathroom', 'group.bedroom', 'group.kitchen']}, 'entity_id': 'group.rooms'}, {'last_changed': '2017-10-17T03:23:45.674864+00:00', 'last_updated': '2017-10-17T03:23:45.674864+00:00', 'state': 'off', 'attributes': {'device_class': 'opening', 'friendly_name': 'Front Door'}, 'entity_id': 'binary_sensor.front_door'}, {'last_changed': '2017-10-17T03:23:45.192218+00:00', 'last_updated': '2017-10-17T03:23:45.192218+00:00', 'state': 'off', 'attributes': {'supported_features': 0, 'assumed_state': False, 'telegram_name': 'Lamp', 'friendly_name': 'Desk Lamp'}, 'entity_id': 'light.lamp'}], 'listen_handle': UUID('6431a38d-5ec5-4f85-9201-adb16072b11b')}, 'name': 'Telegram', 'type': 'timer'}
+2017-10-17 05:23:48.962194 WARNING ------------------------------------------------------------
+2017-10-17 05:23:48.986482 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 518, in worker
+    function(ha.sanitize_timer_kwargs(args["kwargs"]))
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 581, in cancel_handle
+    if KEY_ON_OFF[state] != isOn:
+KeyError: 'unavailable'
+
+2017-10-17 05:23:49.018751 WARNING ------------------------------------------------------------
+2017-10-18 04:34:39.957055 WARNING ------------------------------------------------------------
+2017-10-18 04:34:39.965935 WARNING Unexpected error during loading of telegram.py:
+2017-10-18 04:34:39.972912 WARNING ------------------------------------------------------------
+2017-10-18 04:34:39.995999 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 434
+    if telegram_name is None:
+    ^
+IndentationError: unexpected indent
+
+2017-10-18 04:34:39.999586 WARNING ------------------------------------------------------------
+2017-10-18 04:34:56.909751 WARNING ------------------------------------------------------------
+2017-10-18 04:34:56.923893 WARNING Unexpected error during loading of telegram.py:
+2017-10-18 04:34:56.931741 WARNING ------------------------------------------------------------
+2017-10-18 04:34:56.956181 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 434
+    if telegram_name is None:
+                            ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+2017-10-18 04:34:56.961783 WARNING ------------------------------------------------------------
+2017-10-18 04:35:00.909865 WARNING ------------------------------------------------------------
+2017-10-18 04:35:00.925189 WARNING Unexpected error during loading of telegram.py:
+2017-10-18 04:35:00.935067 WARNING ------------------------------------------------------------
+2017-10-18 04:35:00.956787 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 435
+    if telegram_name is None:
+                            ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+2017-10-18 04:35:00.962425 WARNING ------------------------------------------------------------
+2017-10-18 04:49:28.301892 WARNING ------------------------------------------------------------
+2017-10-18 04:49:28.315241 WARNING Unexpected error in worker for App Telegram:
+2017-10-18 04:49:28.334434 WARNING Worker Ags: {'name': 'Telegram', 'event': 'telegram_text', 'data': {'chat_id': 444908880, 'date': 1508294967, 'data': 1508294967, 'text': 'turn off desk lamp', 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb5c94570>>, 'type': 'event', 'kwargs': {}, 'id': UUID('c64955e9-0dbc-4026-ba5c-e1e3304b5a2b')}
+2017-10-18 04:49:28.337920 WARNING ------------------------------------------------------------
+2017-10-18 04:49:28.378106 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 169, in receive_telegram_text
+    self.turn_on_off(payload_event, accessgroup)
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 473, in turn_on_off
+    telegram_name = self.getTelegramName(entity).lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+
+2017-10-18 04:49:28.388583 WARNING ------------------------------------------------------------
+2017-10-18 04:52:19.933826 WARNING ------------------------------------------------------------
+2017-10-18 04:52:19.944400 WARNING Unexpected error during loading of telegram.py:
+2017-10-18 04:52:19.963987 WARNING ------------------------------------------------------------
+2017-10-18 04:52:19.969379 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 436
+    telegram_name = "None"
+                         ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+2017-10-18 04:52:19.972054 WARNING ------------------------------------------------------------
+2017-10-18 04:52:20.914659 WARNING ------------------------------------------------------------
+2017-10-18 04:52:20.924527 WARNING Unexpected error during loading of telegram.py:
+2017-10-18 04:52:20.943892 WARNING ------------------------------------------------------------
+2017-10-18 04:52:20.949121 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 436
+    telegram_name = "None"
+                         ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+2017-10-18 04:52:20.951836 WARNING ------------------------------------------------------------
+2017-10-18 05:17:52.896854 WARNING ------------------------------------------------------------
+2017-10-18 05:17:52.904576 WARNING Unexpected error during loading of telegram.py:
+2017-10-18 05:17:52.914826 WARNING ------------------------------------------------------------
+2017-10-18 05:17:52.920026 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 348
+    self.call_service("telegram_bot/send_message",
+       ^
+SyntaxError: invalid syntax
+
+2017-10-18 05:17:52.922618 WARNING ------------------------------------------------------------
+2017-10-18 05:17:53.897076 WARNING ------------------------------------------------------------
+2017-10-18 05:17:53.904512 WARNING Unexpected error during loading of telegram.py:
+2017-10-18 05:17:53.917387 WARNING ------------------------------------------------------------
+2017-10-18 05:17:53.935774 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 348
+    self.call_service("telegram_bot/send_message",
+       ^
+SyntaxError: invalid syntax
+
+2017-10-18 05:17:53.939427 WARNING ------------------------------------------------------------
+2017-10-18 05:18:09.944256 WARNING ------------------------------------------------------------
+2017-10-18 05:18:09.954808 WARNING Unexpected error during loading of telegram.py:
+2017-10-18 05:18:09.958985 WARNING ------------------------------------------------------------
+2017-10-18 05:18:09.977960 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 903, in read_app
+    importlib.reload(conf.modules[module_name])
+  File "/srv/homeassistant/lib/python3.4/importlib/__init__.py", line 149, in reload
+    methods.exec(module)
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 628
+    elif keyboard_type in KEYBOARD_STRUCTURE.keys():
+       ^
+SyntaxError: invalid syntax
+
+2017-10-18 05:18:09.980701 WARNING ------------------------------------------------------------
+2017-10-18 05:26:35.644268 WARNING ------------------------------------------------------------
+2017-10-18 05:26:35.661739 WARNING Unexpected error in worker for App Telegram:
+2017-10-18 05:26:35.686027 WARNING Worker Ags: {'name': 'Telegram', 'event': 'telegram_text', 'data': {'chat_id': 444908880, 'date': 1508297195, 'data': 1508297195, 'text': 'living room', 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb595b7d0>>, 'type': 'event', 'kwargs': {}, 'id': UUID('7a8cc7e9-7625-41e3-a726-149fd55c5c74')}
+2017-10-18 05:26:35.693784 WARNING ------------------------------------------------------------
+2017-10-18 05:26:35.721781 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 176, in receive_telegram_text
+    self.roomControl(payload_event, accessgroup)
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 422, in roomControl
+    keyboard = self.getKeyboard("room_control",accessgroup,payload_event))
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 628, in getKeyboard
+    keyboard.append("{} Rooms,{}".format(ALARM_KEYBOARD_REVERED['menu'],ALARM_KEYBOARD_REVERSED['backToMenu']))
+NameError: name 'ALARM_KEYBOARD_REVERED' is not defined
+
+2017-10-18 05:26:35.764639 WARNING ------------------------------------------------------------
+2017-10-18 05:27:07.197096 WARNING ------------------------------------------------------------
+2017-10-18 05:27:07.211079 WARNING Unexpected error in worker for App Telegram:
+2017-10-18 05:27:07.218811 WARNING Worker Ags: {'name': 'Telegram', 'event': 'telegram_text', 'data': {'chat_id': 444908880, 'date': 1508297226, 'data': 1508297226, 'text': 'living room', 'from_last': 'Dav', 'from_first': 'Ultimate', 'user_id': 444908880}, 'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb5ac12b0>>, 'type': 'event', 'kwargs': {}, 'id': UUID('4af42caa-81b5-4696-9989-de2f2071edf3')}
+2017-10-18 05:27:07.237411 WARNING ------------------------------------------------------------
+2017-10-18 05:27:07.252738 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 176, in receive_telegram_text
+    self.roomControl(payload_event, accessgroup)
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 422, in roomControl
+    keyboard = self.getKeyboard("room_control",accessgroup,payload_event))
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 628, in getKeyboard
+    keyboard.append("{} Rooms,{}".format(ALARM_KEYBOARD_REVERSED['menu'],ALARM_KEYBOARD_REVERSED['backToMenu']))
+KeyError: 'menu'
+
+2017-10-18 05:27:07.285986 WARNING ------------------------------------------------------------
