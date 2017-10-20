@@ -7,7 +7,7 @@ update_ha_config:
     - service: homeassistant.restart
 
 update_ha_source:
-  alias: Update Source and Restart
+  alias: Update Config and Restart
   sequence:
     - service: shell_command.pull_source
     - delay:
@@ -18,6 +18,15 @@ update_ha_scripts:
   alias: Update Scripts and Restart
   sequence:
     - service: shell_command.pull_scripts
+    - delay:
+        minutes: 1
+    - service: homeassistant.restart
+
+update_ha_modules:
+  alias: Update Appdaemon_apps and custom_components
+  sequence:
+    - service: shell_command.pull_appdaemon_apps
+    - service: shell_command.pull_custom_components
     - delay:
         minutes: 1
     - service: homeassistant.restart
