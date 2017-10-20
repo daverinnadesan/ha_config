@@ -1567,3 +1567,27 @@ SyntaxError: invalid syntax
 SyntaxError: invalid syntax
 
 2017-10-06 23:52:05.376695 WARNING ------------------------------------------------------------
+2017-10-16 05:02:57.329008 WARNING ------------------------------------------------------------
+2017-10-16 05:02:57.336562 WARNING Unexpected error in worker for App Telegram:
+2017-10-16 05:02:57.339591 WARNING Worker Ags: {'name': 'Telegram', 'type': 'event', 'event': 'telegram_text', 'data': {'user_id': 444908880, 'chat_id': 444908880, 'from_last': 'Dav', 'from_first': 'Ultimate', 'text': '🏠 Menu'}, 'id': UUID('126ef29d-e290-4f7c-b693-ce04d0cd98fb'), 'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb5a5a9d0>>, 'kwargs': {}}
+2017-10-16 05:02:57.342087 WARNING ------------------------------------------------------------
+2017-10-16 05:02:57.355473 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 144, in receive_telegram_text
+    timestamp_text = datetime.datetime.fromtimestamp(payload_event['date'])
+KeyError: 'date'
+
+2017-10-16 05:02:57.364450 WARNING ------------------------------------------------------------
+2017-10-16 05:03:14.821940 WARNING ------------------------------------------------------------
+2017-10-16 05:03:14.836961 WARNING Unexpected error in worker for App Telegram:
+2017-10-16 05:03:14.845764 WARNING Worker Ags: {'name': 'Telegram', 'type': 'event', 'event': 'telegram_text', 'data': {'user_id': 444908880, 'chat_id': 444908880, 'from_last': 'Dav', 'from_first': 'Ultimate', 'text': '🏠 Menu'}, 'id': UUID('126ef29d-e290-4f7c-b693-ce04d0cd98fb'), 'function': <bound method TelegramBotEventListener.receive_telegram_text of <telegram.TelegramBotEventListener object at 0xb5a5a9d0>>, 'kwargs': {}}
+2017-10-16 05:03:14.848438 WARNING ------------------------------------------------------------
+2017-10-16 05:03:14.859662 WARNING Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/appdaemon/appdaemon.py", line 528, in worker
+    function(args["event"], data, args["kwargs"])
+  File "/home/homeassistant/config/appdaemon/apps/telegram.py", line 144, in receive_telegram_text
+    timestamp_text = datetime.datetime.fromtimestamp(payload_event['date'])
+KeyError: 'date'
+
+2017-10-16 05:03:14.862396 WARNING ------------------------------------------------------------
