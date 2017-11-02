@@ -19,7 +19,8 @@ group: !include_dir_merge_named groups
 shell_command: !include config/shell_command.yaml
 script: !include config/script.yaml
 alexa:
-
+logger:
+  default: info
 
 
 frontend:

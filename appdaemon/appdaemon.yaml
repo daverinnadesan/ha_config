@@ -3,11 +3,15 @@ AppDaemon:
   errorfile: /home/homeassistant/config/appdaemon/errorLog
   threads: 10
   api_port: 5000
-  app_dir: appdaemon_apps
+  app_dir: /home/homeassistant/config/appdaemon/appdaemon_apps
 HASS:
   ha_url: http://localhost:8123
   ha_key: daver1ns
 
+AwsSync:
+  module: aws_sync
+  class: AwsSync
+  
 Alarm:
   module: alarm
   class: AlarmReaction
