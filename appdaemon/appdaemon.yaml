@@ -4,6 +4,7 @@ AppDaemon:
   threads: 10
   api_port: 5000
   app_dir: /home/homeassistant/config/appdaemon/appdaemon_apps
+  
 HASS:
   ha_url: http://localhost:8123
   ha_key: daver1ns
@@ -11,6 +12,8 @@ HASS:
 AwsSync:
   module: aws_sync
   class: AwsSync
+
+
   
 Alarm:
   module: alarm
@@ -43,6 +46,9 @@ Alarm:
 Telegram:
   module: telegram
   class: TelegramBotEventListener
+  telegram_modules: 
+    - AthenaActivities
+
   groups:
     admin:
       chatids:
@@ -53,6 +59,7 @@ Telegram:
         - Rooms
         - Lights,Switches,Scenes
         - Cameras
+        - Athena
       switches:
         - switch.kettle
         - switch.heater
@@ -129,3 +136,13 @@ Telegram:
           - sensorBypass
           - sensorOverview
           - disarm
+
+AthenaActivities:
+  module: athenaActivities
+  class: AthenaActivities
+  keywords: 
+    - do
+    - <-
+    - list
+    - activities
+    - athena
