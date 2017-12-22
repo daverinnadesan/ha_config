@@ -28,7 +28,6 @@ config:
 updater:
 discovery:
 conversation:
-history:
 logbook:
 
 
