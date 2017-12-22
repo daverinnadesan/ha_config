@@ -1,0 +1,10 @@
+intent_script:
+  turnOnLamp:
+    action:
+      service: light.turn_off
+      data_template:
+        entity_id: light.lamp
+    speech:
+      type: plain
+      text: OK
+

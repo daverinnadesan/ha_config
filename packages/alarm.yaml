@@ -1,0 +1,84 @@
+panel_custom:
+    - name: alarm
+      sidebar_title: Alarm
+      sidebar_icon: mdi:security-home
+      config:
+          alarmid: alarm_control_panel.house
+
+
+input_boolean:
+  alarm:
+    name: Alarm
+    icon: mdi:alert-decagram
+  warning:
+    name: Warning
+    icon: mdi:alert-circle-outline
+  alarm_lights:
+    name: Alarm Siren
+    icon: mdi:alarm-light
+  alarm_sounds:
+    name: Alarm Sounds
+    icon: mdi:alarm-multiple
+    
+alarm_control_panel: 
+  platform: bwalarm
+  name: House
+  pending_time: 30
+  trigger_time: 60
+  alarm: input_boolean.alarm
+  warning: input_boolean.warning
+  immediate:
+      - binary_sensor.front_door
+      - binary_sensor.garage_door
+      - binary_sensor.living_room_door
+  delayed:
+      - binary_sensor.kitchen_window
+  notathome:
+      - binary_sensor.living_room_door
+  zones:
+    - group.zone_garage
+    - group.zone_living_room
+    - group.zone_kitchen
+    - group.zone_upstairs
+    - group.zone_downstairs
+    - group.zone_outside
+
+group:
+  security:
+    name: Security
+    view: yes
+    entities:
+      - group.zone_garage
+      - group.zone_wliving_room
+      - group.zone_kitchen
+      - group.zone_upstairs
+      - group.zone_downstairs
+      - group.zone_outside
+
+  zone_garage:
+    name: Garage Sensors
+    entities: 
+      - binary_sensor.kitchen_window
+  zone_living_room:
+    name: Living Room Sensors
+    entities:
+      - binary_sensor.kitchen_window
+      - binary_sensor.living_room_door
+  zone_kitchen:
+    name: Kitchen Sensors
+    entities:
+      - binary_sensor.living_room_door
+  zone_upstairs:
+    name: Upstairs Sensors
+    entities:
+      - binary_sensor.kitchen_window
+      - binary_sensor.garage_door
+  zone_downstairs:
+    name: Downstairs Sensors
+    entities:
+      - binary_sensor.garage_door
+  zone_outside:
+    name: Outside Sensors
+    entities:
+      - binary_sensor.garage_door
+      - binary_sensor.living_room_door

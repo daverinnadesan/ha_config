@@ -13,6 +13,8 @@ AwsSync:
   module: aws_sync
   class: AwsSync
 
+
+  
 Alarm:
   module: alarm
   class: AlarmReaction
@@ -46,6 +48,7 @@ Telegram:
   class: TelegramBotEventListener
   telegram_modules: 
     - AthenaActivities
+
   groups:
     admin:
       chatids:
@@ -142,5 +145,4 @@ AthenaActivities:
     - <-
     - list
     - activities
-    - meta
     - athena
