@@ -1,9 +1,0 @@
-- platform: mqtt
-  name: "Lamp"
-  state_topic: "stat/sonoff/desklamp/POWER"
-  command_topic: "cmnd/sonoff/desklamp/power"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: false
-  qos: 0
-  retain: true
