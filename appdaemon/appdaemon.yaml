@@ -9,11 +9,16 @@ HASS:
   ha_url: http://localhost:8123
   ha_key: daver1ns
 
+Assistant:
+  module: assistant
+  class: MyAssistant
+  
 Alarm:
   module: alarm
   class: AlarmReaction
   alarm_lights: input_boolean.alarm_lights
   alarm_sounds: input_boolean.alarm_sounds
+  alarm_switch: binary_sensor.switch_158d000186e9bd
   notify_triggered:
     - admin
     - member
@@ -28,17 +33,10 @@ Alarm:
     - admin
   notify_pending:
     - admin
-  lights:
-    - entity_id: switch.living_room
-    - entity_id: switch.kitchen
-    - entity_id: switch.dummy
-    - entity_id: switch.tarini_bedroom
-    - entity_id: light.lounge
-      effect: Police
   xiaomis:
     - gw_mac: 34:CE:00:88:D6:13
       ringtone_id: 2
-      ringtone_vol: 10
+      ringtone_vol: 1
 
 Telegram:
   module: telegram
@@ -56,18 +54,22 @@ Telegram:
         - Cameras
       switches:
         - switch.tv
-        - switch.lamp
         - light.gateway_light_34ce0088d613
+        - switch.kettle
       lights:
+        - switch.living_room_light
+        - switch.lounge
         - switch.kitchen
-        - switch.living_room
-        - switch.dummy
         - switch.tarinis_bedroom
+        - light.desk_lamp
+        - switch.lamp
+        - light.lifx_light_14e35a
+        - light.passage
       rooms:
-        - group.living_room
-        - group.bathroom
-        - group.bedroom
+        - group.living_space
         - group.kitchen
+        - group.bedroom
+        - group.bar
       scenes:
         - script.power
         - script.tuner
@@ -75,6 +77,11 @@ Telegram:
         - script.mute
         - script.vol_up
         - script.vol_down
+        - script.rsdata
+        - script.ocean
+        - script.dusk
+        - script.sunset
+        - script.color_loop
       alarm:
         functions:
           - nonee
@@ -91,24 +98,27 @@ Telegram:
         - Scenes
       switches:
         - switch.tv
-        - switch.lamp
-        - light.gateway_light_34ce0088d613
+        - switch.kettle
       lights:
+        - switch.living_room_light
+        - switch.lounge
         - switch.kitchen
-        - switch.living_room
-        - switch.dummy
         - switch.tarinis_bedroom
+        - light.desk_lamp
+        - switch.lamp
+        - light.lifx_light_14e35a
       rooms:
-        - group.living_room
-        - group.bathroom
-        - group.bedroom
+        - group.living_space
         - group.kitchen
+        - group.bedroom
+        - group.bar
       scenes:
         - script.power
         - script.tuner
         - script.cd
         - script.mute
         - script.vol_up
+        - script.vol_down
         - script.vol_down
       alarm:
         functions:
@@ -122,13 +132,16 @@ Telegram:
         - Lights,Switches
         - Scenes
       switches:
-        - switch.lamp
+        - switch.tv
       lights:
-        - switch.living_room
+        - switch.living_room_light
+        - switch.lounge
+        - switch.kitchen
+        - light.lifx_light_14e35a
       rooms:
-        - group.kitchen
+        - group.living_space
       scenes:
-        - script.new
+        - script.power
       alarm:
         functions:
           - sensorBypass

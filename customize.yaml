@@ -10,6 +10,7 @@ light.lamp:
   icon: mdi:lamp
 light.gateway_light_34ce0088d613:
   friendly_name: Security hub
+  icon: mdi:spotlight
 group.security:
   order: 2
 group.media:
@@ -39,16 +40,50 @@ script.vol_up:
   friendly_name: Volume Up
   icon: mdi:volume-plus
 switch.tarinis_bedroom:
-  friendly_name: Bedroom light
-  statefull: False
+  friendly_name: Bedroom
+  icon: mdi:lightbulb
   telegram_name: Tarini's Room
-switch.dummy:
-  friendly_name: Bathroom Light
-  telegram_name: Bathroom
-  statefull: False
 group.bedroom:
-  friendly_name: Tarini 's Bedroom
+  friendly_name: Bedroom
 switch.kitchen:
-  statefull: False
-switch.living_room:
-  statefull: False
+  icon: mdi:lightbulb
+binary_sensor.switch_158d000186e9bd:
+  friendly_name: Alarm Switch [Entrance 1]
+light.lifx_light_14e35a:
+  delay_confirmation: true
+  friendly_name: Bar Strip
+  haaska_name: Bar Strip
+  icon: mdi:led-strip
+  telegram_name: Bar Strip
+switch.living_room_light:
+  friendly_name: Living Room
+  icon: mdi:lightbulb
+switch.lounge:
+  icon: mdi:lightbulb
+switch.lamp:
+  friendly_name: Bar Lamp
+  icon: mdi:lamp
+light.desk_lamp:
+  icon: mdi:lava-lamp
+light.passage:
+  friendly_name: Passage
+script.dusk:
+  assumed_state: True
+  friendly_name: Dusk
+  icon: mdi:palette
+script.sunset:
+  assumed_state: True
+  friendly_name: Sunset
+  icon: mdi:palette
+script.rsdata:
+  assumed_state: True
+  friendly_name: RSDATA
+  icon: mdi:palette
+script.ocean:
+  friendly_name: Ocean
+  assumed_state: True
+  icon: mdi:palette
+script.color_loop:
+  friendly_name: Color Loop
+  icon: mdi:palette
+  assumed_state: True

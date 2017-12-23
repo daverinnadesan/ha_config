@@ -1,25 +1,7 @@
 - platform: mqtt
   name: "extractor fan"
-  state_topic: "stat/sonoff/POWER"
-  command_topic: "cmnd/sonoff/power"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: false
-  qos: 0
-  retain: true
-- platform: mqtt
-  name: "outlet_1"
-  state_topic: "cmnd/bathroom/power"
-  command_topic: "cmnd/bathroom/power"
-  payload_on: "ON"
-  payload_off: "OFF"
-  optimistic: false
-  qos: 0
-  retain: true
-- platform: mqtt
-  name: "outlet_2"
-  state_topic: "cmnd/kitchen/power"
-  command_topic: "cmnd/kitchen/power"
+  state_topic: "stat/fan/POWER"
+  command_topic: "cmnd/fan/power"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false
@@ -27,8 +9,8 @@
   retain: true
 - platform: mqtt
   name: "Kettle"
-  state_topic: "cmnd/bedroom/power"
-  command_topic: "cmnd/bedroom/power"
+  state_topic: "cmnd/kettle/power"
+  command_topic: "cmnd/kettle/power"
   payload_on: "ON"
   payload_off: "OFF"
   optimistic: false

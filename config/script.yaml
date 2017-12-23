@@ -33,3 +33,4 @@ update_ha_modules:
     - delay:
         minutes: 1
     - service: homeassistant.restart
+

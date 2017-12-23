@@ -2,8 +2,8 @@ default_view:
   name: Dashboard
   view: yes
   entities:
-    - group.living_room
-    - group.bathroom
+    - group.living_space
+    - group.bar
     - group.bedroom
     - group.kitchen
     

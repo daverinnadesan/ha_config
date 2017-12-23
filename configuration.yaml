@@ -10,32 +10,32 @@ homeassistant:
 
 mqtt: !include config/mqtt.yaml
 http: !include config/http.yaml
-tts: !include config/tts.yaml
-device_tracker: !include config/device_tracker.yaml
-automation: !include_dir_list automations
+#tts: !include config/tts.yaml
+#device_tracker: !include config/device_tracker.yaml
+automation: !include_dir_merge_list automations
 light: !include_dir_merge_list lights
 sensor: !include_dir_merge_list sensors
 switch: !include_dir_merge_list switches
 group: !include_dir_merge_named groups
 shell_command: !include config/shell_command.yaml
 script: !include config/script.yaml
-logger:
-  default: info
+#logger:
+#  default: info
 
-frontend:
-  themes:
-    grey:
-      primary-color: "#606060"
-      dark-primary-color: "#3a3a3a"
+# frontend:
+#   themes:
+#     grey:
+#       primary-color: "#606060"
+#       dark-primary-color: "#3a3a3a"
 
 config:
-updater:
+#updater:
 #discovery:
-conversation:
-history:
-logbook:
+#conversation:
+#history:
+#logbook:
 #logger:
-sun:
+#sun:
 
 
 

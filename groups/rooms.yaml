@@ -1,25 +1,35 @@
-Living Room:
+Living Space:
     icon: mdi:home
     entities:
-        - switch.lamp
-        - switch.living_room
-        - switch.tv
-        - light.lounge
+        - switch.living_room_light
+        - switch.lounge
+        - light.passage
         - light.gateway_light_34ce0088d613
-Bathroom:
+
+Bar:
     control: hidden
     entities:
-        - switch.dummy
-        - switch.extractor_fan
+        - switch.lamp
+        - light.lifx_light_14e35a
+        - script.rsdata
+        - script.sunset
+        - script.ocean
+        - script.dusk
+        - script.color_loop
+
 Bedroom:
-    control: hidden
     entities:
         - switch.tarinis_bedroom
-        - switch.outlet_1
+        - light.desk_lamp
 Kitchen:
     control: hidden
     entities:
         - switch.kitchen
         - switch.kettle
         - switch.outlet_2
-
+Rooms:
+    entities:
+        - group.kitchen
+        - group.living_space
+        - group.bedroom
+        - group.bar

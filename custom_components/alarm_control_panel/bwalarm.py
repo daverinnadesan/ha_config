@@ -304,7 +304,7 @@ class BWAlarm(alarm.AlarmControlPanel):
 
     def noton(self, eid):
         """ For filtering out sensors already tripped """
-        return not self._hass.states.is_state(eid, STATE_ON)
+        return (not self._hass.states.is_state(eid, STATE_ON)) or self._hass.states.is_state_attr(eid, "device_class", "motion")
 
     def setsignals(self, athome):
         """ Figure out what to sense and how """
